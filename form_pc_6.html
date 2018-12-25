@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Description Hear">
+  <title>お振込情報</title>
+  <link href="css/vendor.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+  <script src="js/vendor.js"></script>
+  <script>
+    $(function() {
+      $(".js_tab li").click(function() {
+        var num = $(".js_tab li").index(this);
+        $(".js_tab_content").removeClass('js_tab_current_content');
+        $(".js_tab_content").eq(num).addClass('js_tab_current_content');
+        $(".js_tab li").removeClass('js_tab_current_content');
+
+        $(this).addClass('js_tab_current_content');
+      });
+    });
+  </script>
+</head>
+<body>
+<header class="sw-Header">
+  <div class="sw-Header_Main">
+    <div class="sw-Header_MainInner">
+      <h1 class="sw-Header_Logo">
+        <a><img class="sw-Header_LogoImg" src="./images/common/header/logo.png" alt="もえたく"></a>
+      </h1>
+      <ol class="sw-Header_FlowList">
+        <li class="sw-Header_FlowItem u-pl-18 sw-Header_FlowItem-visited">買取情報</li>
+        <li class="sw-Header_FlowItem u-pl-18 sw-Header_FlowItem-visited">お客様情報</li>
+        <li class="sw-Header_FlowItem sw-Header_FlowItem-active">完了</li>
+      </ol>
+    </div>
+  </div>
+</header>
+<main class="sw-Main">
+  <div class="sw-Main_Content">
+
+    <form action="form_pc_4.html" method="get">
+      <section class="sw-Section">
+        <header class="sw-Section_Header">
+          <div class="sw-Section_TitleMark sw-Section_TitleMark-step6">
+            <h2 class="sw-Section_Title form-Title">お振り込み情報</h2>
+          </div>
+        </header>
+
+        <div class="sw-Section_Content">
+          <div class="sw-SubSection form-Content">
+            <h3 class="sw-SubSection_Title form-Content_Title">査定金額の承認方法</h3>
+
+            <div class="sw-SubSection_Content">
+              <div class="form-Field_Widget form-Field_Widget-multi btn-group-toggle" data-toggle="buttons">
+                <label class="btn form-ToggleBtn mr-2">
+                  <input type="radio" name="options" autocomplete="off">
+                  <span class="form-ToggleBtn_Text">
+                    すぐにお支払<br>（自動承認）
+                  </span>
+                  <i class="fas fa-check form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                </label>
+                <label class="btn form-ToggleBtn">
+                  <input type="radio" name="options" autocomplete="off">
+                  <span class="form-ToggleBtn_Text">
+                    査定結果を<br>確認して承認
+                  </span>
+                  <i class="fas fa-check form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                </label>
+              </div>
+            </div><!--/.sw-SubSection_Content-->
+
+          </div><!-- /.sw-SubSection .form-Content-->
+
+          <div class="sw-SubSection form-Content">
+            <h3 class="sw-SubSection_Title form-Content_Title">振込先口座</h3>
+
+            <div class="sw-SubSection_Content">
+
+                <ul class="form-Field_Widget form-Field_Widget-multi btn-group-toggle js_tab" data-toggle="buttons">
+                  <li class="u-mr-10">
+                    <label class="btn form-ToggleBtn form-ToggleBtn-sm form-ToggleBtn-width150 u-pl-45">
+                      <input type="radio" name="options" autocomplete="off">
+                      <span class="form-ToggleBtn_Text form-ToggleBtn_Text-sm form-ToggleBtn_Text-marginLeft30">
+                        銀行
+                      </span>
+                      <i class="fas fa-chevron-circle-down form-ToggleBtn_Icon"></i>
+                    </label>
+                  </li>
+                  <li class="u-mr-10">
+                    <label class="btn form-ToggleBtn form-ToggleBtn-sm form-ToggleBtn-width150">
+                      <input type="radio" name="options" autocomplete="off">
+                      <span class="form-ToggleBtn_Text form-ToggleBtn_Text-sm">
+                        インターネット<br>バンク
+                      </span>
+                      <i class="fas fa-chevron-circle-down form-ToggleBtn_Icon"></i>
+                    </label>
+                  </li>
+                  <li class="">
+                    <label class="btn form-ToggleBtn form-ToggleBtn-sm form-ToggleBtn-width150">
+                      <input type="radio" name="options" autocomplete="off">
+                      <span class="form-ToggleBtn_Text form-ToggleBtn_Text-sm">
+                        ゆうちょ銀行・<br>郵便局
+                      </span>
+                      <i class="fas fa-chevron-circle-down form-ToggleBtn_Icon"></i>
+                    </label>
+                  </li>
+                </ul>
+
+            </div><!-- /.sw-SubSection_Content -->
+
+            <div class="js_tab_content">
+              <div class="form-Field">
+                <label class="form-Field_Label u-pr-6">
+                  よくある銀行
+                </label>
+                <div class="form-Field-selectBank">
+                  <div class="form-Field_Widget form-Field_Widget-multi flex-wrap btn-group-toggle u-mb-5" data-toggle="buttons">
+                    <label class="btn form-ToggleBtn form-ToggleBtn-selectBank u-mr-10">
+                      <input type="radio" name="options" autocomplete="off">
+                      <span class="form-ToggleBtn_Text-selectBank">
+                        三菱UFJ銀行
+                      </span>
+                      <i class="fas fa-check form-Radio_Icon form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                    </label>
+
+                    <label class="btn form-ToggleBtn form-ToggleBtn-selectBank">
+                      <input type="radio" name="options" autocomplete="off">
+                      <span class="form-ToggleBtn_Text-selectBank">
+                          みずほ銀行
+                        </span>
+                      <i class="fas fa-check form-Radio_Icon form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                    </label>
+
+                    <label class="btn form-ToggleBtn form-ToggleBtn-selectBank mb-0 u-mr-10">
+                      <input type="radio" name="options" autocomplete="off">
+                      <span class="form-ToggleBtn_Text-selectBank">
+                        三井住友銀行
+                      </span>
+                      <i class="fas fa-check form-Radio_Icon form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                    </label>
+
+                    <label class="btn form-ToggleBtn form-ToggleBtn-selectBank mb-0">
+                      <input type="radio" name="options" autocomplete="off">
+                      <span class="form-ToggleBtn_Text-selectBank">
+                          りそな銀行
+                        </span>
+                      <i class="fas fa-check form-Radio_Icon form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                    </label>
+                  </div><!-- /.form-Field_Widget -->
+                </div><!-- /.form-Field-selectBank -->
+              </div><!-- /.form-Field -->
+
+              <div class="form-Field">
+                <label class="form-Field_Label u-mb-20">
+                  銀行名
+                </label>
+                <div class="form-Field_Widget form-Field_Widget-mr10">
+                  <input class="form-control form-InputText form-InputText-230 form-InputText-optional" type="text" placeholder="古本銀行">
+                </div>
+                <!-- a.modaalまたは button.modaal 要素でオープン data-modall-xxx にoptionを書く -->
+                <a href="#modal-search-bank"
+                   class="btn btn-secondary form-Button-SearchBank form-Button_Text-searchBank form-Button-width150 modaal"
+                   data-modaal-custom-class="modal-Bank"
+                   data-modaal-width="540">
+                  <i class="fas fa-chevron-circle-left form-Button_searchBankIcon"></i>
+                    銀行名を検索
+                </a>
+
+
+                <div id="modal-search-bank" class="modal-Template modal-Select">
+                  <div class="form-group modal-Field-selectBank">
+                    <label class="col-form-label modal-Field_Label-selectBank">銀行名を入力</label>
+                    <input class="form-control form-InputText form-InputText-310 form-InputText-optional" type="text" value="">
+                  </div>
+                  <select class="form-control modal-Select-selectBank" size="6">
+                    <option>UFJ銀行</option>
+                    <option>UFJ銀行</option>
+                    <option>UFJ銀行</option>
+                    <option>UFJ銀行</option>
+                    <option>UFJ銀行</option>
+                    <option>UFJ銀行</option>
+                    <option>UFJ銀行</option>
+                    <option>UFJ銀行</option>
+                    <option>UFJ銀行</option>
+                    <option>UFJ銀行</option>
+                    <option>UFJ銀行</option>
+                    <option>UFJ銀行</option>
+                    <option>UFJ銀行</option>
+                    <option>UFJ銀行</option>
+                    <option>UFJ銀行</option>
+                    <option>UFJ銀行</option>
+                  </select>
+                  <div class="text-center">
+                    <button class="btn btn-secondary modal-Bank_Button">選択</button>
+                  </div>
+                </div><!-- /.modal-Template -->
+              </div><!-- /.form-Field -->
+
+              <div class="form-Field">
+                <label class="form-Field_Label u-mb-17">
+                  支店名
+                </label>
+                <div class="form-Field_Widget form-Field_Widget-mr10">
+                  <input class="form-control form-InputText form-InputText-230 form-InputText-optional" type="text" placeholder="古本支店">
+                </div>
+                <!-- a.modaalまたは button.modaal 要素でオープン data-modall-xxx にoptionを書く -->
+                <a href="#modal-search-bank-branch"
+                   class="btn btn-secondary form-Button-SearchBank form-Button_Text-searchBank form-Button-width150 modaal"
+                   data-modaal-custom-class="modal-Bank"
+                   data-modaal-width="540"
+                ><i class="fas fa-chevron-circle-left form-Button_searchBankIcon"></i>
+                  支店名を検索
+                </a>
+
+                <div id="modal-search-bank-branch" class="modal-Template">
+                  <div class="form-group modal-Field-selectBank">
+                    <label class="col-form-label modal-Field_Label-selectBank">支店名を入力</label>
+                    <input class="form-control form-InputText form-InputText-310 form-InputText-optional" type="text" value="">
+                  </div>
+                  <select class="form-control modal-Select-selectBank" size="6">
+                    <option>UFJ銀行</option>
+                    <option>UFJ銀行</option>
+                    <option>UFJ銀行</option>
+                    <option>UFJ銀行</option>
+                    <option>UFJ銀行</option>
+                    <option>UFJ銀行</option>
+                    <option>UFJ銀行</option>
+                    <option>UFJ銀行</option>
+                    <option>UFJ銀行</option>
+                    <option>UFJ銀行</option>
+                    <option>UFJ銀行</option>
+                    <option>UFJ銀行</option>
+                    <option>UFJ銀行</option>
+                    <option>UFJ銀行</option>
+                    <option>UFJ銀行</option>
+                    <option>UFJ銀行</option>
+                  </select>
+                  <div class="text-center">
+                    <button class="btn btn-secondary modal-Bank_Button">選択</button>
+                  </div>
+                </div><!-- /.modal-Template -->
+
+              </div><!-- /.form-Field -->
+
+              <div class="form-Field">
+                <label class="form-Field_Label-selectBank u-mb-25">
+                  口座種類
+                </label>
+
+                <div class="form-Field_Widget btn-group-toggle" data-toggle="buttons">
+                  <div class="form-Field_Widget-selectType">
+                    <label class="btn form-ToggleBtn form-ToggleBtn-selectBank form-ToggleBtn-width86 active form-ToggleBtn-mr10">
+                      <input type="radio" name="options" autocomplete="off">
+                      <span class="form-ToggleBtn_Text-selectBank pr-2" checked="checked">
+                        普通
+                      </span>
+                      <i class="fas fa-check form-Radio_Icon form-ToggleBtn_Icon-sm form-ToggleBtn_Icon-check"></i>
+                    </label>
+                  </div>
+                  <div class="form-Field_Widget-selectType u-ml-6">
+                    <label class="btn form-ToggleBtn form-ToggleBtn-selectBank form-ToggleBtn-width86">
+                      <input type="radio" name="options" autocomplete="off">
+                      <span class="form-ToggleBtn_Text-selectBank pr-2">
+                        当座
+                      </span>
+                      <i class="fas fa-check form-Radio_Icon form-ToggleBtn_Icon-sm form-ToggleBtn_Icon-check"></i>
+                    </label>
+                  </div>
+                </div>
+              </div><!-- /.form-Field -->
+              <!--</div>-->
+              <div class="form-Field">
+                <label class="form-Field_Label-selectBank u-mb-22">
+                  口座番号
+                </label>
+                <div class="form-Field_Widget">
+                  <input class="form-control form-InputText form-InputText-150 form-InputText-optional" type="text" placeholder="1234567">
+                </div>
+              </div><!-- /.form-Field -->
+
+              <div class="form-Field">
+                <label class="form-Field_Label-selectBank u-mb-25">
+                  口座名義
+                </label>
+                <div class="form-Field_Widget">
+                  <input class="form-control form-InputText form-InputText-230 form-InputText-optional" type="text" placeholder="フルホンタロウ">
+                </div>
+              </div><!-- /.form-Field -->
+
+            </div><!-- /.js_tab_content -->
+
+            <div class="js_tab_content">
+            <div class="form-Field-selectBank ml-auto mr-auto"><!--インターネットバンク-->
+
+              <div class="form-Field_Widget form-Field_Widget-multi flex-wrap btn-group-toggle u-mb-10" data-toggle="buttons">
+                <label class="btn form-ToggleBtn form-ToggleBtn-selectBank u-mr-10">
+                  <input type="radio" name="options" autocomplete="off">
+                  <span class="form-ToggleBtn_Text-selectBank">
+                      ジャパンネット銀行
+                    </span>
+                  <i class="fas fa-check form-Radio_Icon form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                </label>
+
+                <label class="btn form-ToggleBtn form-ToggleBtn-selectBank">
+                  <input type="radio" name="options" autocomplete="off">
+                  <span class="form-ToggleBtn_Text-selectBank">
+                        楽天銀行
+                      </span>
+                  <i class="fas fa-check form-Radio_Icon form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                </label>
+              </div>
+            </div><!-- /.form-Field-selectBank -->
+
+            <div class="form-Field">
+              <label class="form-Field_Label-selectBank u-mb-20">
+                支店番号
+              </label>
+              <div class="form-Field_Widget">
+                <input class="form-control form-InputText form-InputText-150 form-InputText-optional" type="text" placeholder="123">
+              </div>
+            </div>
+
+            <div class="form-Field">
+              <label class="form-Field_Label-selectBank u-mb-20">
+                口座番号
+              </label>
+              <div class="form-Field_Widget">
+                <input class="form-control form-InputText form-InputText-150 form-InputText-optional" type="text" placeholder="1234567">
+              </div>
+            </div>
+
+            <div class="form-Field">
+              <label class="form-Field_Label-selectBank u-mb-30">
+                口座名義
+              </label>
+              <div class="form-Field_Widget">
+                <input class="form-control form-InputText form-InputText-230 form-InputText-optional" type="text" placeholder="フルホンタロウ">
+              </div>
+            </div>
+            </div> <!-- /.tab_content -->
+
+            <div class="js_tab_content">
+            <!--ゆうちょ銀行・郵便局-->
+            <div class="form-Field">
+              <label class="form-Field_Label-selectBank u-mb-20">
+                記号
+              </label>
+              <div class="form-Field_Widget">
+                <input class="form-control form-InputText form-InputText-150 form-InputText-optional" type="text" placeholder="12345">
+              </div>
+            </div>
+
+            <div class="form-Field">
+              <label class="form-Field_Label-selectBank u-mb-20">
+                口座番号
+              </label>
+              <div class="form-Field_Widget">
+                <input class="form-control form-InputText form-InputText-150 form-InputText-optional" type="text" placeholder="1234567">
+              </div>
+            </div>
+
+            <div class="form-Field">
+              <label class="form-Field_Label-selectBank">
+                口座名義
+              </label>
+              <div class="form-Field_Widget">
+                <input class="form-control form-InputText form-InputText-230 form-InputText-optional" type="text" placeholder="フルホンタロウ">
+              </div>
+            </div>
+            </div>
+
+          </div><!--/.form-Content-->
+
+          <div class="sw-SubSection form-Content">
+            <h3 class="sw-SubSection_Title form-Content_Title u-mt-15">お得意様専用　買取1,500円UPクーポン</h3>
+
+            <div class="sw-SubSection_Content u-mb-23">
+              <div class="form-Field_Widget form-Field_Widget-multi btn-group-toggle" data-toggle="buttons">
+                <label class="btn form-ToggleBtn mr-2 active">
+                  <input type="radio" name="options" autocomplete="off" checked="checked">
+                  <span class="form-ToggleBtn_Text">
+                    受け取る
+                  </span>
+                  <i class="fas fa-check form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                </label>
+                <label class="btn form-ToggleBtn">
+                  <input type="radio" name="options" autocomplete="off">
+                  <span class="form-ToggleBtn_Text">
+                    受け取らない
+                  </span>
+                  <i class="fas fa-check form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                </label>
+              </div>
+              <p class="form-Text form-Text_Coupon">
+                アンケートに答えてくれた方の中から抽選で、<br>
+                追加でさらにクーポン500円UP!
+              </p>
+            </div>
+          </div><!--/.form-Content-->
+
+          <div class="sw-SubSection form-Content">
+            <h3 class="sw-SubSection_Title form-Content_Title u-mt-3 u-mb-23">今回の買取のご利用のきっかけ（複数可）</h3>
+
+            <div class="sw-SubSection_Content mt-0">
+              <div class="form-Content_Inner">
+                <div class="form-Content_Wrapper">
+                  <div class="form-Checkbox form-Checkbox-multi form-Checkbox-optional custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label form-Field_Label-custumerQues" for="customCheck1">バナー広告</label>
+                  </div>
+                  <div class="form-Checkbox form-Checkbox-multi form-Checkbox-optional custom-control custom-checkbox u-pl-30">
+                    <input type="checkbox" class="custom-control-input" id="customCheck2">
+                    <label class="custom-control-label form-Field_Label-custumerQues" for="customCheck2">チラシ</label>
+                  </div>
+                  <div class="form-Checkbox form-Checkbox-multi form-Checkbox-optional custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck3">
+                    <label class="custom-control-label form-Field_Label-custumerQues" for="customCheck3">お気に入り</label>
+                  </div>
+                  <div class="form-Checkbox form-Checkbox-optional custom-control custom-checkbox u-pl-30">
+                    <input type="checkbox" class="custom-control-input" id="customCheck4">
+                    <label class="custom-control-label form-Field_Label-custumerQues" for="customCheck4">キーワード検索</label>
+                  </div>
+                  <div class="form-Checkbox form-Checkbox-multi form-Checkbox-optional custom-control custom-checkbox u-mb-5">
+                    <input type="checkbox" class="custom-control-input" id="customCheck5">
+                    <label class="custom-control-label form-Field_Label-custumerQues" for="customCheck5">その他</label>
+                  </div>
+                </div>
+                <div class="form-Field_Widget">
+                  <input class="form-control form-InputText form-InputText-470 form-InputText-another form-InputText-optional u-mt-7" type="text">
+                </div>
+              </div>
+            </div>
+          </div><!--/.form-Content-->
+
+          <div class="sw-SubSection form-Content">
+            <h3 class="sw-SubSection_Title form-Content_Title u-mb-26">買取をご利用したことのあるサービス（複数可）</h3>
+
+            <div class="sw-SubSection_Content mt-0 mb-0">
+              <div class="form-Content_Inner form-Content_Wrapper">
+
+                <div class="form-Checkbox form-Checkbox-multi form-Checkbox-optional custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck6">
+                  <label class="custom-control-label form-Field_Label-custumerQues" for="customCheck6">ブックオフ店舗</label>
+                </div>
+                <div class="form-Checkbox form-Checkbox-multi form-Checkbox-optional custom-control custom-checkbox u-pl-30">
+                  <input type="checkbox" class="custom-control-input" id="customCheck7">
+                  <label class="custom-control-label form-Field_Label-custumerQues" for="customCheck7">ブックオフオンライン</label>
+                </div>
+                <div class="form-Checkbox form-Checkbox-multi form-Checkbox-optional custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck8">
+                  <label class="custom-control-label form-Field_Label-custumerQues u-pt-5" for="customCheck8">駿河屋</label>
+                </div>
+                <div class="form-Checkbox form-Checkbox-multi form-Checkbox-optional custom-control custom-checkbox u-pl-30">
+                  <input type="checkbox" class="custom-control-input" id="customCheck9">
+                  <label class="custom-control-label form-Field_Label-custumerQues u-pt-5" for="customCheck9">フルイチオンライン</label>
+                </div>
+                <div class="form-Checkbox form-Checkbox-multi form-Checkbox-optional custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck10">
+                  <label class="custom-control-label form-Field_Label-custumerQues u-pt-5" for="customCheck10">Amazon</label>
+                </div>
+                <div class="form-Checkbox form-Checkbox-multi form-Checkbox-optional custom-control custom-checkbox u-pl-30">
+                  <input type="checkbox" class="custom-control-input" id="customCheck11">
+                  <label class="custom-control-label form-Field_Label-custumerQues u-pt-5" for="customCheck11">買取王子</label>
+                </div>
+                <div class="form-Checkbox form-Checkbox-multi form-Checkbox-optional custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck12">
+                  <label class="custom-control-label form-Field_Label-custumerQues u-pt-5" for="customCheck12">GEO</label>
+                </div>
+                <div class="form-Checkbox form-Checkbox-multi form-Checkbox-optional custom-control custom-checkbox u-pl-30">
+                  <input type="checkbox" class="custom-control-input" id="customCheck13">
+                  <label class="custom-control-label form-Field_Label-custumerQues" for="customCheck13">その他</label>
+                </div>
+                <div class="form-Checkbox form-Checkbox-multi form-Checkbox-optional custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck14">
+                  <label class="custom-control-label form-Field_Label-custumerQues" for="customCheck14">なし</label>
+                </div>
+              </div>
+            </div>
+
+          </div><!--/.form-Content-->
+
+          <div class="sw-SubSection form-Content">
+            <h3 class="sw-SubSection_Title form-Content_Title u-mt-21">お客様情報</h3>
+
+            <div class="sw-SubSection_Content u-mb-15">
+              <div class="form-Field_Widget form-Field_Widget-multi btn-group-toggle" data-toggle="buttons">
+                <label class="btn form-ToggleBtn form-ToggleBtn-mr10">
+                  <input type="radio" name="options" autocomplete="off">
+                  <span class="form-ToggleBtn_Text">
+                    男性
+                  </span>
+                  <i class="fas fa-check form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                </label>
+                <label class="btn form-ToggleBtn">
+                  <input type="radio" name="options" autocomplete="off">
+                  <span class="form-ToggleBtn_Text">
+                    女性
+                  </span>
+                  <i class="fas fa-check form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                </label>
+              </div>
+              <div class="form-Field">
+                <label class="form-Field_Label u-mt-8">
+                  職業
+                </label>
+                <!--<div class="form-Field_Widget">-->
+                  <div class="form-Field_Widget u-mt-7">
+                    <select class="custom-select form-Select form-Select-200 form-Select-optional">
+                      <option value="">選択してください</option>
+                      <option value="会社員">会社員</option>
+                      <option value="主婦">主婦</option>
+                      <option value="自営業">自営業</option>
+                      <option value="公務員">公務員</option>
+                      <option value="自由業">自由業</option>
+                      <option value="学生">学生</option>
+                      <option value="その他">その他</option>
+                    </select>
+                  </div>
+                <!--</div>-->
+              </div>
+
+            </div>
+          </div><!--/.form-Content-->
+
+          <hr class="sw-Section_Hr">
+
+          <div class="form-Submit">
+            <span class="form-Button_Chara form-Button_Chara-moe1">
+              <button type="submit" class="btn btn-block form-Button">
+                確認へ
+                <span class="form-Button_Icon"><i class="fas fa-chevron-circle-right"></i></span>
+              </button>
+            </span>
+          </div>
+
+        </div>
+
+      </section>
+    </form>
+
+  </div><!--/.sw-Main_Content-->
+</main><!--./sw-Main-->
+<footer class="sw-Footer sw-Footer-mb20 u-pr-30">
+  <p class="sw-Footer_PermitNumber">
+    リネットジャパングループ株式会社古物商許可番号 541050100100 愛知県公安委員会許可<small class="sw-Footer_Copyright">Copyright © ReNet Japan Group,inc.</small>
+  </p>
+</footer>
+
+<script src="js/site.js"></script>
+
+</body>
+</html>

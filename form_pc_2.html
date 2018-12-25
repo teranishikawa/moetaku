@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Description Hear">
+  <title>Title</title>
+  <link href="css/vendor.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+  <script src="js/vendor.js"></script>
+</head>
+<body>
+<header class="sw-Header">
+  <div class="sw-Header_Main">
+    <div class="sw-Header_MainInner">
+      <h1 class="sw-Header_Logo">
+        <a><img class="sw-Header_LogoImg" src="./images/common/header/logo.png" alt="もえたく"></a>
+      </h1>
+      <ol class="sw-Header_FlowList">
+        <li class="sw-Header_FlowItem u-pl-18 sw-Header_FlowItem-active">買取情報</li>
+        <li class="sw-Header_FlowItem u-pl-18">お客様情報</li>
+        <li class="sw-Header_FlowItem">完了</li>
+      </ol>
+    </div>
+  </div>
+
+</header>
+<main class="sw-Main">
+  <div class="welcome-Wrapper">
+    <div class="welcome-Inner">
+      <figure class="welcome-Character">
+        <img src="./images/common/header/chara_1@2x.png" alt="もえたくのキャラクター">
+      </figure>
+      <div class="welcome-Copy">
+        <p class="welcome-Copy_Text">もえたく！買取フォームにようこそ！</p>
+        <a class="welcome-Copy_Anchor Help modaal"  href="#modal-login"
+           data-modaal-custom-class="modal-Login"
+           data-modaal-width="540">
+          <span>会員の方、２回目以降の方はこちらからログインしてください</span>
+          <i class="fas fa-chevron-circle-right"></i>
+        </a>
+        <div id="modal-login" class="modal-Template">
+
+          <form action="dummy" method="get">
+
+            <div class="modal-Field">
+              <label class="modal-Field_Label modal-Field_Label-sm">
+                ログインID
+              </label>
+              <div class="modal-Field_Widget">
+                <input class="form-control form-InputText form-InputText-230 form-InputText-optional" type="text" placeholder="">
+              </div>
+            </div>
+            <div class="modal-Field">
+              <label class="modal-Field_Label modal-Field_Label-sm">
+                パスワード
+              </label>
+              <div class="modal-Field_Widget">
+                <input class="form-control form-InputText form-InputText-230 form-InputText-optional" type="text" placeholder="">
+              </div>
+            </div>
+
+            <div class="modal-Checkbox custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="modal-checkbox-confirm">
+              <label class="custom-control-label form-Text_Confirm" for="modal-checkbox-confirm">
+                ログイン状態を保持する
+              </label>
+            </div>
+
+            <div class="modal-Submit">
+              <!--<span class="form-Button_Chara form-Button_Chara-moe1">-->
+                <button type="submit" class="btn btn-block form-Button">
+                  ログインして進む
+                  <span class="form-Button_Icon"><i class="fas fa-chevron-circle-right"></i></span>
+                </button>
+              <!--</span>-->
+            </div>
+
+            <p class="modal-Text"><a href="#dummy">パスワードを忘れた方はこちら<i class="fas fa-chevron-circle-right modal-Text-ml5"></i></a></p>
+
+          </form>
+
+        </div><!-- /.modal-Template #modal-help-login -->
+
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="sw-Main_Content">
+
+    <div class="purchase-Wrapper">
+      
+      <div class="purchase-Summary">
+        <table class="purchase-Summary_Table">
+          <tr class="purchase-Summary_Row">
+            <td class="purchase-Summary_TextCell">買取希望商品：</td>
+            <td class="purchase-Summary_TotalItems">99点</td>
+            <td class="purchase-Summary_TextCell">合計買取金額：</td>
+            <td class="purchase-Summary_TotalPrice">999,300円</td>
+          </tr>
+        </table>
+        <p class="purchase-Summary_Comment">その他商品もまとめて売れます</p>
+        <i class="fas fa-chevron-circle-down purchase-Summary_Icon js_purchase_display_btn"></i>
+      </div>
+
+      <div class="purchase-Container">
+        <div class="purchase-Content-1">
+          <table class="purchase-Item_Table">
+            <tr class="purchase-Item_Row">
+              <td class="purchase-Item_Name">Fate/Grand Order バーサーカー/タマモキャット 1/7スケール ABS&PVC製 塗装済み完成品フィギュア</td>
+              <td class="purchase-Item_Price">989,000円</td>
+            </tr>
+            <tr class="purchase-Item_Row">
+              <td class="purchase-Item_Name">MISSING KINGS 伏見猿比古 1/8 完成品フィギュア</td>
+              <td class="purchase-Item_Price">1,000円</td>
+            </tr>
+            <tr class="purchase-Item_Row">
+              <td class="purchase-Item_Name u-pb-15">G.E.M.シリーズ 鋼の錬金術師 FULLMETAL ALCHEMIST エドワード・エルリック（未開封品）</td>
+              <td class="purchase-Item_Price">2,000円</td>
+            </tr>
+            <tr class="purchase-Item_Row">
+              <td class="purchase-Item_Name u-pb-15">G.E.M.シリーズ remix 斉天大聖 うずまきナルト! 「NARUTO-ナルト-疾風伝」 メガトレショップ＆ジャンプショップ(一部店舗)＆オンラインショップ限定</td>
+              <td class="purchase-Item_Price">3,000円</td>
+            </tr>
+            <tr class="purchase-Item_Row">
+              <td class="purchase-Item_Name">ねんどろいど この世界の片隅に すずさん</td>
+              <td class="purchase-Item_Price">4,000円</td>
+            </tr>
+          </table>
+        </div><!-- purchase-Content-1 -->
+
+        <div class="purchase-Content-2">
+
+          <h3 class="purchase-Detail_Title">買取金額詳細</h3>
+
+          <div class="purchase-Content_Inner">
+            <table class="purchase-Detail_Table">
+              <tr class="purchase-Detail_Row">
+                <th class="purchase-Detail_RowTitle">買取金額小計</th>
+                <td class="purchase-Detail_SubtotalNum">5点</td>
+                <td class="purchase-Detail_Price">999,000円</td>
+              </tr>
+              <tr class="purchase-Detail_Row">
+                <th class="purchase-Detail_RowTitle">未開封品10％UP</th>
+                <td class="purchase-Detail_SubtotalNum">1点</td>
+                <td class="purchase-Detail_Price">100円</td>
+              </tr>
+              <tr class="purchase-Detail_Row"><th class="purchase-Detail_RowTitle">ランクアップ</th>
+                <td class="purchase-Detail_SubtotalNum">5点</td>
+                <td class="purchase-Detail_Price">200円</td>
+              </tr>
+              <tr class="purchase-Detail_Row">
+                <th class="purchase-Detail_RowTitle purchase-Detail_RowTitle-total">買取金額合計</th>
+                <td></td>
+                <td class="purchase-Detail_TotalPrice">999,300円</td>
+              </tr>
+            </table>
+          </div><!-- purchase-Content_Inner -->
+        </div><!-- purchase-Content-2 -->
+        <div class="purchase-Close">
+          <span class="purchase-Close_Text">閉じる</span>
+          <i class="fas fa-times-circle purchase-Close_Icon"></i>
+        </div>
+      </div><!-- purchase-Container -->
+    </div><!-- purchase-Wrapper -->
+
+    <form action="form_pc_3.html" method="get">
+      <section class="sw-Section">
+        <header class="sw-Section_Header">
+          <div class="sw-Section_TitleMark sw-Section_TitleMark-step2">
+            <h2 class="sw-Section_Title form-Title u-pr-11">お荷物の発送方法・集荷希望日</h2>
+          </div>
+        </header>
+        <div class="sw-Section_Content">
+          <div class="sw-SubSection form-Content">
+            <h3 class="sw-SubSection_Title form-Content_Title u-mb-26">
+              お荷物の発送方法
+              <a href="#modal-help-shipping"
+                 class="sw-SubSection_TitleHelp modaal"
+                 data-modaal-custom-class="modal-Help modal-Help-shipping"
+                 data-modaal-width="290">
+                <i class="fas fa-question-circle"></i>
+              </a>
+            </h3>
+            <div id="modal-help-shipping" class="modal-Template">
+              <p class="modal-help-shippingText">
+                最寄りのクロネコヤマト宅配便取扱店から着払いで弊社までお送りください。<br>
+                コンビニエンスストアはファミリーマート・セブンイレブン等がお取扱をしております。
+              </p>
+              <img class="modal-help-shippingImg" src="./images/step2/step2-modal_1.png">
+            </div>
+
+            <div class="sw-SubSection_Content mt-0 u-mb-22">
+              <div class="form-Field_Widget form-Field_Widget-multi btn-group-toggle" data-toggle="buttons">
+                <label class="btn form-ToggleBtn form-ToggleBtn-mr10">
+                  <input type="radio" name="options" autocomplete="off" class="js-collapse-radio" data-collapse-target="#collapse-container-shipping-home">
+                  <span class="form-ToggleBtn_Text">
+                    ご自宅集荷
+                  </span>
+                  <i class="fas fa-chevron-circle-down form-ToggleBtn_Icon"></i>
+                </label>
+                <label class="btn form-ToggleBtn">
+                  <input type="radio" name="options" autocomplete="off">
+                  <span class="form-ToggleBtn_Text">
+                    コンビニ<br>持ち込み
+                  </span>
+                  <i class="fas fa-chevron-circle-right form-ToggleBtn_Icon"></i>
+                </label>
+              </div>
+              <div class="form-Radio custom-control custom-radio form-Content_Inner text-right">
+                <input type="radio" id="shipping-box-other" name="options" class="custom-control-input js-collapse-radio" data-toggle="other" data-collapse-target="#collapse-container-shipping-other">
+                <label class="custom-control-label" for="shipping-box-other">
+                  ご自宅以外
+                </label>
+
+              </div>
+            </div><!--.sw-SubSection_Content-->
+          </div><!--/.sw-SubSection.form-Content-->
+
+          <div id="collapse-container-shipping-other" style="display: none">
+            <div class="sw-SubSection form-Content">
+              <h3 class="sw-SubSection_Title mt-0 mb-0 form-Content_Title">ご自宅以外の住所</h3>
+
+              <div class="sw-SubSection_Content u-mt-26">
+
+                <div class="form-Field_Wrapper">
+                  <div class="form-Field form-Field-half">
+                    <label class="form-Field_Label">
+                      〒
+                    </label>
+                    <div class="form-Field_Widget">
+                      <input class="form-control form-InputText form-InputText-200" type="text" placeholder="1234567" name="zip">
+                    </div>
+                  </div>
+                  <div class="form-Field form-Field-half">
+                    <div class="form-Field_Widget u-ml-10">
+                      <span class="btn btn-secondary form-Button-SearchBank form-Button_Text-autoAddress form-InputText-150" type="text">
+                        住所を自動入力
+                        <i class="fas fa-chevron-circle-down form-Button_searchBankIcon"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="form-Field u-mt-5">
+                  <label class="form-Field_Label u-mb-11">
+                    都道府県
+                  </label>
+                  <div class="form-Field_Widget">
+                    <select class="custom-select form-Select form-Select-200" name="prefecture">
+                      <option value="">選択してください</option>
+                      <option value="1">北海道</option>
+                      <option value="2">青森県</option>
+                      <option value="3">岩手県</option>
+                      <option value="4">宮城県</option>
+                      <option value="5">秋田県</option>
+                      <option value="6">山形県</option>
+                      <option value="7">福島県</option>
+                      <option value="8">茨城県</option>
+                      <option value="9">栃木県</option>
+                      <option value="10">群馬県</option>
+                      <option value="11">埼玉県</option>
+                      <option value="12">千葉県</option>
+                      <option value="13">東京都</option>
+                      <option value="14">神奈川県</option>
+                      <option value="15">新潟県</option>
+                      <option value="16">富山県</option>
+                      <option value="17">石川県</option>
+                      <option value="18">福井県</option>
+                      <option value="19">山梨県</option>
+                      <option value="20">長野県</option>
+                      <option value="21">岐阜県</option>
+                      <option value="22">静岡県</option>
+                      <option value="23">愛知県</option>
+                      <option value="24">三重県</option>
+                      <option value="25">滋賀県</option>
+                      <option value="26">京都府</option>
+                      <option value="27">大阪府</option>
+                      <option value="28">兵庫県</option>
+                      <option value="29">奈良県</option>
+                      <option value="30">和歌山県</option>
+                      <option value="31">鳥取県</option>
+                      <option value="32">島根県</option>
+                      <option value="33">岡山県</option>
+                      <option value="34">広島県</option>
+                      <option value="35">山口県</option>
+                      <option value="36">徳島県</option>
+                      <option value="37">香川県</option>
+                      <option value="38">愛媛県</option>
+                      <option value="39">高知県</option>
+                      <option value="40">福岡県</option>
+                      <option value="41">佐賀県</option>
+                      <option value="42">長崎県</option>
+                      <option value="43">熊本県</option>
+                      <option value="44">大分県</option>
+                      <option value="45">宮崎県</option>
+                      <option value="46">鹿児島県</option>
+                      <option value="47">沖縄県</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-Field u-mt-5 u-mb-3">
+                  <label class="form-Field_Label">
+                    市区町村
+                  </label>
+                  <div class="form-Field_Widget">
+                    <input class="form-control form-InputText form-InputText-470" type="text" placeholder="古本市古本区古本町" name="address1">
+                  </div>
+                </div>
+                <div class="form-Field">
+                  <label class="form-Field_Label">
+                    番地・建物名
+                  </label>
+                  <div class="form-Field_Widget">
+                    <input class="form-control form-InputText form-InputText-470" type="text" placeholder="1-23-4 古本マンション101" name="address2">
+                  </div>
+                </div>
+
+                <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+                <script>
+                  $('.form-Button_Text-autoAddress').click(function(e){
+                    AjaxZip3.zip2addr('zip', '', 'prefecture', 'address1');
+                  });
+                </script>
+              </div><!--.sw-SubSection_Content-->
+            </div><!--/.sw-SubSection.form-Content-->
+
+            <div class="sw-SubSection form-Content">
+              <h3 class="sw-SubSection_Title form-Content_Title mt-0">送付箱数の目安</h3>
+              <div class="sw-SubSection_Content">
+
+                <div class="form-Field_Widget form-Field_Widget-multi btn-group-toggle u-mb-20" data-toggle="buttons">
+                  <label class="btn form-ToggleBtn form-ToggleBtn-sm">
+                    <input type="radio" name="num-box" autocomplete="off">
+                    <span class="form-ToggleBtn_Text">
+                      2箱
+                    </span>
+                    <i class="fas fa-check form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                  </label>
+                  <label class="btn form-ToggleBtn form-ToggleBtn-sm">
+                    <input type="radio" name="num-box" autocomplete="off">
+                    <span class="form-ToggleBtn_Text">
+                      3箱
+                    </span>
+                    <i class="fas fa-check form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                  </label>
+                  <label class="btn form-ToggleBtn form-ToggleBtn-sm">
+                    <input type="radio" name="num-box" autocomplete="off">
+                    <span class="form-ToggleBtn_Text">
+                      4箱
+                    </span>
+                    <i class="fas fa-check form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                  </label>
+                  <label class="btn form-ToggleBtn form-ToggleBtn-sm">
+                    <input type="radio" name="num-box" autocomplete="off">
+                    <span class="form-ToggleBtn_Text">
+                    5箱
+                    </span>
+                    <i class="fas fa-check form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                  </label>
+                  <label class="btn form-ToggleBtn form-ToggleBtn-sm">
+                    <input type="radio" name="num-box" autocomplete="off" checked>
+                    <span class="form-ToggleBtn_Text">
+                      6箱
+                    </span>
+                    <i class="fas fa-check form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                  </label>
+                </div>
+                <div class="form-Field_Widget form-Field_Widget-boxOther">
+                  <div class="form-Radio custom-control custom-radio">
+                    <input type="radio" id="num-box-other" name="num-box" class="custom-control-input u-pt-3" data-toggle="other">
+                    <label class="custom-control-label form-Text form-Text-numBoxOver mt-0" for="num-box-other">それ以上</label>
+                  </div>
+                  <input class="form-control form-InputText form-InputText-numBoxOver form-InputText-optional form-InputText_Placeholder-black" type="text" placeholder="">箱
+                </div>
+
+              </div><!--.sw-SubSection_Content-->
+            </div><!--/.sw-SubSection.form-Content-->
+
+            <div class="sw-SubSection form-Content">
+              <h3 class="sw-SubSection_Title form-Content_Title  u-pr-11 u-mb-24">集荷希望日</h3>
+
+              <div class="sw-SubSection_Content mt-0">
+                <p class="form-Text text-center mt-0">宅配キットより後のお日にちをお選びいただけます</p>
+
+                <div class="form-Calendar u-mb-8">
+                  <table class="form-Calender_Table u-mb-18 u-pb-6">
+                    <caption class="u-mb-6">2018年11月</caption>
+                    <thead>
+                    <tr class="form-Calender_Row">
+                      <th class="form-Calender_Cell form-Calender_Cell-sun">日</th>
+                      <th class="form-Calender_Cell form-Calender_Cell-mon">月</th>
+                      <th class="form-Calender_Cell form-Calender_Cell-tue">火</th>
+                      <th class="form-Calender_Cell form-Calender_Cell-wed">水</th>
+                      <th class="form-Calender_Cell form-Calender_Cell-thu">木</th>
+                      <th class="form-Calender_Cell form-Calender_Cell-fri">金</th>
+                      <th class="form-Calender_Cell form-Calender_Cell-sat">土</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="form-Calender_Row">
+                      <td class="form-Calender_Cell form-Calender_Cell-sun">
+                        <button type="button" class="btn" disabled>18</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-mon">
+                        <button type="button" class="btn" disabled>19</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-tue">
+                        <button type="button" class="btn" disabled>20</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-wed">
+                        <button type="button" class="btn" disabled>21</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-thu">
+                        <button type="button" class="btn" disabled>22</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-fri form-Calender_Cell-kitDate">
+                        <button type="button" class="btn" disabled>23</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-sat">
+                        <button type="button" class="btn" data-date="2018-11-24">24</button>
+                      </td>
+                    </tr>
+                    <tr class="form-Calender_Row">
+                      <td class="form-Calender_Cell form-Calender_Cell-sun">
+                        <button type="button" class="btn" data-date="2018-11-25">25</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-mon">
+                        <button type="button" class="btn" data-date="2018-11-26">26</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-tue">
+                        <button type="button" class="btn" data-date="2018-11-27">27</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-wed">
+                        <button type="button" class="btn" data-date="2018-11-28">28</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-thu">
+                        <button type="button" class="btn" data-date="2018-11-29">29</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-fri">
+                        <button type="button" class="btn" data-date="2018-11-30">30</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-sat">
+                        <button type="button" class="btn" disabled></button>
+                      </td>
+                    </tr>
+                    </tbody>
+
+                  </table>
+
+                  <table class="form-Calender_Table u-ml-3 mb-0">
+                    <caption class="u-mb-6">2018年12月</caption>
+                    <thead>
+                    <tr class="form-Calender_Row">
+                      <th class="form-Calender_Cell form-Calender_Cell-sun">日</th>
+                      <th class="form-Calender_Cell form-Calender_Cell-mon">月</th>
+                      <th class="form-Calender_Cell form-Calender_Cell-tue">火</th>
+                      <th class="form-Calender_Cell form-Calender_Cell-wed">水</th>
+                      <th class="form-Calender_Cell form-Calender_Cell-thu">木</th>
+                      <th class="form-Calender_Cell form-Calender_Cell-fri">金</th>
+                      <th class="form-Calender_Cell form-Calender_Cell-sat">土</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="form-Calender_Row">
+                      <td class="form-Calender_Cell form-Calender_Cell-sun">
+                        <button type="button" class="btn" disabled></button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-mon">
+                        <button type="button" class="btn" disabled></button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-tue">
+                        <button type="button" class="btn" disabled></button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-wed">
+                        <button type="button" class="btn" disabled></button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-thu">
+                        <button type="button" class="btn" disabled></button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-fri">
+                        <button type="button" class="btn" disabled></button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-sat">
+                        <button type="button" class="btn" data-date="2018-12-01">1</button>
+                      </td>
+                    </tr>
+                    <tr class="form-Calender_Row">
+                      <td class="form-Calender_Cell form-Calender_Cell-sun">
+                        <button type="button" class="btn" data-date="2018-12-02">2</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-mon">
+                        <button type="button" class="btn" data-date="2018-12-03">3</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-tue">
+                        <button type="button" class="btn" data-date="2018-12-04">4</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-wed">
+                        <button type="button" class="btn" data-date="2018-12-05">5</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-thu">
+                        <button type="button" class="btn" data-date="2018-12-06">6</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-fri">
+                        <button type="button" class="btn" disabled>7</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-sat">
+                        <button type="button" class="btn" disabled>8</button>
+                      </td>
+                    </tr>
+                    </tbody>
+
+                  </table>
+                </div><!-- /.form-Calender -->
+
+                <div class="form-Field_Widget-selectCalender">
+                  <select class="custom-select form-Select form-Select-140 form-Select-optional js-calendar-date-field">
+                    <option value="">希望日</option>
+                    <option value="2018-11-24">2018-11-24</option>
+                    <option value="2018-11-25">2018-11-25</option>
+                    <option value="2018-11-26">2018-11-26</option>
+                    <option value="2018-11-27">2018-11-27</option>
+                    <option value="2018-11-28">2018-11-28</option>
+                    <option value="2018-11-29">2018-11-29</option>
+                    <option value="2018-11-30">2018-11-30</option>
+                    <option value="2018-12-01">2018-12-01</option>
+                    <option value="2018-12-02">2018-12-02</option>
+                    <option value="2018-12-03">2018-12-03</option>
+                    <option value="2018-12-04">2018-12-04</option>
+                    <option value="2018-12-05">2018-12-05</option>
+                    <option value="2018-12-06">2018-12-06</option>
+                    <option value="2018-12-07">2018-12-07</option>
+                  </select>
+                  <select class="custom-select form-Select form-Select-200 form-Select-optional u-ml-6">
+                    <option value="">希望時間帯</option>
+                    <option value="1">指定なし</option>
+                    <option value="2">午前中</option>
+                    <option value="3">12:00-16:00</option>
+                    <option value="4">16:00-18:00</option>
+                    <option value="5">18:00-20:00</option>
+                  </select>
+                </div>
+              </div><!--.sw-SubSection_Content-->
+              <script>
+                jQuery(function($){
+                  $('.form-Calendar td button').click(function(e){
+                    var $this = $(this);
+                    if ($this.prop('disabled')) {
+                      return;
+                    }
+                    var date = $this.data('date');
+                    if (!date) {
+                      return;
+                    }
+                    $('.form-Calendar td button').not($this).removeClass('selected');
+                    $this.addClass('selected');
+                    // フィールドを更新
+                    $('select.js-calendar-date-field').val(date);
+                  });
+                });
+
+              </script>
+
+
+            </div><!--/.sw-SubSection.form-Content-->
+
+            <div class="sw-SubSection form-Content position-relative text-center">
+              <h3 class="sw-SubSection_Title form-Content_Title mb-0 u-pl-7">宅配キットのお届け日</h3>
+              <p class="form-Text form-Text_UnderLine d-inline-block u-mt-20">2018年10月19日（水）12:00〜14:00</p>
+              <a href="./form_pc_1.html" class="comfirm-ChangeAnchor comfirm-ChangeAnchor-h40">変更する</a>
+            </div><!--/.sw-SubSection.form-Content-->
+
+          </div>
+          <div id="collapse-container-shipping-home" style="display: none;">
+            <div class="sw-SubSection form-Content">
+              <h3 class="sw-SubSection_Title form-Content_Title mt-0">送付箱数の目安</h3>
+              <div class="sw-SubSection_Content">
+
+                <div class="form-Field_Widget form-Field_Widget-multi btn-group-toggle u-mb-20" data-toggle="buttons">
+                  <label class="btn form-ToggleBtn form-ToggleBtn-sm">
+                    <input type="radio" name="num-box" autocomplete="off">
+                    <span class="form-ToggleBtn_Text">
+                    2箱
+                  </span>
+                    <i class="fas fa-check form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                  </label>
+                  <label class="btn form-ToggleBtn form-ToggleBtn-sm">
+                    <input type="radio" name="num-box" autocomplete="off">
+                    <span class="form-ToggleBtn_Text">
+                    3箱
+                  </span>
+                    <i class="fas fa-check form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                  </label>
+                  <label class="btn form-ToggleBtn form-ToggleBtn-sm">
+                    <input type="radio" name="num-box" autocomplete="off">
+                    <span class="form-ToggleBtn_Text">
+                    4箱
+                  </span>
+                    <i class="fas fa-check form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                  </label>
+                  <label class="btn form-ToggleBtn form-ToggleBtn-sm">
+                    <input type="radio" name="num-box" autocomplete="off">
+                    <span class="form-ToggleBtn_Text">
+                    5箱
+                  </span>
+                    <i class="fas fa-check form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                  </label>
+                  <label class="btn form-ToggleBtn form-ToggleBtn-sm">
+                    <input type="radio" name="num-box" autocomplete="off" checked>
+                    <span class="form-ToggleBtn_Text">
+                    6箱
+                  </span>
+                    <i class="fas fa-check form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                  </label>
+                </div>
+                <div class="form-Field_Widget form-Field_Widget-boxOther">
+                  <div class="form-Radio custom-control custom-radio">
+                    <input type="radio" id="num-box-other" name="num-box" class="custom-control-input u-pt-3" data-toggle="other">
+                    <label class="custom-control-label form-Text form-Text-numBoxOver mt-0" for="num-box-other">それ以上</label>
+                  </div>
+                  <input class="form-control form-InputText form-InputText-numBoxOver form-InputText-optional form-InputText_Placeholder-black" type="text" placeholder="">箱
+                </div>
+
+              </div><!--.sw-SubSection_Content-->
+            </div><!--/.sw-SubSection.form-Content-->
+
+            <div class="sw-SubSection form-Content">
+              <h3 class="sw-SubSection_Title form-Content_Title  u-pr-11 u-mb-24">集荷希望日</h3>
+
+              <div class="sw-SubSection_Content mt-0">
+                <p class="form-Text text-center mt-0">宅配キットより後のお日にちをお選びいただけます</p>
+
+                <div class="form-Calendar u-mb-8">
+                  <table class="form-Calender_Table u-mb-18 u-pb-6">
+                    <caption class="u-mb-6">2018年11月</caption>
+                    <thead>
+                    <tr class="form-Calender_Row">
+                      <th class="form-Calender_Cell form-Calender_Cell-sun">日</th>
+                      <th class="form-Calender_Cell form-Calender_Cell-mon">月</th>
+                      <th class="form-Calender_Cell form-Calender_Cell-tue">火</th>
+                      <th class="form-Calender_Cell form-Calender_Cell-wed">水</th>
+                      <th class="form-Calender_Cell form-Calender_Cell-thu">木</th>
+                      <th class="form-Calender_Cell form-Calender_Cell-fri">金</th>
+                      <th class="form-Calender_Cell form-Calender_Cell-sat">土</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="form-Calender_Row">
+                      <td class="form-Calender_Cell form-Calender_Cell-sun">
+                        <button type="button" class="btn" disabled>18</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-mon">
+                        <button type="button" class="btn" disabled>19</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-tue">
+                        <button type="button" class="btn" disabled>20</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-wed">
+                        <button type="button" class="btn" disabled>21</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-thu">
+                        <button type="button" class="btn" disabled>22</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-fri form-Calender_Cell-kitDate">
+                        <button type="button" class="btn" disabled>23</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-sat">
+                        <button type="button" class="btn" data-date="2018-11-24">24</button>
+                      </td>
+                    </tr>
+                    <tr class="form-Calender_Row">
+                      <td class="form-Calender_Cell form-Calender_Cell-sun">
+                        <button type="button" class="btn" data-date="2018-11-25">25</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-mon">
+                        <button type="button" class="btn" data-date="2018-11-26">26</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-tue">
+                        <button type="button" class="btn" data-date="2018-11-27">27</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-wed">
+                        <button type="button" class="btn" data-date="2018-11-28">28</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-thu">
+                        <button type="button" class="btn" data-date="2018-11-29">29</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-fri">
+                        <button type="button" class="btn" data-date="2018-11-30">30</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-sat">
+                        <button type="button" class="btn" disabled></button>
+                      </td>
+                    </tr>
+                    </tbody>
+
+                  </table>
+
+                  <table class="form-Calender_Table u-ml-3 mb-0">
+                    <caption class="u-mb-6">2018年12月</caption>
+                    <thead>
+                    <tr class="form-Calender_Row">
+                      <th class="form-Calender_Cell form-Calender_Cell-sun">日</th>
+                      <th class="form-Calender_Cell form-Calender_Cell-mon">月</th>
+                      <th class="form-Calender_Cell form-Calender_Cell-tue">火</th>
+                      <th class="form-Calender_Cell form-Calender_Cell-wed">水</th>
+                      <th class="form-Calender_Cell form-Calender_Cell-thu">木</th>
+                      <th class="form-Calender_Cell form-Calender_Cell-fri">金</th>
+                      <th class="form-Calender_Cell form-Calender_Cell-sat">土</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="form-Calender_Row">
+                      <td class="form-Calender_Cell form-Calender_Cell-sun">
+                        <button type="button" class="btn" disabled></button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-mon">
+                        <button type="button" class="btn" disabled></button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-tue">
+                        <button type="button" class="btn" disabled></button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-wed">
+                        <button type="button" class="btn" disabled></button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-thu">
+                        <button type="button" class="btn" disabled></button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-fri">
+                        <button type="button" class="btn" disabled></button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-sat">
+                        <button type="button" class="btn" data-date="2018-12-01">1</button>
+                      </td>
+                    </tr>
+                    <tr class="form-Calender_Row">
+                      <td class="form-Calender_Cell form-Calender_Cell-sun">
+                        <button type="button" class="btn" data-date="2018-12-02">2</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-mon">
+                        <button type="button" class="btn" data-date="2018-12-03">3</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-tue">
+                        <button type="button" class="btn" data-date="2018-12-04">4</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-wed">
+                        <button type="button" class="btn" data-date="2018-12-05">5</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-thu">
+                        <button type="button" class="btn" data-date="2018-12-06">6</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-fri">
+                        <button type="button" class="btn" disabled>7</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-sat">
+                        <button type="button" class="btn" disabled>8</button>
+                      </td>
+                    </tr>
+                    </tbody>
+
+                  </table>
+                </div><!-- /.form-Calender -->
+
+                <div class="form-Field_Widget-selectCalender">
+                  <select class="custom-select form-Select form-Select-140 form-Select-optional js-calendar-date-field">
+                    <option value="">希望日</option>
+                    <option value="2018-11-24">2018-11-24</option>
+                    <option value="2018-11-25">2018-11-25</option>
+                    <option value="2018-11-26">2018-11-26</option>
+                    <option value="2018-11-27">2018-11-27</option>
+                    <option value="2018-11-28">2018-11-28</option>
+                    <option value="2018-11-29">2018-11-29</option>
+                    <option value="2018-11-30">2018-11-30</option>
+                    <option value="2018-12-01">2018-12-01</option>
+                    <option value="2018-12-02">2018-12-02</option>
+                    <option value="2018-12-03">2018-12-03</option>
+                    <option value="2018-12-04">2018-12-04</option>
+                    <option value="2018-12-05">2018-12-05</option>
+                    <option value="2018-12-06">2018-12-06</option>
+                    <option value="2018-12-07">2018-12-07</option>
+                  </select>
+                  <select class="custom-select form-Select form-Select-200 form-Select-optional u-ml-6">
+                    <option value="">希望時間帯</option>
+                    <option value="1">指定なし</option>
+                    <option value="2">午前中</option>
+                    <option value="3">12:00-16:00</option>
+                    <option value="4">16:00-18:00</option>
+                    <option value="5">18:00-20:00</option>
+                  </select>
+                </div>
+              </div><!--.sw-SubSection_Content-->
+              <script>
+                jQuery(function($){
+                  $('.form-Calendar td button').click(function(e){
+                    var $this = $(this);
+                    if ($this.prop('disabled')) {
+                      return;
+                    }
+                    var date = $this.data('date');
+                    if (!date) {
+                      return;
+                    }
+                    $('.form-Calendar td button').not($this).removeClass('selected');
+                    $this.addClass('selected');
+                    // フィールドを更新
+                    $('select.js-calendar-date-field').val(date);
+                  });
+                });
+
+              </script>
+
+
+            </div><!--/.sw-SubSection.form-Content-->
+
+            <div class="sw-SubSection form-Content position-relative text-center">
+              <h3 class="sw-SubSection_Title form-Content_Title mb-0 u-pl-7">宅配キットのお届け日</h3>
+              <p class="form-Text form-Text_UnderLine d-inline-block u-mt-20">2018年10月19日（水）12:00〜14:00</p>
+              <a href="./form_pc_1.html" class="comfirm-ChangeAnchor comfirm-ChangeAnchor-h40">変更する</a>
+            </div><!--/.sw-SubSection.form-Content-->
+
+          </div>
+
+
+          <div class="sw-SubSection form-Content u-mb-25">
+            <h3 class="sw-SubSection_Title form-Content_Title u-mt-35 u-pl-7 u-mb-4">クーポン</h3><span class="form-Text-anyMark">任意</span>
+            <div class="text-center">
+              <div class="form-Field_Widget form-Field_Widget-couponInput">
+                <input class="form-control form-InputText form-InputText-110 form-InputText-optional form-InputText_Placeholder-black" type="text" placeholder="MOE">
+              </div>
+              <p class="form-text d-inline-block">-</p>
+              <div class="form-Field_Widget form-Field_Widget-couponInput">
+                <input class="form-control form-InputText form-InputText-190 form-InputText-optional" type="text" placeholder="">
+              </div>
+            </div>
+            <p class="form-Text text-center u-mt-7">買取1.5倍キャンぺーン</p>
+
+          </div><!--/.sw-SubSection.form-Content-->
+
+          <hr class="sw-Section_Hr">
+
+          <div class="form-Submit u-mt-70">
+            <div class="form-Submit_wrapper">
+              <span class="form-Button_Chara form-Button_Chara-moe1 u-mr-28">
+                <button type="submit" class="btn btn-block form-Button">
+                  会員の方<br>
+                  <span class="form-Button_SubText">２回目以降はこちらから！</span>
+                  <span class="form-Button_Icon form-Button_Icon-member"><i class="fas fa-chevron-circle-right"></i></span>
+                </button>
+              </span>
+
+              <div class="form-Button_Chara form-Button_Chara-nene1">
+                <button type="button" class="btn btn-block form-Button form-Button-orange">
+                  初めての買取は<br>
+                  <span class="form-Button_SubText">こちらから！</span>
+                  <span class="form-Button_Icon form-Button_Icon-new"><i class="fas fa-chevron-circle-down"></i></span>
+                </button>
+
+                <ul class="form-Button_CharaNene1-list form-Content-hide">
+                  <li class="form-Button_CharaNene1-list--text">
+                    <p>外部IDでログイン</p>
+                  </li>
+                  <li>
+                    <button type="button" class="btn btn-block form-Button form-Button-orange form-Button-small">
+                      Facebook
+                      <span class="form-Button_Icon"><i class="fas fa-chevron-circle-right"></i></span>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="btn btn-block form-Button form-Button-orange form-Button-small">
+                      twitter
+                      <span class="form-Button_Icon"><i class="fas fa-chevron-circle-right"></i></span>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="btn btn-block form-Button form-Button-orange form-Button-small">
+                      Yahoo!
+                      <span class="form-Button_Icon"><i class="fas fa-chevron-circle-right"></i></span>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="btn btn-block form-Button form-Button-orange form-Button-small">
+                      Google
+                      <span class="form-Button_Icon"><i class="fas fa-chevron-circle-right"></i></span>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="btn btn-block form-Button form-Button-orange form-Button-small">
+                      LINE
+                      <span class="form-Button_Icon"><i class="fas fa-chevron-circle-right"></i></span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+    </form>
+  </div><!--/.sw-Main_Content-->
+</main><!--./sw-Main-->
+<footer class="sw-Footer sw-Footer-mb20 u-pr-30">
+  <p class="sw-Footer_PermitNumber">
+    リネットジャパングループ株式会社古物商許可番号 541050100100 愛知県公安委員会許可<small class="sw-Footer_Copyright">Copyright © ReNet Japan Group,inc.</small>
+  </p>
+</footer>
+
+<script src="js/site.js"></script>
+
+</body>
+</html>

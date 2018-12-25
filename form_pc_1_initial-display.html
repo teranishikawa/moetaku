@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Description Hear">
+  <title>もえたく</title>
+  <link href="css/vendor.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+  <script src="js/vendor.js"></script>
+</head>
+<body>
+<header class="sw-Header">
+  <div class="sw-Header_Main">
+    <div class="sw-Header_MainInner">
+      <h1 class="sw-Header_Logo">
+        <a><img class="sw-Header_LogoImg" src="images/common/header/logo.png" alt="もえたく"></a>
+      </h1>
+      <ol class="sw-Header_FlowList">
+        <li class="sw-Header_FlowItem u-pl-18 sw-Header_FlowItem-active">買取情報</li>
+        <li class="sw-Header_FlowItem u-pl-18">お客様情報</li>
+        <li class="sw-Header_FlowItem">完了</li>
+      </ol>
+    </div>
+  </div>
+
+</header>
+<main class="sw-Main u-pb-84">
+  <div class="welcome-Wrapper">
+    <div class="welcome-Inner">
+      <figure class="welcome-Character">
+        <img src="images/common/header/chara_1@2x.png" alt="もえたくのキャラクター">
+      </figure>
+      <div class="welcome-Copy">
+        <p class="welcome-Copy_Text">もえたく！買取フォームにようこそ！</p>
+        <a class="welcome-Copy_Anchor Help modaal" href="#modal-login"
+           data-modaal-custom-class="modal-Login"
+           data-modaal-width="540">
+          <span>会員の方、２回目以降の方はこちらからログインしてください</span>
+          <i class="fas fa-chevron-circle-right"></i>
+        </a>
+        <div id="modal-login" class="modal-Template">
+
+          <form action="dummy" method="get">
+
+            <div class="modal-Field u-ml-80 u-mb-4">
+              <label class="modal-Field_Label modal-Field_Label-sm">
+                ログインID
+              </label>
+              <div class="modal-Field_Widget">
+                <input class="form-control form-InputText form-InputText-230 form-InputText-optional" type="text" placeholder="">
+              </div>
+            </div>
+            <div class="modal-Field u-ml-80">
+              <label class="modal-Field_Label modal-Field_Label-sm">
+                パスワード
+              </label>
+              <div class="modal-Field_Widget">
+                <input class="form-control form-InputText form-InputText-230 form-InputText-optional" type="text" placeholder="">
+              </div>
+            </div>
+
+            <div class="modal-Checkbox custom-control custom-checkbox u-mt-6 u-pl-56">
+              <input type="checkbox" class="custom-control-input" id="modal-checkbox-confirm">
+              <label class="custom-control-label form-Text_Confirm" for="modal-checkbox-confirm">
+                ログイン状態を保持する
+              </label>
+            </div>
+
+            <div class="modal-Submit u-mt-24">
+              <!--<span class="form-Button_Chara form-Button_Chara-moe1">-->
+              <button type="submit" class="btn btn-block form-Button">
+                ログインして進む
+                <span class="form-Button_Icon"><i class="fas fa-chevron-circle-right"></i></span>
+              </button>
+              <!--</span>-->
+            </div>
+
+            <p class="modal-Text u-mt-27"><a href="#dummy">パスワードを忘れた方はこちら<i class="fas fa-chevron-circle-right modal-Text-ml5"></i></a></p>
+
+          </form>
+
+        </div><!-- /.modal-Template #modal-help-login -->
+      </div>
+    </div>
+  </div>
+
+  <!--<div class="sw-Main">-->
+  <div class="sw-Main_Content">
+
+      <form action="form_pc_4.html" method="get">
+        <section class="sw-Section">
+
+          <header class="sw-Section_Header">
+            <div class="sw-Section_TitleMark sw-Section_TitleMark-step0">
+              <h2 class="sw-Section_Title">事前にお届け！無料宅配キットの送付（無料）</h2>
+            </div>
+          </header>
+          <div class="sw-Section_Content">
+            <div class="sw-SubSection form-Content">
+
+              <div class="sw-SubSection_Content-initDis">
+                <div class="form-Field_Widget form-Field_Widget-multi btn-group-toggle" data-toggle="buttons">
+                  <label class="btn form-ToggleBtn">
+                    <input type="radio" name="options" autocomplete="off">
+                    <span class="form-ToggleBtn_Text">
+                      必要ない
+                    </span>
+                    <i class="fas fa-chevron-circle-right form-ToggleBtn_Icon"></i>
+                  </label>
+                  <label class="btn form-ToggleBtn">
+                    <input type="radio" name="options" autocomplete="off">
+                    <span class="form-ToggleBtn_Text">
+                      欲しい
+                    </span>
+                    <i class="fas fa-chevron-circle-down form-ToggleBtn_Icon"></i>
+                  </label>
+                </div>
+              </div>
+
+            </div>
+
+            <script>
+              $(':radio[name="options"]').each(function(index){
+                $(this).change(function(){
+                  if (index === 0) {
+                    document.location = 'form_pc_2.html';
+                  } else {
+                    document.location = 'form_pc_1.html';
+                  }
+                });
+              });
+            </script>
+          </div>
+
+        </section>
+      </form>
+
+    <!--</div>--!>
+  </div><!--/.sw-Main_Content-->
+</main><!--./sw-Main-->
+<footer class="sw-Footer u-pr-30">
+  <p class="sw-Footer_PermitNumber">
+    リネットジャパングループ株式会社古物商許可番号 541050100100 愛知県公安委員会許可
+    <small class="sw-Footer_Copyright">Copyright © ReNet Japan Group,inc.</small>
+  </p>
+</footer>
+
+<script src="js/site.js"></script>
+
+</body>
+</html>
