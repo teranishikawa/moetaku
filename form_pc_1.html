@@ -208,13 +208,13 @@
 
           <div class="sw-SubSection form-Content">
 
-            <h3 class="sw-SubSection_Title form-Content_Title u-mb-25"><span class="kit-Subtitle_Notice">無料でお届け！</span><span class="">「もえたく！用宅配キット」のサイズと箱数</span></h3>
+            <h3 class="sw-SubSection_Title form-Content_Title u-mb-25"><span class="kit-Subtitle_Notice">無料でお届け!</span><span class="">宅配キットのサイズと箱数</span></h3>
             <p class="kit-Text">すべての段ボールには、緩衝材が同梱されています</p>
 
             <ul class="kit-List">
               <li class="kit-List_Item">
                 <figure class="kit-Img_Unit kit-Img_Unit-large">
-                  <img class="kit-Img kit-Img-large" src="./images/step1/icon-package_large@2x.png" alt="段ボール大">
+                  <img class="kit-Img kit-Img-large" src="./images/step1/icon-package_large.png" alt="段ボール大">
                   <figcaption class="kit-Img kit-Img_Title">figma 約32個分<span class="kit-Img_SizeText kit-Img_SizeText-large">（61×44×40cm）</span></figcaption>
                 </figure>
                 <div class="text-center u-ml-5">
@@ -235,7 +235,7 @@
               </li>
               <li class="kit-List_Item">
                 <figure class="kit-Img_Unit kit-Img_Unit-medium">
-                  <img class="kit-Img kit-Img-medium" src="./images/step1/icon-package_middle@2x.png" alt="段ボール中">
+                  <img class="kit-Img kit-Img-medium" src="./images/step1/icon-package_middle.png" alt="段ボール中">
                   <figcaption class="kit-Img_Title">figma 約10個分<span class="kit-Img_SizeText kit-Img_SizeText-medium">（40×33×24cm）</span></figcaption>
                 </figure>
                 <div class="text-center u-ml-5">
@@ -256,7 +256,7 @@
               </li>
               <li class="kit-List_Item">
                 <figure class="kit-Img_Unit kit-Img_Unit-small">
-                  <img class="kit-Img kit-Img-small" src="./images/step1/icon-package_small@2x.png" alt="段ボール小">
+                  <img class="kit-Img kit-Img-small" src="./images/step1/icon-package_small.png" alt="段ボール小">
                   <figcaption class="kit-Img_Title kit-Img_Title-small">figma 約4個分<span class="kit-Img_SizeText kit-Img_SizeText-small">（33×25×16cm）</span></figcaption>
                 </figure>
                 <div class="text-center u-ml-5">
@@ -277,7 +277,7 @@
               </li>
               <li class="kit-List_Item">
                 <figure class="kit-Img_Unit kit-Img_Unit-only">
-                  <img class="kit-Img kit-Img-only" src="./images/step1/icon-package_only@2x.png" alt="緩衝材のみ">
+                  <img class="kit-Img kit-Img-only" src="./images/step1/icon-package_only.png" alt="緩衝材のみ">
                   <figcaption class="kit-Img_Title kit-Img_Title-only"><span class="kit-Img_SizeText kit-Img_SizeText-only">（120x300cm）</span></figcaption>
                 </figure>
                 <div class="text-center u-ml-5">
@@ -310,24 +310,20 @@
           <div class="sw-SubSection form-Content">
             <h3 class="sw-SubSection_Title form-Content_Title u-pr-11">お届け先の郵便番号</h3>
 
-            <div class="form-Content_Inner text-center">
+      
+            <div class="form-Content_Inner text-center u-mt-12 u-mb-18">
               <div class="form-Field_Widget d-inline-block">
-                <input class="form-control form-InputText form-InputText-230 form-InputText-optional" type="text" placeholder="">
+                <input class="form-control form-InputText form-InputText-230" type="text" placeholder="1234567">
               </div>
             </div>
 
-            <div class="form-Content_Inner text-center u-mt-12"><!--必須-->
+            <!--エラー表示の場合
+            <div class="form-Content_Inner text-center u-mt-9 u-mb-18">
               <div class="form-Field_Widget d-inline-block">
-                <input class="form-control form-InputText form-InputText-230" type="text" placeholder="">
+                <input class="form-control form-InputText form-InputText-230 form-InputText-error" type="text" placeholder="1234567">
               </div>
             </div>
-
-            <div class="form-Content_Inner text-center u-mt-9 u-mb-18"><!--エラー-->
-              <div class="form-Field_Widget d-inline-block">
-                <input class="form-control form-InputText form-InputText-230 form-InputText-error" type="text" placeholder="">
-              </div>
-            </div>
-
+            -->
 
             <div class="text-center">
               <a href="#dummy"><span class="form-Text  u-mt-18"><span class="form-Text_UnderLine d-inline-block">郵便番号がご不明な方</span><i class="fas fa-chevron-circle-right"></i></span></a>
@@ -503,8 +499,8 @@
   モーダル表示（お届け希望時間帯）
 </a>
 <div id="modal-HopeTime" class="modal-Template">
-  <div class="modal-HopeTime_Header">
-    <p class="modal-HopeTime_HeaderText">
+  <div class="modal-Header">
+    <p class="modal-HeaderText">
       お届け希望時間帯を<br>
       教えてください
     </p>
