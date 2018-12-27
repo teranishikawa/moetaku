@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -40,7 +41,11 @@
           <div class="sw-SubSection form-Content">
             <h3 class="sw-SubSection_Title form-Content_Title">お名前</h3>
 
-            <div class="sw-SubSection_Content form-Field_Wrapper">
+            <div>
+              <p class="error_Message"><i class="fas fa-exclamation-triangle"></i>「xxx」を選択した場合、「xxxxxx」は必須入力なのにゃ！</p>
+            </div>
+
+            <div class="sw-SubSection_Content form-Field_Wrapper u-mt-26">
               <div class="form-Field form-Field-half">
                 <label class="form-Field_Label">
                   姓
@@ -79,6 +84,9 @@
           <div class="sw-SubSection form-Content">
             <h3 class="sw-SubSection_Title form-Content_Title u-mt-15">集荷先住所</h3>
 
+            <div>
+              <p class="error_Message"><i class="fas fa-exclamation-triangle"></i>「xxx」を選択した場合、「xxxxxx」は必須入力なのにゃ！</p>
+            </div>
 
             <div class="sw-SubSection_Content u-mt-26">
 
@@ -187,6 +195,10 @@
 
           <div class="sw-SubSection form-Content">
             <h3 class="sw-SubSection_Title form-Content_Title u-mt-15">ご連絡先・ＩＤ パスワード</h3>
+
+            <div>
+              <p class="error_Message"><i class="fas fa-exclamation-triangle"></i>「xxx」を選択した場合、「xxxxxx」は必須入力なのにゃ！</p>
+            </div>
 
             <div class="sw-SubSection_Content u-mb-0">
               <div class="form-Field">
@@ -311,6 +323,10 @@
               </a>
             </h3>
 
+            <div>
+              <p class="error_Message"><i class="fas fa-exclamation-triangle"></i>「xxx」を選択した場合、「xxxxxx」は必須入力なのにゃ！</p>
+            </div>
+
             <div class="sw-SubSection_Content">
               <div class="form-Field_Widget form-Field_Widget-multi btn-group-toggle" data-toggle="buttons">
                 <label class="btn form-ToggleBtn">
@@ -351,6 +367,11 @@
 
         <div class="form-Content">
           <p class="form-Text">ネットオフ買取サービスにご意見・ご要望がございましたらご記入ください。（全角300字以内）</p>
+
+          <div>
+            <p class="error_Message"><i class="fas fa-exclamation-triangle"></i>「xxx」を選択した場合、「xxxxxx」は必須入力なのにゃ！</p>
+          </div>
+
           <textarea class="form-InputText_TextArea form-InputText-optional u-mt-5"></textarea>
 
           <div class="form-Checkbox custom-control custom-checkbox u-mt-10 u-mb-30">
@@ -362,10 +383,18 @@
               <i class="fas fa-window-restore form-Text_Icon"></i>」に同意する
             </label>
           </div>
-
+          <div>
+            <p class="error_Message u-mt--10 u-mb-20"><i class="fas fa-exclamation-triangle"></i>「xxx」を選択した場合、「xxxxxx」は必須入力なのにゃ！</p>
+          </div>
         </div>
 
         <hr class="sw-Section_Hr">
+
+        <div class="sw-SubSection form-Content u-mt-27 u-mb-70">
+          <div>
+            <p class="error_Message"><i class="fas fa-exclamation-triangle"></i>「xxx」を選択した場合、「xxxxxx」は必須入力なのにゃ！</p>
+          </div>
+        </div>
 
         <div class="form-Submit">
           <span class="form-Button_Chara form-Button_Chara-moe1">
@@ -384,11 +413,38 @@
 <footer class="sw-Footer u-pr-30">
   <p class="sw-Footer_PermitNumber">
     リネットジャパングループ株式会社古物商許可番号 541050100100 愛知県公安委員会許可
-    <small class="sw-Footer_Copyright">Copyright © ReNet Japan Group,inc.</small>
+    <small class="sw-Footer_Copyright">Copyright c ReNet Japan Group,inc.</small>
   </p>
 </footer>
 
-<script src="js/site.js"></script>
+<div id="modal-Recommend" class="modal-Template">
+  <div class="modal-Recommend_Header">
+    <p class="modal-Recommend_HeaderText">売るなら今です！</p>
+  </div>
 
+  <div class="modal-Recommend_Content">
+    <p class="modal-Recommend_Text modal-Recommend_Text-1">
+      フィギュアの価格は、発売後、<br>
+      毎週値下がりしてしまいます。<br>
+      今が最高値の可能性が高いです。<br>
+      <span class="modal-Recommend_Text-emphasis">売るなら今です！</span><br>
+    </p>
+    <p class="modal-Recommend_Text modal-Recommend_Text-2">ぜひこのまま<br>買取お申し込みにお進みください。</p>
+  </div>
+
+  <div class="form-Submit modal-Recommend_Submit">
+    <button type="submit" class="btn btn-block form-Button">
+      <i class="fas fa-chevron-circle-left form-Button_Icon form-Button_Icon-prev"></i>
+      申込に戻る
+    </button>
+  </div>
+</div><!--モダール表示　（売るなら今です）ここまで-->
+
+<div id="cv-top"></div>
+<div id="cv-left"></div>
+<script src="js/site.js"></script>
+<script>
+  $(document).separationPopup();
+</script>
 </body>
 </html>

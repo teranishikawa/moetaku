@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -51,7 +52,32 @@
 
         <div class="sw-Section_Content">
           <div class="sw-SubSection form-Content">
-            <h3 class="sw-SubSection_Title form-Content_Title">査定金額の承認方法</h3>
+            <h3 class="sw-SubSection_Title form-Content_Title">
+              査定金額の承認方法
+              <a href="#modal-help-assess"
+                 class="sw-SubSection_TitleHelp modaal"
+                 data-modaal-custom-class="modal-Help modal-Help-assess"
+                 data-modaal-width="310">
+                <i class="fas fa-question-circle"></i>
+              </a>
+            </h3>
+            <div id="modal-help-assess" class="modal-Template">
+              <div class="modal-Header">
+                <p class="modal-HeaderText">
+                  査定金額の承認方法
+                </p>
+              </div>
+              <p class="modal-help-assessText">
+                <em>すぐにお支払（自動承認）<span>おすすめ</span></em>
+                査定完了後すぐにお支払いに入ります。<br>商品詳細の問合せや返送はお受けできません。<br><br>
+                <em>査定結果を確認して承認</em>
+                メール、マイページで査定結果を確認し、承認後にお支払いに入ります。
+              </p>
+            </div>
+
+            <div>
+              <p class="error_Message"><i class="fas fa-exclamation-triangle"></i>「xxx」を選択した場合、「xxxxxx」は必須入力なのにゃ！</p>
+            </div>
 
             <div class="sw-SubSection_Content">
               <div class="form-Field_Widget form-Field_Widget-multi btn-group-toggle" data-toggle="buttons">
@@ -77,13 +103,17 @@
           <div class="sw-SubSection form-Content">
             <h3 class="sw-SubSection_Title form-Content_Title">振込先口座</h3>
 
+            <div>
+              <p class="error_Message"><i class="fas fa-exclamation-triangle"></i>「xxx」を選択した場合、「xxxxxx」は必須入力なのにゃ！</p>
+            </div>
+
             <div class="sw-SubSection_Content">
 
                 <ul class="form-Field_Widget form-Field_Widget-multi btn-group-toggle js_tab" data-toggle="buttons">
-                  <li class="u-mr-10">
-                    <label class="btn form-ToggleBtn form-ToggleBtn-sm form-ToggleBtn-width150 u-pl-45">
+                  <li class="u-mr-10 js_tab_current_content">
+                    <label class="btn form-ToggleBtn form-ToggleBtn-sm form-ToggleBtn-width150 u-pl-45 active">
                       <input type="radio" name="options" autocomplete="off">
-                      <span class="form-ToggleBtn_Text form-ToggleBtn_Text-sm form-ToggleBtn_Text-marginLeft30">
+                      <span class="larger form-ToggleBtn_Text form-ToggleBtn_Text-sm form-ToggleBtn_Text-marginLeft30">
                         銀行
                       </span>
                       <i class="fas fa-chevron-circle-down form-ToggleBtn_Icon"></i>
@@ -111,43 +141,39 @@
 
             </div><!-- /.sw-SubSection_Content -->
 
-            <div class="js_tab_content">
+            <div class="js_tab_content js_tab_current_content">
               <div class="form-Field">
                 <label class="form-Field_Label u-pr-6">
                   よくある銀行
                 </label>
                 <div class="form-Field-selectBank">
-                  <div class="form-Field_Widget form-Field_Widget-multi flex-wrap btn-group-toggle u-mb-5" data-toggle="buttons">
+                  <div class="form-Field_Widget form-Field_Widget-multi flex-wrap btn-group-toggle u-mb-5">
                     <label class="btn form-ToggleBtn form-ToggleBtn-selectBank u-mr-10">
-                      <input type="radio" name="options" autocomplete="off">
-                      <span class="form-ToggleBtn_Text-selectBank">
+                      <input type="radio" name="options" autocomplete="off" onclick="$('#bank_name').val('三菱UFJ銀行')">
+                      <span class="form-Text-selectBank">
                         三菱UFJ銀行
                       </span>
-                      <i class="fas fa-check form-Radio_Icon form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
                     </label>
 
                     <label class="btn form-ToggleBtn form-ToggleBtn-selectBank">
-                      <input type="radio" name="options" autocomplete="off">
-                      <span class="form-ToggleBtn_Text-selectBank">
+                      <input type="radio" name="options" autocomplete="off" onclick="$('#bank_name').val('みずほ銀行')">
+                      <span class="form-Text-selectBank">
                           みずほ銀行
-                        </span>
-                      <i class="fas fa-check form-Radio_Icon form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                      </span>
                     </label>
 
                     <label class="btn form-ToggleBtn form-ToggleBtn-selectBank mb-0 u-mr-10">
-                      <input type="radio" name="options" autocomplete="off">
-                      <span class="form-ToggleBtn_Text-selectBank">
+                      <input type="radio" name="options" autocomplete="off" onclick="$('#bank_name').val('三井住友銀行')">
+                      <span class="form-Text-selectBank">
                         三井住友銀行
                       </span>
-                      <i class="fas fa-check form-Radio_Icon form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
                     </label>
 
                     <label class="btn form-ToggleBtn form-ToggleBtn-selectBank mb-0">
-                      <input type="radio" name="options" autocomplete="off">
-                      <span class="form-ToggleBtn_Text-selectBank">
+                      <input type="radio" name="options" autocomplete="off" onclick="$('#bank_name').val('りそな銀行')">
+                      <span class="form-Text-selectBank">
                           りそな銀行
-                        </span>
-                      <i class="fas fa-check form-Radio_Icon form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                      </span>
                     </label>
                   </div><!-- /.form-Field_Widget -->
                 </div><!-- /.form-Field-selectBank -->
@@ -158,7 +184,7 @@
                   銀行名
                 </label>
                 <div class="form-Field_Widget form-Field_Widget-mr10">
-                  <input class="form-control form-InputText form-InputText-230 form-InputText-optional" type="text" placeholder="古本銀行">
+                  <input id="bank_name" class="form-control form-InputText form-InputText-230 form-InputText-optional" type="text" placeholder="古本銀行">
                 </div>
                 <!-- a.modaalまたは button.modaal 要素でオープン data-modall-xxx にoptionを書く -->
                 <a href="#modal-search-bank"
@@ -300,7 +326,7 @@
                   <input type="radio" name="options" autocomplete="off">
                   <span class="form-ToggleBtn_Text-selectBank">
                       ジャパンネット銀行
-                    </span>
+                  </span>
                   <i class="fas fa-check form-Radio_Icon form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
                 </label>
 
@@ -308,7 +334,7 @@
                   <input type="radio" name="options" autocomplete="off">
                   <span class="form-ToggleBtn_Text-selectBank">
                         楽天銀行
-                      </span>
+                  </span>
                   <i class="fas fa-check form-Radio_Icon form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
                 </label>
               </div>
@@ -485,6 +511,10 @@
           <div class="sw-SubSection form-Content">
             <h3 class="sw-SubSection_Title form-Content_Title u-mt-21">お客様情報</h3>
 
+            <div>
+              <p class="error_Message"><i class="fas fa-exclamation-triangle"></i>「xxx」を選択した場合、「xxxxxx」は必須入力なのにゃ！</p>
+            </div>
+
             <div class="sw-SubSection_Content u-mb-15">
               <div class="form-Field_Widget form-Field_Widget-multi btn-group-toggle" data-toggle="buttons">
                 <label class="btn form-ToggleBtn form-ToggleBtn-mr10">
@@ -527,14 +557,21 @@
 
           <hr class="sw-Section_Hr">
 
+          <div class="sw-SubSection form-Content u-mt-27 u-mb-70">
+            <div>
+              <p class="error_Message"><i class="fas fa-exclamation-triangle"></i>「xxx」を選択した場合、「xxxxxx」は必須入力なのにゃ！</p>
+            </div>
+          </div>
+
           <div class="form-Submit">
-            <span class="form-Button_Chara form-Button_Chara-moe1">
-              <button type="submit" class="btn btn-block form-Button">
-                確認へ
+            <span class="form-Button_Chara form-Button_Chara-nene2">
+              <button type="submit" class="btn btn-block form-Button form-Button-bgOrange form-Button_height60">
+                買取情報の入力を完了する
                 <span class="form-Button_Icon"><i class="fas fa-chevron-circle-right"></i></span>
               </button>
             </span>
           </div>
+           
 
         </div>
 
@@ -545,11 +582,38 @@
 </main><!--./sw-Main-->
 <footer class="sw-Footer sw-Footer-mb20 u-pr-30">
   <p class="sw-Footer_PermitNumber">
-    リネットジャパングループ株式会社古物商許可番号 541050100100 愛知県公安委員会許可<small class="sw-Footer_Copyright">Copyright © ReNet Japan Group,inc.</small>
+    リネットジャパングループ株式会社古物商許可番号 541050100100 愛知県公安委員会許可<small class="sw-Footer_Copyright">Copyright c ReNet Japan Group,inc.</small>
   </p>
 </footer>
 
-<script src="js/site.js"></script>
+<div id="modal-Recommend" class="modal-Template">
+  <div class="modal-Recommend_Header">
+    <p class="modal-Recommend_HeaderText">売るなら今です！</p>
+  </div>
 
+  <div class="modal-Recommend_Content">
+    <p class="modal-Recommend_Text modal-Recommend_Text-1">
+      フィギュアの価格は、発売後、<br>
+      毎週値下がりしてしまいます。<br>
+      今が最高値の可能性が高いです。<br>
+      <span class="modal-Recommend_Text-emphasis">売るなら今です！</span><br>
+    </p>
+    <p class="modal-Recommend_Text modal-Recommend_Text-2">ぜひこのまま<br>買取お申し込みにお進みください。</p>
+  </div>
+
+  <div class="form-Submit modal-Recommend_Submit">
+    <button type="submit" class="btn btn-block form-Button">
+      <i class="fas fa-chevron-circle-left form-Button_Icon form-Button_Icon-prev"></i>
+      申込に戻る
+    </button>
+  </div>
+</div><!--モダール表示　（売るなら今です）ここまで-->
+
+<div id="cv-top"></div>
+<div id="cv-left"></div>
+<script src="js/site.js"></script>
+<script>
+  $(document).separationPopup();
+</script>
 </body>
 </html>

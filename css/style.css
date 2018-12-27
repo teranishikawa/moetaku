@@ -2,6 +2,10 @@
 body {
   font-family: Meiryo, 'Hiragino Kaku Gothic ProN', sans-serif; }
 
+.btn {
+  transition: color 0.1s ease-in-out,background-color 0.1s ease-in-out,border-color 0.1s ease-in-out,box-shadow 0.1s ease-in-out;
+}
+
 .sw-Header_Main {
   width: 100%;
   height: 60px;
@@ -314,7 +318,9 @@ body {
   font-size: 0.8125rem;
   line-height: 40px;
   color: #000000; }
-
+.form-Field_Label.twoline{
+  line-height: 20px;
+}
 .form-Field_Label-custumerQues {
   padding-left: 18px !important;
   padding-top: 6px !important; }
@@ -474,6 +480,7 @@ body {
   position: relative;
   color: #000000;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20aria-hidden%3D%22true%22%20data-prefix%3D%22fas%22%20data-icon%3D%22chevron-circle-down%22%20class%3D%22svg-inline--fa%20fa-chevron-circle-down%20fa-w-16%22%20role%3D%22img%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cpath%20fill%3D%22#999999%22%20d%3D%22M504%20256c0%20137-111%20248-248%20248S8%20393%208%20256%20119%208%20256%208s248%20111%20248%20248zM273%20369.9l135.5-135.5c9.4-9.4%209.4-24.6%200-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9%200L256%20285.1%20154.4%20183.5c-9.4-9.4-24.6-9.4-33.9%200l-17%2017c-9.4%209.4-9.4%2024.6%200%2033.9L239%20369.9c9.4%209.4%2024.6%209.4%2034%200z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
+  background-image: url("../images/common/marks/font-awesome_4-7-0_chevron-circle-down_16_0_999999_none.png");
   background-position: right 10px center;
   background-size: 16px 16px;
   background-repeat: no-repeat;
@@ -481,7 +488,8 @@ body {
   border-radius: 6px;
   box-shadow: 4px 4px 16px -8px #999999 inset;
   background-color: #fff9d4;
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+  -moz-appearance: none; }
 
 .form-Select:focus {
   outline: 0 !important;
@@ -577,6 +585,8 @@ body {
   font-display: swap;
   display: block;
   text-align: center; }
+  .form-ToggleBtn_Text.larger {
+    font-size: 1rem; }
 
 .form-ToggleBtn_Text-sm {
   font-size: 14px;
@@ -586,6 +596,15 @@ body {
 .form-ToggleBtn_Text-selectBank {
   display: inline-block;
   padding: 0 23px 0 0;
+  font-family: "Noto Sans JP", sans-serif;
+  font-display: swap;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.42857; }
+
+.form-Text-selectBank {
+  display: inline-block;
+  padding: 0;
   font-family: "Noto Sans JP", sans-serif;
   font-display: swap;
   font-size: 14px;
@@ -714,6 +733,7 @@ body {
     font-weight: bold; }
 
 .form-Calender_Cell {
+  position:relative;
   font-size: 16px;
   font-size: 1rem;
   text-align: center;
@@ -727,8 +747,19 @@ body {
     border: 2px solid #999999;
     box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.15) inset; }
     .form-Calender_Cell .btn:hover, .form-Calender_Cell .btn.selected {
-      color: #6cb23c;
+      color: #ffffff;
+      background-color: #6cb23c;
       border: 2px solid #6cb23c; }
+    .form-Calender_Cell .btn.selected:after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      right: -2px;
+      width: 33px;
+      height: 23px;
+      background: url(../images/step2/calender-icon-truck@2x.png) center center no-repeat;
+      background-size: contain;
+    }
     .form-Calender_Cell .btn:disabled, .form-Calender_Cell .btn:disabled:hover {
       opacity: 0.3;
       color: inherit;
@@ -746,6 +777,10 @@ body {
 
 .form-Calender_Cell-kitDate {
   position: relative; }
+  .form-Calender_Cell-kitDate .btn:hover {
+    color:#ffffff !important;
+
+  }
   .form-Calender_Cell-kitDate:after {
     content: "";
     position: absolute;
@@ -756,10 +791,15 @@ body {
     background: url(../images/step2/calender-icon-package@2x.png) center center no-repeat;
     background-size: contain; }
   .form-Calender_Cell-kitDate .btn {
-    color: #ffffff !important;
-    background: #6cb23c !important;
     border-color: #6cb23c !important;
+    background-color: #6cb23c !important;
+    color:#ffffff !important;
     opacity: 1 !important; }
+  .cargo-Select .form-Calender_Cell-kitDate .btn {
+    border-color: #999999 !important;
+    background-color: #ffff !important;
+    color:#000000 !important;
+     }
 
 .form-Text {
   margin: 25px 0 8px 0;
@@ -968,8 +1008,7 @@ body {
   padding: 20px 0 30px;
   list-style-type: none;
   background-color: #f2f2f2;
-  border-radius: 10px;
-  display: none; }
+  border-radius: 10px; }
   .form-Button_CharaNene1-list li {
     padding: 5px 0; }
     .form-Button_CharaNene1-list li p {
@@ -1323,7 +1362,7 @@ body {
   text-align: center;
   margin: 0 0 16px; }
 
-.kit-Text_Notice {
+.kit-Text_Notice, .error_Message {
   position: relative;
   border: 1px solid #ff124b;
   margin: 0;
@@ -1333,7 +1372,7 @@ body {
   font-size: 0.875rem;
   color: #ff124b;
   line-height: 24px; }
-  .kit-Text_Notice:before {
+  .kit-Text_Notice:before, .error_Message:before {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1342,9 +1381,12 @@ body {
     height: 55px;
     background: url("../images/step1/chara_3@2x.png") no-repeat center;
     background-size: 100% auto; }
-  .kit-Text_Notice .fa-exclamation-triangle {
+  .kit-Text_Notice .fa-exclamation-triangle, .error_Message .fa-exclamation-triangle {
     font-size: 20px;
     font-size: 1.25rem; }
+.error_Message {
+  text-align:left !important;
+  margin:1em 0; }
 
 .kit-Subtitle_Notice {
   margin: 0 10px 0 0;
@@ -1572,6 +1614,23 @@ body {
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.71429; }
+
+.modal-Help-assess {
+  padding: 30px; }
+  .modal-Help-assess .modaal-content-container {
+    width: 310px; }
+.modal-help-assessText {
+  display: block;
+  width: 255px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71429;
+  margin-bottom:0; }
+  .modal-help-assessText em {
+    font-weight:bold;
+    display:block; }
+    .modal-help-assessText em span {
+      color:#FB074D; }
 
 .modal-Field_Wrapper {
   display: flex;
@@ -1967,6 +2026,9 @@ body {
   height: 40px;
   padding: 8px 0 0 5px; }
 
+.u-mt--10 {
+  margin-top: -10px !important; }
+
 .u-mt-0 {
   margin-top: 0 !important; }
 
@@ -2132,6 +2194,9 @@ body {
 .u-mb-36 {
   margin-bottom: 36px !important; }
 
+.u-mb-70 {
+  margin-bottom: 70px !important; }
+
 .u-ml-0 {
   margin-left: 0 !important; }
 
@@ -2260,5 +2325,17 @@ body {
 .js_tab_current_content {
   display: block; }
 
+#cv-top {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:20px; }
+#cv-left {
+  position:fixed;
+  top:0;
+  left:0;
+  width:20px;
+  height:100vh; }
 
 /*# sourceMappingURL=style.css.map*/

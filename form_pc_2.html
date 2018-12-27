@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -8,7 +9,6 @@
   <link href="css/vendor.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-
   <script src="js/vendor.js"></script>
 </head>
 <body>
@@ -106,7 +106,6 @@
         <p class="purchase-Summary_Comment">その他商品もまとめて売れます</p>
         <i class="fas fa-chevron-circle-down purchase-Summary_Icon js_purchase_display_btn"></i>
       </div>
-
       <div class="purchase-Container">
         <div class="purchase-Content-1">
           <table class="purchase-Item_Table">
@@ -206,14 +205,14 @@
                   <span class="form-ToggleBtn_Text">
                     ご自宅集荷
                   </span>
-                  <i class="fas fa-chevron-circle-down form-ToggleBtn_Icon"></i>
+                  <i class="fas fa-check form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
                 </label>
                 <label class="btn form-ToggleBtn">
-                  <input type="radio" name="options" autocomplete="off">
+                  <input type="radio" name="options" autocomplete="off" class="js-collapse-radio" data-collapse-target="#collapse-container-shipping-convini">
                   <span class="form-ToggleBtn_Text">
                     コンビニ<br>持ち込み
                   </span>
-                  <i class="fas fa-chevron-circle-right form-ToggleBtn_Icon"></i>
+                  <i class="fas fa-check form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
                 </label>
               </div>
               <div class="form-Radio custom-control custom-radio form-Content_Inner text-right">
@@ -229,9 +228,10 @@
           <div id="collapse-container-shipping-other" style="display: none">
             <div class="sw-SubSection form-Content">
               <h3 class="sw-SubSection_Title mt-0 mb-0 form-Content_Title">ご自宅以外の住所</h3>
-
               <div class="sw-SubSection_Content u-mt-26">
-
+                <div>
+                  <p class="error_Message"><i class="fas fa-exclamation-triangle"></i>「xxx」を選択した場合、「xxxxxx」は必須入力なのにゃ！</p>
+                </div>
                 <div class="form-Field_Wrapper">
                   <div class="form-Field form-Field-half">
                     <label class="form-Field_Label">
@@ -408,7 +408,7 @@
               <div class="sw-SubSection_Content mt-0">
                 <p class="form-Text text-center mt-0">宅配キットより後のお日にちをお選びいただけます</p>
 
-                <div class="form-Calendar u-mb-8">
+                <div class="form-Calendar u-mb-8 cargo-Select">
                   <table class="form-Calender_Table u-mb-18 u-pb-6">
                     <caption class="u-mb-6">2018年11月</caption>
                     <thead>
@@ -539,7 +539,7 @@
                 </div><!-- /.form-Calender -->
 
                 <div class="form-Field_Widget-selectCalender">
-                  <select class="custom-select form-Select form-Select-140 form-Select-optional js-calendar-date-field">
+                  <select class="custom-select form-Select form-Select-140 js-calendar-date-field">
                     <option value="">希望日</option>
                     <option value="2018-11-24">2018-11-24</option>
                     <option value="2018-11-25">2018-11-25</option>
@@ -556,7 +556,7 @@
                     <option value="2018-12-06">2018-12-06</option>
                     <option value="2018-12-07">2018-12-07</option>
                   </select>
-                  <select class="custom-select form-Select form-Select-200 form-Select-optional u-ml-6">
+                  <select class="custom-select form-Select form-Select-200 u-ml-6">
                     <option value="">希望時間帯</option>
                     <option value="1">指定なし</option>
                     <option value="2">午前中</option>
@@ -590,7 +590,7 @@
             </div><!--/.sw-SubSection.form-Content-->
 
             <div class="sw-SubSection form-Content position-relative text-center">
-              <p class="form-Text form-Text_UnderLine d-inline-block u-mt-20">宅配キットのお届け日　2018年10月19日（水）12:00〜14:00</p>
+              <p class="form-Text form-Text_UnderLine d-inline-block u-mt-20">宅配キットのお届け日　2018年10月19日（水）12:00～14:00</p>
               <a href="./form_pc_1.html" class="comfirm-ChangeAnchor comfirm-ChangeAnchor-h40">変更する</a>
             </div><!--/.sw-SubSection.form-Content-->
 
@@ -669,7 +669,7 @@
               <div class="sw-SubSection_Content mt-0">
                 <p class="form-Text text-center mt-0">宅配キットより後のお日にちをお選びいただけます</p>
 
-                <div class="form-Calendar u-mb-8">
+                <div class="form-Calendar u-mb-8 cargo-Select">
                   <table class="form-Calender_Table u-mb-18 u-pb-6">
                     <caption class="u-mb-6">2018年11月</caption>
                     <thead>
@@ -800,7 +800,7 @@
                 </div><!-- /.form-Calender -->
 
                 <div class="form-Field_Widget-selectCalender">
-                  <select class="custom-select form-Select form-Select-140 form-Select-optional js-calendar-date-field">
+                  <select class="custom-select form-Select form-Select-140 js-calendar-date-field">
                     <option value="">希望日</option>
                     <option value="2018-11-24">2018-11-24</option>
                     <option value="2018-11-25">2018-11-25</option>
@@ -817,7 +817,7 @@
                     <option value="2018-12-06">2018-12-06</option>
                     <option value="2018-12-07">2018-12-07</option>
                   </select>
-                  <select class="custom-select form-Select form-Select-200 form-Select-optional u-ml-6">
+                  <select class="custom-select form-Select form-Select-200 u-ml-6">
                     <option value="">希望時間帯</option>
                     <option value="1">指定なし</option>
                     <option value="2">午前中</option>
@@ -851,8 +851,80 @@
             </div><!--/.sw-SubSection.form-Content-->
 
             <div class="sw-SubSection form-Content position-relative text-center">
-              <p class="form-Text form-Text_UnderLine d-inline-block u-mt-20">宅配キットのお届け日 2018年10月19日（水）12:00〜14:00</p>
+              <p class="form-Text form-Text_UnderLine d-inline-block u-mt-20">宅配キットのお届け日 2018年10月19日（水）12:00～14:00</p>
               <a href="./form_pc_1.html" class="comfirm-ChangeAnchor comfirm-ChangeAnchor-h40">変更する</a>
+            </div><!--/.sw-SubSection.form-Content-->
+
+          </div>
+
+          <div id="collapse-container-shipping-convini" style="display: none;">
+            <div class="sw-SubSection form-Content">
+              <h3 class="sw-SubSection_Title form-Content_Title mt-0">送付箱数の目安</h3>
+              <div class="sw-SubSection_Content">
+
+                <div class="form-Field_Widget form-Field_Widget-multi btn-group-toggle u-mb-20" data-toggle="buttons">
+                  <label class="btn form-ToggleBtn form-ToggleBtn-sm">
+                    <input type="radio" name="num-box" autocomplete="off">
+                    <span class="form-ToggleBtn_Text">
+                    2箱
+                  </span>
+                    <i class="fas fa-check form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                  </label>
+                  <label class="btn form-ToggleBtn form-ToggleBtn-sm">
+                    <input type="radio" name="num-box" autocomplete="off">
+                    <span class="form-ToggleBtn_Text">
+                    3箱
+                  </span>
+                    <i class="fas fa-check form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                  </label>
+                  <label class="btn form-ToggleBtn form-ToggleBtn-sm">
+                    <input type="radio" name="num-box" autocomplete="off">
+                    <span class="form-ToggleBtn_Text">
+                    4箱
+                  </span>
+                    <i class="fas fa-check form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                  </label>
+                  <label class="btn form-ToggleBtn form-ToggleBtn-sm">
+                    <input type="radio" name="num-box" autocomplete="off">
+                    <span class="form-ToggleBtn_Text">
+                    5箱
+                  </span>
+                    <i class="fas fa-check form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                  </label>
+                  <label class="btn form-ToggleBtn form-ToggleBtn-sm">
+                    <input type="radio" name="num-box" autocomplete="off" checked>
+                    <span class="form-ToggleBtn_Text">
+                    6箱
+                  </span>
+                    <i class="fas fa-check form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                  </label>
+                </div>
+                <div class="form-Field_Widget form-Field_Widget-boxOther">
+                  <div class="form-Radio custom-control custom-radio">
+                    <input type="radio" id="num-box-other3" name="num-box" class="custom-control-input u-pt-3">
+                    <label class="custom-control-label form-Text form-Text-numBoxOver mt-0" for="num-box-other3">それ以上</label>
+                  </div>
+                  <select class="custom-select form-Select form-Select-120 form-Select-optional u-pb-6">
+                    <option value="7箱">7箱</option>
+                    <option value="8箱">8箱</option>
+                    <option value="9箱">9箱</option>
+                    <option value="10箱">10箱</option>
+                    <option value="11箱">11箱</option>
+                    <option value="12箱">12箱</option>
+                    <option value="13箱">13箱</option>
+                    <option value="14箱">14箱</option>
+                    <option value="15箱">15箱</option>
+                    <option value="16箱">16箱</option>
+                    <option value="17箱">17箱</option>
+                    <option value="18箱">18箱</option>
+                    <option value="19箱">19箱</option>
+                    <option value="20箱">20箱</option>
+                  </select>
+                </div>
+
+              </div><!--.sw-SubSection_Content-->
+            </div><!--/.sw-SubSection.form-Content-->
+
             </div><!--/.sw-SubSection.form-Content-->
 
           </div>
@@ -869,13 +941,23 @@
                 <input class="form-control form-InputText form-InputText-190 form-InputText-optional" type="text" placeholder="">
               </div>
             </div>
+            <div>
+              <p class="error_Message"><i class="fas fa-exclamation-triangle"></i>「xxx」を選択した場合、「xxxxxx」は必須入力なのにゃ！</p>
+            </div>
+
             <p class="form-Text text-center u-mt-7">買取1.5倍キャンぺーン</p>
 
           </div><!--/.sw-SubSection.form-Content-->
 
           <hr class="sw-Section_Hr">
 
-          <div class="form-Submit u-mt-70">
+          <div class="sw-SubSection form-Content u-mt-27 u-mb-70">
+            <div>
+              <p class="error_Message"><i class="fas fa-exclamation-triangle"></i>「xxx」を選択した場合、「xxxxxx」は必須入力なのにゃ！</p>
+            </div>
+          </div>
+
+          <div class="form-Submit">
             <div class="form-Submit_wrapper">
               <span class="form-Button_Chara form-Button_Chara-moe1 u-mr-28">
                 <button type="submit" class="btn btn-block form-Button">
@@ -886,13 +968,13 @@
               </span>
 
               <div class="form-Button_Chara form-Button_Chara-nene1">
-                <button type="button" class="btn btn-block form-Button form-Button-orange">
+                <button type="submit" class="btn btn-block form-Button form-Button-orange">
                   初めての買取は<br>
                   <span class="form-Button_SubText">こちらから！</span>
                   <span class="form-Button_Icon form-Button_Icon-new"><i class="fas fa-chevron-circle-down"></i></span>
                 </button>
 
-                <ul class="form-Button_CharaNene1-list form-Content-hide">
+                <ul class="form-Button_CharaNene1-list">
                   <li class="form-Button_CharaNene1-list--text">
                     <p>外部IDでログイン</p>
                   </li>
@@ -940,11 +1022,38 @@
 </main><!--./sw-Main-->
 <footer class="sw-Footer sw-Footer-mb20 u-pr-30">
   <p class="sw-Footer_PermitNumber">
-    リネットジャパングループ株式会社古物商許可番号 541050100100 愛知県公安委員会許可<small class="sw-Footer_Copyright">Copyright © ReNet Japan Group,inc.</small>
+    リネットジャパングループ株式会社古物商許可番号 541050100100 愛知県公安委員会許可<small class="sw-Footer_Copyright">Copyright c ReNet Japan Group,inc.</small>
   </p>
 </footer>
 
-<script src="js/site.js"></script>
+<div id="modal-Recommend" class="modal-Template">
+  <div class="modal-Recommend_Header">
+    <p class="modal-Recommend_HeaderText">売るなら今です！</p>
+  </div>
 
+  <div class="modal-Recommend_Content">
+    <p class="modal-Recommend_Text modal-Recommend_Text-1">
+      フィギュアの価格は、発売後、<br>
+      毎週値下がりしてしまいます。<br>
+      今が最高値の可能性が高いです。<br>
+      <span class="modal-Recommend_Text-emphasis">売るなら今です！</span><br>
+    </p>
+    <p class="modal-Recommend_Text modal-Recommend_Text-2">ぜひこのまま<br>買取お申し込みにお進みください。</p>
+  </div>
+
+  <div class="form-Submit modal-Recommend_Submit">
+    <button type="submit" class="btn btn-block form-Button">
+      <i class="fas fa-chevron-circle-left form-Button_Icon form-Button_Icon-prev"></i>
+      申込に戻る
+    </button>
+  </div>
+</div><!--モダール表示　（売るなら今です）ここまで-->
+
+<div id="cv-top"></div>
+<div id="cv-left"></div>
+<script src="js/site.js"></script>
+<script>
+  $(document).separationPopup();
+</script>
 </body>
 </html>

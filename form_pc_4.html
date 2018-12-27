@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -320,12 +321,39 @@
 
 <footer class="sw-Footer u-pr-30">
   <p class="sw-Footer_PermitNumber">
-    リネットジャパングループ株式会社古物商許可番号 541050100100 愛知県公安委員会許可<small class="sw-Footer_Copyright">Copyright © ReNet Japan Group,inc.</small>
+    リネットジャパングループ株式会社古物商許可番号 541050100100 愛知県公安委員会許可<small class="sw-Footer_Copyright">Copyright c ReNet Japan Group,inc.</small>
   </p>
 </footer>
 
-<script src="js/site.js"></script>
+<div id="modal-Recommend" class="modal-Template">
+  <div class="modal-Recommend_Header">
+    <p class="modal-Recommend_HeaderText">売るなら今です！</p>
+  </div>
 
+  <div class="modal-Recommend_Content">
+    <p class="modal-Recommend_Text modal-Recommend_Text-1">
+      フィギュアの価格は、発売後、<br>
+      毎週値下がりしてしまいます。<br>
+      今が最高値の可能性が高いです。<br>
+      <span class="modal-Recommend_Text-emphasis">売るなら今です！</span><br>
+    </p>
+    <p class="modal-Recommend_Text modal-Recommend_Text-2">ぜひこのまま<br>買取お申し込みにお進みください。</p>
+  </div>
+
+  <div class="form-Submit modal-Recommend_Submit">
+    <button type="submit" class="btn btn-block form-Button">
+      <i class="fas fa-chevron-circle-left form-Button_Icon form-Button_Icon-prev"></i>
+      申込に戻る
+    </button>
+  </div>
+</div><!--モダール表示　（売るなら今です）ここまで-->
+
+<div id="cv-top"></div>
+<div id="cv-left"></div>
+<script src="js/site.js"></script>
+<script>
+  $(document).separationPopup();
+</script>
 </body>
 </html>
 

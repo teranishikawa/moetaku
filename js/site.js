@@ -14,19 +14,6 @@
     });
   });
 
-
-  // form-Button_Chara-nene1
-  $($('.form-Button_Chara-nene1').children("button")).click(function (e) {
-    var $hide_content = $('.form-Button_CharaNene1-list');
-    $($hide_content).slideToggle(500);
-
-    if($('i', this).hasClass('fa-chevron-circle-down')){
-      $('i', this).removeClass('fa-chevron-circle-down').addClass('fa-times-circle');
-    }else{
-      $('i', this).addClass('fa-chevron-circle-down').removeClass('fa-times-circle');
-    }
-  });
-
   // purchase-Detailの表示表示の操作
   $('.purchase-Summary').click(function (e) {
     var $hide_content = $('.purchase-Container');
@@ -81,7 +68,21 @@
 
   });
 
-  $.fn.separationPopup = function() {
+  $('li.kit-List_Item select').on('change',function(){
+    var sumKit = 0;
+    $('li.kit-List_Item select').each(function(){
+        sumKit += parseInt($(this).val());
+    });
+    $('.kit-Sum_TotalValue').html(sumKit);
+  });
+
+  $.fn.separationPopup = function(bPopstate = false) {
+    $(document).on('click', 'a', function(e) {
+      $(window).off("beforeunload");
+    });
+    $(document).on('submit', function(e) {
+      $(window).off("beforeunload");
+    });
     var option = {
       type: 'inline',
       content_source: '#modal-Recommend',
@@ -89,34 +90,52 @@
       width: 540
     };
     var popup = $('<div />').modaal(option);
-    var opened = false;
-    var opened2 = false;
-    $(document).on('mouseleave', 'body', function(){
-      if (!opened2) {
-        popup.modaal('open');
-        opened2 = true;
+    var cntBodyon = 0;
+    $(document).on('mouseover', 'body', function(){
+      cntBodyon += 1;
+    });
+    $(document).on('mouseleave', '#cv-top, #cv-left', function(){
+      if(cntBodyon > 1){
+        if($.cookie('cv-opened') !== 'true') {
+          if($('.modaal-wrapper').length){
+            $('.modaal-wrapper .modaal-close').eq(0).trigger('click');
+          }
+          popup.modaal('open');
+          $.cookie('cv-opened', 'true', { expires: 90 });
+        }
       }
     });
     $(document).on('click', '.modal-Recommend_Submit button', function(){
       popup.modaal('close');
     });
     $(window).on('beforeunload', function(e){
-      popup.modaal('open');
-//      opened = true;
+      if($('.modaal-wrapper').length){
+        $('.modaal-wrapper .modaal-close').eq(0).trigger('click');
+      }
+      if($.cookie('cv-opened') !== 'true') {
+        popup.modaal('open');
+        $.cookie('cv-opened', 'true', { expires: 90 });
+        $(window).off("beforeunload");
+      }
       return '売るなら今です！';
     });
-    history.replaceState('beforeunload', null, null);
-    history.pushState(null, null, null);
-    $(window).on('popstate', function(e){
-      if(!e.originalEvent.state){
-        return;
-      }
-      if(e.originalEvent.state == 'beforeunload'){
-        if (!opened) {
-          popup.modaal('open');
-//          opened = true;
+    if(bPopstate){
+      history.replaceState('beforeunload', null, null);
+      history.pushState(null, null, null);
+      $(window).on('popstate', function(e){
+        if(!e.originalEvent.state){
+          return;
         }
-      }
-    });
+        if(e.originalEvent.state == 'beforeunload'){
+          if($('.modaal-wrapper').length){
+            $('.modaal-wrapper .modaal-close').eq(0).trigger('click');
+          }
+          if($.cookie('cv-opened') !== 'true') {
+            popup.modaal('open');
+            $.cookie('cv-opened', 'true', { expires: 90 });
+          }
+        }
+      });
+    }
   };
 })(jQuery);
