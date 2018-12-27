@@ -1404,9 +1404,7 @@
 <script>
   jQuery(function($){
     $('.form-Text-numBoxOver').on('click',function(){
-console.log($('input.num-box:checked').val());
       $('input.num-box').prop('checked',false).parent('label').removeClass('active');
-console.log($('input.num-box:checked').val());
     });
 
     var modal_hopetime = $('<div />').modaal({
