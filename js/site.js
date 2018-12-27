@@ -76,7 +76,8 @@
     $('.kit-Sum_TotalValue').html(sumKit);
   });
 
-  $.fn.separationPopup = function(bPopstate = false) {
+  $.fn.separationPopup = function(bPopstate) {
+    if(typeof bPopstate === 'undefined') bPopstate = false;
     $(document).on('click', 'a', function(e) {
       $(window).off("beforeunload");
     });

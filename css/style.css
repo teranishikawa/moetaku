@@ -1,6 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans+JP);
+html {
+  overflow-y: scroll;
+}
 body {
-  font-family: Meiryo, 'Hiragino Kaku Gothic ProN', sans-serif; }
+  font-family: Meiryo, 'Hiragino Kaku Gothic ProN', sans-serif;
+}
 
 .btn {
   transition: color 0.1s ease-in-out,background-color 0.1s ease-in-out,border-color 0.1s ease-in-out,box-shadow 0.1s ease-in-out;
@@ -319,7 +323,7 @@ body {
   line-height: 40px;
   color: #000000; }
 .form-Field_Label.twoline{
-  line-height: 20px;
+  line-height: 1.4em;
 }
 .form-Field_Label-custumerQues {
   padding-left: 18px !important;
@@ -586,7 +590,8 @@ body {
   display: block;
   text-align: center; }
   .form-ToggleBtn_Text.larger {
-    font-size: 1rem; }
+    font-size: 1.4rem;
+    line-height: 1.4rem; }
 
 .form-ToggleBtn_Text-sm {
   font-size: 14px;
@@ -713,6 +718,13 @@ body {
   position: absolute;
   top: 10px;
   right: 10px; }
+
+.collectDatetime {
+  background-color: #F1F1F1;
+  padding: 8px 30px 30px;
+  width: 470px;
+  box-sizing: content-box;
+  margin: 20px auto 0; }
 
 .form-Calendar {
   width: 470px;
