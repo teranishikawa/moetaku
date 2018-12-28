@@ -83,10 +83,10 @@
             <div class="sw-SubSection_Content">
 
               <ul class="form-Field_Widget form-Field_Widget-multi btn-group-toggle js_tab" data-toggle="buttons">
-                <li class="u-mr-10">
-                  <label class="btn form-ToggleBtn form-ToggleBtn-sm form-ToggleBtn-width150 u-pl-45">
+                <li class="u-mr-10 js_tab_current_content">
+                  <label class="btn form-ToggleBtn form-ToggleBtn-sm form-ToggleBtn-width150 u-pl-45 active">
                     <input type="radio" name="options" autocomplete="off">
-                    <span class="form-ToggleBtn_Text form-ToggleBtn_Text-sm form-ToggleBtn_Text-marginLeft30">
+                    <span class="larger form-ToggleBtn_Text form-ToggleBtn_Text-sm form-ToggleBtn_Text-marginLeft30">
                         銀行
                       </span>
                     <i class="fas fa-chevron-circle-down form-ToggleBtn_Icon"></i>
@@ -114,44 +114,40 @@
 
             </div><!-- /.sw-SubSection_Content -->
 
-            <div class="js_tab_content">
+            <div class="js_tab_content js_tab_current_content">
 
               <div class="form-Field">
                 <label class="form-Field_Label u-pr-6">
                   よくある銀行
                 </label>
                 <div class="form-Field-selectBank">
-                  <div class="form-Field_Widget form-Field_Widget-multi flex-wrap btn-group-toggle u-mb-5" data-toggle="buttons">
+                  <div class="form-Field_Widget form-Field_Widget-multi flex-wrap btn-group-toggle u-mb-5">
                     <label class="btn form-ToggleBtn comfirm-ToggleBtn form-ToggleBtn-selectBank u-mr-10">
-                      <input type="radio" name="options" autocomplete="off">
-                      <span class="form-ToggleBtn_Text-selectBank">
+                      <input type="radio" name="options" autocomplete="off" onclick="$('#bank_name').val('三菱UFJ銀行')">
+                      <span class="form-Text-selectBank">
                           三菱UFJ銀行
-                        </span>
-                      <i class="fas fa-check form-Radio_Icon form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                      </span>
                     </label>
 
                     <label class="btn form-ToggleBtn comfirm-ToggleBtn form-ToggleBtn-selectBank">
-                      <input type="radio" name="options" autocomplete="off">
-                      <span class="form-ToggleBtn_Text-selectBank">
-                            みずほ銀行
-                          </span>
-                      <i class="fas fa-check form-Radio_Icon form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                      <input type="radio" name="options" autocomplete="off" onclick="$('#bank_name').val('みずほ銀行')">
+                      <span class="form-Text-selectBank">
+                          みずほ銀行
+                      </span>
                     </label>
 
                     <label class="btn form-ToggleBtn comfirm-ToggleBtn form-ToggleBtn-selectBank u-mr-10">
-                      <input type="radio" name="options" autocomplete="off">
-                      <span class="form-ToggleBtn_Text-selectBank">
+                      <input type="radio" name="options" autocomplete="off" onclick="$('#bank_name').val('三井住友銀行')">
+                      <span class="form-Text-selectBank">
                           三井住友銀行
-                        </span>
-                      <i class="fas fa-check form-Radio_Icon form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                      </span>
                     </label>
 
                     <label class="btn form-ToggleBtn comfirm-ToggleBtn form-ToggleBtn-selectBank form-ToggleBtn-mb0">
-                      <input type="radio" name="options" autocomplete="off">
-                      <span class="form-ToggleBtn_Text-selectBank">
-                            りそな銀行
-                          </span>
-                      <i class="fas fa-check form-Radio_Icon form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                      <input type="radio" name="options" autocomplete="off" onclick="$('#bank_name').val('りそな銀行')">
+                      <span class="form-Text-selectBank">
+                          りそな銀行
+                      </span>
                     </label>
                   </div><!-- /.form-Field_Widget -->
                 </div><!-- /.form-Field-selectBank -->
@@ -162,14 +158,16 @@
                   銀行名
                 </label>
                 <div class="form-Field_Widget form-Field_Widget-mr10">
-                  <input class="form-control form-InputText form-InputText-230 form-InputText-optional" type="text" placeholder="古本銀行">
+                  <input id="bank_name" class="form-control form-InputText form-InputText-230 form-InputText-optional" type="text" placeholder="古本銀行">
                 </div>
                 <!-- a.modaalまたは button.modaal 要素でオープン data-modall-xxx にoptionを書く -->
                 <a href="#modal-search-bank"
                    class="btn btn-secondary form-Button-SearchBank form-Button_Text-searchBank form-Button-width150 modaal"
                    data-modaal-custom-class="modal-Bank"
-                   data-modaal-width="540"
-                ><i class="fas fa-chevron-circle-left form-Button_searchBankIcon"></i>銀行名を検索</a>
+                   data-modaal-width="540">
+                  <i class="fas fa-chevron-circle-left form-Button_searchBankIcon"></i>
+                    銀行名を検索
+                </a>
 
                 <div id="modal-search-bank" class="modal-Template">
                   <div class="form-group modal-Field-selectBank">
@@ -211,8 +209,10 @@
                 <a href="#modal-search-bank-branch"
                    class="btn btn-secondary form-Button-SearchBank form-Button_Text-searchBank form-Button-width150 modaal"
                    data-modaal-custom-class="modal-Bank"
-                   data-modaal-width="540"
-                ><i class="fas fa-chevron-circle-left form-Button_searchBankIcon"></i>支店名を検索</a>
+                   data-modaal-width="540">
+                  <i class="fas fa-chevron-circle-left form-Button_searchBankIcon"></i>
+                  支店名を検索
+                </a>
 
                 <div id="modal-search-bank-branch" class="modal-Template">
                   <div class="form-group  modal-Field-selectBank">
