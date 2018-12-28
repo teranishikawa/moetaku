@@ -719,6 +719,13 @@ body {
   top: 10px;
   right: 10px; }
 
+.calender_Panel {
+  background-color: #F1F1F1;
+  padding: 8px 30px;
+  width: 470px;
+  box-sizing: content-box;
+  margin: 20px auto; }
+
 .collectDatetime {
   background-color: #F1F1F1;
   padding: 8px 30px 30px;

@@ -197,6 +197,7 @@
             <script>
               $(':radio[name="options"]').each(function(index){
                 $(this).change(function(){
+                  $(window).off("beforeunload");
                   if (index === 0) {
                     document.location = 'form_pc_2.html';
                   } else {
@@ -342,156 +343,168 @@
 
           <div class="sw-SubSection form-Content">
             <h3 class="sw-SubSection_Title form-Content_Title u-pr-11 u-mb-24">送付希望日時</h3>
-            <div class="form-Content_Inner">
-              <div class="form-Calendar u-mb-28">
-                <table class="form-Calender_Table u-mb-7 u-pb-6">
-                  <caption class="mb-0">2018年11月</caption>
-                  <thead>
-                  <tr class="form-Calender_Row">
-                    <th class="form-Calender_Cell form-Calender_Cell-sun u-pt-5">日</th>
-                    <th class="form-Calender_Cell form-Calender_Cell-mon u-pt-5">月</th>
-                    <th class="form-Calender_Cell form-Calender_Cell-tue u-pt-5">火</th>
-                    <th class="form-Calender_Cell form-Calender_Cell-wed u-pt-5">水</th>
-                    <th class="form-Calender_Cell form-Calender_Cell-thu u-pt-5">木</th>
-                    <th class="form-Calender_Cell form-Calender_Cell-fri u-pt-5">金</th>
-                    <th class="form-Calender_Cell form-Calender_Cell-sat u-pt-5">土</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr class="form-Calender_Row">
-                    <td class="form-Calender_Cell form-Calender_Cell-sun">
-                      <button type="button" class="btn" disabled></button>
-                    </td>
-                    <td class="form-Calender_Cell form-Calender_Cell-mon">
-                      <button type="button" class="btn" disabled></button>
-                    </td>
-                    <td class="form-Calender_Cell form-Calender_Cell-tue">
-                      <button type="button" class="btn" disabled></button>
-                    </td>
-                    <td class="form-Calender_Cell form-Calender_Cell-wed">
-                      <button type="button" class="btn" disabled></button>
-                    </td>
-                    <td class="form-Calender_Cell form-Calender_Cell-thu">
-                      <button type="button" class="btn" disabled>1</button>
-                    </td>
-                    <td class="form-Calender_Cell form-Calender_Cell-fri">
-                      <button type="button" class="btn" data-date="2018-11-2">2</button>
-                    </td>
-                    <td class="form-Calender_Cell form-Calender_Cell-sat">
-                      <button type="button" class="btn" data-date="2018-11-3">3</button>
-                    </td>
-                  </tr>
-                  <tr class="form-Calender_Row">
-                    <td class="form-Calender_Cell form-Calender_Cell-sun">
-                      <button type="button" class="btn" data-date="2018-11-4">4</button>
-                    </td>
-                    <td class="form-Calender_Cell form-Calender_Cell-mon">
-                      <button type="button" class="btn" data-date="2018-11-5">5</button>
-                    </td>
-                    <td class="form-Calender_Cell form-Calender_Cell-tue">
-                      <button type="button" class="btn" data-date="2018-11-6">6</button>
-                    </td>
-                    <td class="form-Calender_Cell form-Calender_Cell-wed">
-                      <button type="button" class="btn" data-date="2018-11-7">7</button>
-                    </td>
-                    <td class="form-Calender_Cell form-Calender_Cell-thu">
-                      <button type="button" class="btn" data-date="2018-11-8">8</button>
-                    </td>
-                    <td class="form-Calender_Cell form-Calender_Cell-fri">
-                      <button type="button" class="btn" data-date="2018-11-9">9</button>
-                    </td>
-                    <td class="form-Calender_Cell form-Calender_Cell-sat">
-                      <button type="button" class="btn" data-date="2018-11-10">10</button>
-                    </td>
-                  </tr>
-                  <tr class="form-Calender_Row">
-                    <td class="form-Calender_Cell form-Calender_Cell-sun">
-                      <button type="button" class="btn" data-date="2018-11-11">11</button>
-                    </td>
-                    <td class="form-Calender_Cell form-Calender_Cell-mon">
-                      <button type="button" class="btn" data-date="2018-11-12">12</button>
-                    </td>
-                    <td class="form-Calender_Cell form-Calender_Cell-tue">
-                      <button type="button" class="btn" data-date="2018-11-13">13</button>
-                    </td>
-                    <td class="form-Calender_Cell form-Calender_Cell-wed form-Calender_Cell-kitDate">
-                      <button type="button" class="btn" data-date="2018-11-14">14</button>
-                    </td>
-                    <td class="form-Calender_Cell form-Calender_Cell-thu">
-                      <button type="button" class="btn" data-date="2018-11-15">15</button>
-                    </td>
-                    <td class="form-Calender_Cell form-Calender_Cell-fri">
-                      <button type="button" class="btn" disabled>16</button>
-                    </td>
-                    <td class="form-Calender_Cell form-Calender_Cell-sat">
-                      <button type="button" class="btn" disabled>17</button>
-                    </td>
-                  </tr>
-                  </tbody>
-
-                </table>
-                <div class="form-Field_Widget-selectCalender">
-                  <select class="custom-select form-Select form-Select-140 js-calendar-date-field">
-                    <option value="">日</option>
-                    <option value="2018-11-2">2018-11-2</option>
-                    <option value="2018-11-3">2018-11-3</option>
-                    <option value="2018-11-4">2018-11-4</option>
-                    <option value="2018-11-5">2018-11-5</option>
-                    <option value="2018-11-6">2018-11-6</option>
-                    <option value="2018-11-7">2018-11-7</option>
-                    <option value="2018-11-8">2018-11-8</option>
-                    <option value="2018-11-9">2018-11-9</option>
-                    <option value="2018-11-10">2018-11-10</option>
-                    <option value="2018-11-11">2018-11-11</option>
-                    <option value="2018-11-12">2018-11-12</option>
-                    <option value="2018-11-13">2018-11-13</option>
-                    <option value="2018-11-14">2018-11-14</option>
-                    <option value="2018-11-15">2018-11-15</option>
-                  </select>
-                  <select class="custom-select form-Select form-Select-200 js-calendar-time-field">
-                    <option value="">時</option>
-                    <option value="1">指定なし</option>
-                    <option value="2">午前中</option>
-                    <option value="3">12:00-14:00</option>
-                    <option value="4">14:00-16:00</option>
-                    <option value="5">16:00-18:00</option>
-                    <option value="6">18:00-20:00</option>
-                  </select>
-                </div>
-                <script>
-                  jQuery(function($){
-                    var modal_hopetime = $('<div />').modaal({
-                      type: 'inline',
-                      content_source: '#modal-HopeTime',
-                      custom_class: 'modal-HopeTime',
-                      width: 310
+            <div class="calender_Panel">
+              <div class="form-Content_Inner">
+                <div class="form-Calendar u-mb-28">
+                  <table class="form-Calender_Table u-mb-7 u-pb-6">
+                    <caption class="mb-0">2018年11月</caption>
+                    <thead>
+                    <tr class="form-Calender_Row">
+                      <th class="form-Calender_Cell form-Calender_Cell-sun u-pt-5">日</th>
+                      <th class="form-Calender_Cell form-Calender_Cell-mon u-pt-5">月</th>
+                      <th class="form-Calender_Cell form-Calender_Cell-tue u-pt-5">火</th>
+                      <th class="form-Calender_Cell form-Calender_Cell-wed u-pt-5">水</th>
+                      <th class="form-Calender_Cell form-Calender_Cell-thu u-pt-5">木</th>
+                      <th class="form-Calender_Cell form-Calender_Cell-fri u-pt-5">金</th>
+                      <th class="form-Calender_Cell form-Calender_Cell-sat u-pt-5">土</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="form-Calender_Row">
+                      <td class="form-Calender_Cell form-Calender_Cell-sun">
+                        <button type="button" class="btn" disabled></button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-mon">
+                        <button type="button" class="btn" disabled></button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-tue">
+                        <button type="button" class="btn" disabled></button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-wed">
+                        <button type="button" class="btn" disabled></button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-thu">
+                        <button type="button" class="btn" disabled>1</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-fri">
+                        <button type="button" class="btn" data-date="2018-11-2">2</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-sat">
+                        <button type="button" class="btn" data-date="2018-11-3">3</button>
+                      </td>
+                    </tr>
+                    <tr class="form-Calender_Row">
+                      <td class="form-Calender_Cell form-Calender_Cell-sun">
+                        <button type="button" class="btn" data-date="2018-11-4">4</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-mon">
+                        <button type="button" class="btn" data-date="2018-11-5">5</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-tue">
+                        <button type="button" class="btn" data-date="2018-11-6">6</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-wed">
+                        <button type="button" class="btn" data-date="2018-11-7">7</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-thu">
+                        <button type="button" class="btn" data-date="2018-11-8">8</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-fri">
+                        <button type="button" class="btn" data-date="2018-11-9">9</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-sat">
+                        <button type="button" class="btn" data-date="2018-11-10">10</button>
+                      </td>
+                    </tr>
+                    <tr class="form-Calender_Row">
+                      <td class="form-Calender_Cell form-Calender_Cell-sun">
+                        <button type="button" class="btn" data-date="2018-11-11">11</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-mon">
+                        <button type="button" class="btn" data-date="2018-11-12">12</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-tue">
+                        <button type="button" class="btn" data-date="2018-11-13">13</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-wed form-Calender_Cell-kitDate">
+                        <button type="button" class="btn" data-date="2018-11-14">14</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-thu">
+                        <button type="button" class="btn" data-date="2018-11-15">15</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-fri">
+                        <button type="button" class="btn" disabled>16</button>
+                      </td>
+                      <td class="form-Calender_Cell form-Calender_Cell-sat">
+                        <button type="button" class="btn" disabled>17</button>
+                      </td>
+                    </tr>
+                    </tbody>
+  
+                  </table>
+                  <div class="form-Field_Widget-selectCalender">
+                    <select class="custom-select form-Select form-Select-140 js-calendar-date-field">
+                      <option value="">日</option>
+                      <option value="2018-11-2">2018-11-2</option>
+                      <option value="2018-11-3">2018-11-3</option>
+                      <option value="2018-11-4">2018-11-4</option>
+                      <option value="2018-11-5">2018-11-5</option>
+                      <option value="2018-11-6">2018-11-6</option>
+                      <option value="2018-11-7">2018-11-7</option>
+                      <option value="2018-11-8">2018-11-8</option>
+                      <option value="2018-11-9">2018-11-9</option>
+                      <option value="2018-11-10">2018-11-10</option>
+                      <option value="2018-11-11">2018-11-11</option>
+                      <option value="2018-11-12">2018-11-12</option>
+                      <option value="2018-11-13">2018-11-13</option>
+                      <option value="2018-11-14">2018-11-14</option>
+                      <option value="2018-11-15">2018-11-15</option>
+                    </select>
+                    <select class="custom-select form-Select form-Select-200 js-calendar-time-field">
+                      <option value="">時</option>
+                      <option value="1">指定なし</option>
+                      <option value="2">午前中</option>
+                      <option value="3">12:00-14:00</option>
+                      <option value="4">14:00-16:00</option>
+                      <option value="5">16:00-18:00</option>
+                      <option value="6">18:00-20:00</option>
+                    </select>
+                  </div>
+                  <script>
+                    jQuery(function($){
+                      var modal_hopetime = $('<div />').modaal({
+                        type: 'inline',
+                        content_source: '#modal-HopeTime',
+                        custom_class: 'modal-HopeTime',
+                        width: 310
+                      });
+                      $('.form-Calendar td button').click(function(e){
+                        var $this = $(this);
+                        if ($this.prop('disabled')) {
+                          return;
+                        }
+                        var date = $this.data('date');
+                        if (!date) {
+                          return;
+                        }
+                        // マークを更新
+                        $('.form-Calendar td').removeClass('form-Calender_Cell-kitDate');
+                        $this.parent('td').addClass('form-Calender_Cell-kitDate');
+  
+                        // フィールドを更新
+                        $('select.js-calendar-date-field').val(date);
+                        modal_hopetime.modaal('open');
+                        $('.modal-HopeTime .modal-HopeTime_Content input[type=radio]').val([$('select.js-calendar-time-field').val()]);
+                      });
+                      $('select.js-calendar-date-field').on('change', function(e){
+                        var date = $(this).val();
+                        if (!date) {
+                          return;
+                        }
+                        // マークを更新
+                        $('.form-Calendar td').removeClass('form-Calender_Cell-kitDate');
+                        $('.form-Calendar [data-date='+date+']').parent('td').addClass('form-Calender_Cell-kitDate');
+                      });
+                      $('input[type=radio][name=hope-time]').on('change',function(){
+                        $('.js-calendar-time-field').val($(this).val());
+                        modal_hopetime.modaal('close');
+                      });
                     });
-                    $('.form-Calendar td button').click(function(e){
-                      var $this = $(this);
-                      if ($this.prop('disabled')) {
-                        return;
-                      }
-                      var date = $this.data('date');
-                      if (!date) {
-                        return;
-                      }
-                      // マークを更新
-                      $('.form-Calendar td').removeClass('form-Calender_Cell-kitDate');
-                      $this.parent('td').addClass('form-Calender_Cell-kitDate');
-
-                      // フィールドを更新
-                      $('select.js-calendar-date-field').val(date);
-                      modal_hopetime.modaal('open');
-                    });
-                    $('input[type=radio][name=hope-time]').on('change',function(){
-                      $('.js-calendar-time-field').val($(this).val());
-                      modal_hopetime.modaal('close');
-                    });
-                  });
-
-                </script>
-              </div><!-- /.form-Calender -->
-            </div><!-- /.form-Content_Inner -->
+  
+                  </script>
+                </div><!-- /.form-Calender -->
+              </div><!-- /.form-Content_Inner -->
+            </div>
           </div><!--/.sw-SubSection.form-Content-->
         </div><!-- .sw-section-Content -->
         <hr  class="sw-Section_Hr">
