@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Description Hear">
+  <title>もえたく</title>
+  <link href="css/vendor.css" rel="stylesheet">
+  <link href="css/style.css?v=0.2" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <script src="js/vendor.js"></script>
+</head>
+<body>
+
+<header class="sw-Header">
+  <div class="sw-Header_Main">
+    <div class="sw-Header_MainInner cf">
+      <h1 class="sw-Header_Logo">
+        <a><img class="sw-Header_LogoImg" src="images/common/header/logo.png" alt="もえたく"></a>
+      </h1>
+      <ol class="sw-Header_FlowList">
+        <li class="sw-Header_FlowItem sw-Header_FlowItem-active">買取情報</li>
+        <li class="sw-Header_FlowItem ">お客様情報</li>
+        <li class="sw-Header_FlowItem">完了</li>
+      </ol>
+    </div>
+  </div>
+</header>
+
+<main class="sw-Main">
+  <form action="form_sp_2.html" method="get">
+    <div class="stageSlide">
+      <div class="slidePanel">
+        <div class="slideInner">
+
+          <div class="welcome-Wrapper">
+            <div class="welcome-Inner">
+              <figure class="welcome-Character">
+                <img src="images/common/header/chara_1@2x.png" alt="もえたくのキャラクター">
+              </figure>
+              <div class="welcome-Copy">
+                <p class="welcome-Copy_Text">もえたく！買取フォームにようこそ！</p>
+                <a class="welcome-Copy_Anchor Help modaal" href="#modal-login"
+                   data-modaal-custom-class="modal-Login">
+                  <span>会員の方、２回目以降の方はこちら</span>
+                  <i class="fas fa-chevron-circle-right"></i>
+                </a>
+              </div>
+            </div>
+            <script>
+              jQuery(function($){
+                var modal_purchase = $('<div />').modaal({
+                  type: 'inline',
+                  content_source: '#modal-Purchase',
+                  custom_class: 'modal-Purchase',
+                });
+                $('.purchase-Summary').click(function(e){
+                  modal_purchase.modaal('open');
+                });
+                $(document).on('click', '.modal-Purchase .purchase-Close_Text', function(){
+                  modal_purchase.modaal('close');
+                });
+              });
+            </script>
+          </div>
+
+          <section class="sw-Section">
+            <header class="sw-Section_Header">
+              <div class="sw-Section_TitleMark sw-Section_TitleMark-step0">
+                <h2 class="sw-Section_Title">事前にお届け！宅配キットの送付（無料）</h2>
+              </div>
+            </header>
+            <div class="sw-Section_Content">
+              <div class="sw-SubSection form-Content">
+                <div class="sw-SubSection_Content-initDis">
+                  <div class="form-Field_Widget form-Field_Widget-multi btn-group-toggle" data-toggle="buttons">
+                    <label class="btn form-ToggleBtn" onClick="$(window).off('beforeunload'); document.location = 'form_sp_2.html';">
+                      <input type="radio" name="options" autocomplete="off">
+                      <span class="form-ToggleBtn_Text">
+                        必要ない
+                      </span>
+                      <i class="fas fa-chevron-circle-right form-ToggleBtn_Icon"></i>
+                    </label>
+                    <label class="btn form-ToggleBtn" onClick="$('.stageSlide').slidePanel('next');">
+                      <input type="radio" name="options" autocomplete="off">
+                      <span class="form-ToggleBtn_Text">
+                        欲しい
+                      </span>
+                      <i class="fas fa-chevron-circle-right form-ToggleBtn_Icon"></i>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="purchase-Wrapper">
+            <div class="purchase-Summary">
+              <table class="purchase-Summary_Table">
+                <tr class="purchase-Summary_Row">
+                  <td class="purchase-Summary_TextCell">買取希望商品：</td>
+                  <td class="purchase-Summary_TotalItems">99点</td>
+                  <td class="purchase-Summary_TextCell">合計買取金額：</td>
+                  <td class="purchase-Summary_TotalPrice">999,300円</td>
+                </tr>
+              </table>
+              <p class="purchase-Summary_Comment">その他商品もまとめて売れます</p>
+              <i class="fas fa-chevron-circle-up purchase-Summary_Icon js_purchase_display_btn"></i>
+            </div>
+          </div><!-- purchase-Wrapper -->
+
+        </div><!--/.slideInner-->
+      </div><!--/.slidePanel-->
+
+      <div class="slidePanel">
+        <div class="slideInner">
+
+          <div class="sw-SubSection form-Content">
+            <h3 class="sw-SubSection_Title form-Content_Title"><span class="kit-Subtitle_Notice">無料!</span><span class="">「もえたく！用宅配キット」のサイズと箱数</span></h3>
+            <p class="kit-Text">緩衝材が同梱されています</p>
+            <ul class="kit-List">
+              <li class="kit-List_Item">
+                <figure class="kit-Img_Unit kit-Img_Unit-large">
+                  <img class="kit-Img kit-Img-large" src="./images/step1/icon-package_large.png" alt="段ボール大">
+                  <figcaption class="kit-Img kit-Img_Title">figma 約32個分</figcaption>
+                </figure>
+                <div class="text-center">
+                  <select class="custom-select form-Select u-wd-27v">
+                    <option value="0">0箱</option>
+                    <option value="1">1箱</option>
+                    <option value="2">2箱</option>
+                    <option value="3">3箱</option>
+                    <option value="4">4箱</option>
+                    <option value="5">5箱</option>
+                    <option value="6">6箱</option>
+                    <option value="7">7箱</option>
+                    <option value="8">8箱</option>
+                    <option value="9">9箱</option>
+                    <option value="10">10箱</option>
+                  </select>
+                </div>
+              </li>
+              <li class="kit-List_Item">
+                <figure class="kit-Img_Unit kit-Img_Unit-medium">
+                  <img class="kit-Img kit-Img-medium" src="./images/step1/icon-package_middle.png" alt="段ボール中">
+                  <figcaption class="kit-Img_Title">figma 約10個分</figcaption>
+                </figure>
+                <div class="text-center">
+                  <select class="custom-select form-Select u-wd-27v">
+                    <option value="0">0箱</option>
+                    <option value="1">1箱</option>
+                    <option value="2">2箱</option>
+                    <option value="3">3箱</option>
+                    <option value="4">4箱</option>
+                    <option value="5">5箱</option>
+                    <option value="6">6箱</option>
+                    <option value="7">7箱</option>
+                    <option value="8">8箱</option>
+                    <option value="9">9箱</option>
+                    <option value="10">10箱</option>
+                  </select>
+                </div>
+              </li>
+              <li class="kit-List_Item">
+                <figure class="kit-Img_Unit kit-Img_Unit-small">
+                  <img class="kit-Img kit-Img-small" src="./images/step1/icon-package_small.png" alt="段ボール小">
+                  <figcaption class="kit-Img_Title kit-Img_Title-small">figma 約4個分</figcaption>
+                </figure>
+                <div class="text-center">
+                  <select class="custom-select form-Select u-wd-27v">
+                    <option value="0">0箱</option>
+                    <option value="1">1箱</option>
+                    <option value="2">2箱</option>
+                    <option value="3">3箱</option>
+                    <option value="4">4箱</option>
+                    <option value="5">5箱</option>
+                    <option value="6">6箱</option>
+                    <option value="7">7箱</option>
+                    <option value="8">8箱</option>
+                    <option value="9">9箱</option>
+                    <option value="10">10箱</option>
+                  </select>
+                </div>
+              </li>
+              <li class="kit-List_Item">
+                <figure class="kit-Img_Unit kit-Img_Unit-only">
+                  <img class="kit-Img kit-Img-only" src="./images/step1/icon-package_only.png" alt="緩衝材のみ">
+                  <figcaption class="kit-Img_Title kit-Img_Title-only"></figcaption>
+                </figure>
+                <div class="text-center">
+                  <select class="custom-select form-Select u-wd-27v">
+                    <option value="0">0箱</option>
+                    <option value="1">1個</option>
+                    <option value="2">2個</option>
+                    <option value="3">3個</option>
+                    <option value="4">4個</option>
+                    <option value="5">5個</option>
+                    <option value="6">6個</option>
+                    <option value="7">7個</option>
+                    <option value="8">8個</option>
+                    <option value="9">9個</option>
+                    <option value="10">10個</option>
+                  </select>
+                </div>
+              </li>
+            </ul>
+
+            <div class="kit-Sum">
+              <span class="kit-Sum_Text">合計<span class="kit-Sum_TotalValue">0</span>個<span class="kit-Sum_SubText">（最大20個まで）</span></span>
+              <div>
+                <p class="error_Message"><i class="fas fa-exclamation-triangle"></i>「xxx」を選択した場合、「xxxxxx」は必須入力なのにゃ！</p>
+              </div>
+            </div>
+
+            <div class="form-Submit">
+              <p class="btn btn-block form-Button" onClick="$('.stageSlide').slidePanel('next');">
+                次へ
+                <span class="form-Button_Icon"><i class="fas fa-chevron-circle-right"></i></span>
+              </p>
+              <a onClick="$('.stageSlide').slidePanel('prev');" class="slidePrev">
+                <i class="fas fa-chevron-circle-left"></i>
+                戻る
+              </a>
+            </div>
+          </div><!--/.sw-SubSection.form-Content-->
+
+        </div><!--/.slideInner-->
+      </div><!--/.slidePanel-->
+
+      <div class="slidePanel">
+        <div class="slideInner">
+
+          <div class="sw-SubSection form-Content">
+            <h3 class="sw-SubSection_Title form-Content_Title">お届け先の郵便番号</h3>
+
+            <div class="form-Content_Inner text-center">
+              <div class="form-Field u-mb-0">
+                <div class="form-Field_Widget">
+                  <input class="js-collapse-zip form-control form-InputText u-wd-53v u-mb-3v" type="text" placeholder="1234567" data-collapse-target="#collapse-container-shipping-calender">
+                </div>
+              </div>     
+            </div>
+
+            <!--エラー表示の場合
+            <div class="form-Content_Inner text-center">
+              <div class="form-Field_Widget d-inline-block">
+                <input class="js-collapse-zip form-control form-InputText u-wd-53v u-mb-3v form-InputText-error" type="text" placeholder="1234567" data-collapse-target="#collapse-container-shipping-calender">
+              </div>
+            </div>
+            -->
+
+            <script>
+              jQuery(function($){
+                $('.js-collapse-zip').on('keyup', function(e){
+                  var tgt = $($(this).data('collapseTarget'));
+                  if(tgt.css('display') == 'none'){
+                    switch(e.which){
+                      case 37: // ←
+                      case 39: // →
+                      case 36: // HOME
+                      case 35: // END
+                      case 16: // SHIFT
+                        return false;
+                      break;
+                      default:
+                        if($(this).val().length >= 7){
+                          $('.stageSlide').removeAttr('style').css('height','auto');
+                          tgt.slideDown('fast',function(){
+                            $('.stageSlide').slidePanel('adjust');
+                          });
+                        }
+                    }
+                  }
+                });
+              });
+            </script>
+
+            <div class="text-center">
+              <a href="#dummy"><span class="form-Text"><span class="form-Text_UnderLine d-inline-block">郵便番号がご不明な方</span><i class="fas fa-chevron-circle-right u-ml-1v"></i></span></a>
+            </div>
+          </div><!-- /.sw-SubSection form-Content-->
+
+          <div class="sw-SubSection form-Content" id="collapse-container-shipping-calender" style="display:none">
+            <h3 class="sw-SubSection_Title form-Content_Title u-mt-8v">お届けのご希望日をお選びください</h3>
+
+            <div class="form-Content_Inner u-mt--2v">
+              <div class="form-Calendar">
+                <p class="caption">2018年11月</p>
+                <table class="form-Calender_Table u-mt-0">
+                  <thead>
+                  <tr class="form-Calender_Row">
+                    <th class="form-Calender_Cell form-Calender_Cell-sun">日</th>
+                    <th class="form-Calender_Cell form-Calender_Cell-mon">月</th>
+                    <th class="form-Calender_Cell form-Calender_Cell-tue">火</th>
+                    <th class="form-Calender_Cell form-Calender_Cell-wed">水</th>
+                    <th class="form-Calender_Cell form-Calender_Cell-thu">木</th>
+                    <th class="form-Calender_Cell form-Calender_Cell-fri">金</th>
+                    <th class="form-Calender_Cell form-Calender_Cell-sat">土</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr class="form-Calender_Row">
+                    <td class="form-Calender_Cell form-Calender_Cell-sun">
+                      <button type="button" class="btn" disabled></button>
+                    </td>
+                    <td class="form-Calender_Cell form-Calender_Cell-mon">
+                      <button type="button" class="btn" disabled></button>
+                    </td>
+                    <td class="form-Calender_Cell form-Calender_Cell-tue">
+                      <button type="button" class="btn" disabled></button>
+                    </td>
+                    <td class="form-Calender_Cell form-Calender_Cell-wed">
+                      <button type="button" class="btn" disabled></button>
+                    </td>
+                    <td class="form-Calender_Cell form-Calender_Cell-thu">
+                      <button type="button" class="btn" disabled>1</button>
+                    </td>
+                    <td class="form-Calender_Cell form-Calender_Cell-fri">
+                      <button type="button" class="btn" data-date="2018-11-2">2</button>
+                    </td>
+                    <td class="form-Calender_Cell form-Calender_Cell-sat">
+                      <button type="button" class="btn" data-date="2018-11-3">3</button>
+                    </td>
+                  </tr>
+                  <tr class="form-Calender_Row">
+                    <td class="form-Calender_Cell form-Calender_Cell-sun">
+                      <button type="button" class="btn" data-date="2018-11-4">4</button>
+                    </td>
+                    <td class="form-Calender_Cell form-Calender_Cell-mon">
+                      <button type="button" class="btn" data-date="2018-11-5">5</button>
+                    </td>
+                    <td class="form-Calender_Cell form-Calender_Cell-tue">
+                      <button type="button" class="btn" data-date="2018-11-6">6</button>
+                    </td>
+                    <td class="form-Calender_Cell form-Calender_Cell-wed">
+                      <button type="button" class="btn" data-date="2018-11-7">7</button>
+                    </td>
+                    <td class="form-Calender_Cell form-Calender_Cell-thu">
+                      <button type="button" class="btn" data-date="2018-11-8">8</button>
+                    </td>
+                    <td class="form-Calender_Cell form-Calender_Cell-fri">
+                      <button type="button" class="btn" data-date="2018-11-9">9</button>
+                    </td>
+                    <td class="form-Calender_Cell form-Calender_Cell-sat">
+                      <button type="button" class="btn" data-date="2018-11-10">10</button>
+                    </td>
+                  </tr>
+                  <tr class="form-Calender_Row">
+                    <td class="form-Calender_Cell form-Calender_Cell-sun">
+                      <button type="button" class="btn" data-date="2018-11-11">11</button>
+                    </td>
+                    <td class="form-Calender_Cell form-Calender_Cell-mon">
+                      <button type="button" class="btn" data-date="2018-11-12">12</button>
+                    </td>
+                    <td class="form-Calender_Cell form-Calender_Cell-tue">
+                      <button type="button" class="btn" data-date="2018-11-13">13</button>
+                    </td>
+                    <td class="form-Calender_Cell form-Calender_Cell-wed form-Calender_Cell-kitDate">
+                      <button type="button" class="btn" data-date="2018-11-14">14</button>
+                    </td>
+                    <td class="form-Calender_Cell form-Calender_Cell-thu">
+                      <button type="button" class="btn" data-date="2018-11-15">15</button>
+                    </td>
+                    <td class="form-Calender_Cell form-Calender_Cell-fri">
+                      <button type="button" class="btn" disabled>16</button>
+                    </td>
+                    <td class="form-Calender_Cell form-Calender_Cell-sat">
+                      <button type="button" class="btn" disabled>17</button>
+                    </td>
+                  </tr>
+                  </tbody>
+
+                </table>
+                <div class="form-Field_Widget-selectCalender">
+                  <select class="custom-select form-Select u-wd-40v u-mr-1v js-calendar-date-field">
+                    <option value="">日</option>
+                    <option value="2018-11-2">2018-11-2</option>
+                    <option value="2018-11-3">2018-11-3</option>
+                    <option value="2018-11-4">2018-11-4</option>
+                    <option value="2018-11-5">2018-11-5</option>
+                    <option value="2018-11-6">2018-11-6</option>
+                    <option value="2018-11-7">2018-11-7</option>
+                    <option value="2018-11-8">2018-11-8</option>
+                    <option value="2018-11-9">2018-11-9</option>
+                    <option value="2018-11-10">2018-11-10</option>
+                    <option value="2018-11-11">2018-11-11</option>
+                    <option value="2018-11-12">2018-11-12</option>
+                    <option value="2018-11-13">2018-11-13</option>
+                    <option value="2018-11-14">2018-11-14</option>
+                    <option value="2018-11-15">2018-11-15</option>
+                  </select>
+                  <select class="custom-select form-Select u-wd-44v js-calendar-time-field">
+                    <option value="">時</option>
+                    <option value="1">指定なし</option>
+                    <option value="2">午前中</option>
+                    <option value="3">12:00-14:00</option>
+                    <option value="4">14:00-16:00</option>
+                    <option value="5">16:00-18:00</option>
+                    <option value="6">18:00-20:00</option>
+                  </select>
+                </div>
+                <script>
+                  jQuery(function($){
+                    var modal_hopetime = $('<div />').modaal({
+                      type: 'inline',
+                      content_source: '#modal-HopeTime',
+                      custom_class: 'modal-HopeTime'
+                    });
+                    $('.form-Calendar td button').click(function(e){
+                      var $this = $(this);
+                      if ($this.prop('disabled')) {
+                        return;
+                      }
+                      var date = $this.data('date');
+                      if (!date) {
+                        return;
+                      }
+                      // マークを更新
+                      $('.form-Calendar td').removeClass('form-Calender_Cell-kitDate');
+                      $this.parent('td').addClass('form-Calender_Cell-kitDate');
+
+                      // フィールドを更新
+                      $('select.js-calendar-date-field').val(date);
+                      modal_hopetime.modaal('open');
+                      $('.modal-HopeTime .modal-HopeTime_Content input[type=radio]').val([$('select.js-calendar-time-field').val()]);
+                    });
+                    $('select.js-calendar-date-field').on('change', function(e){
+                      var date = $(this).val();
+                      if (!date) {
+                        return;
+                      }
+                      // マークを更新
+                      $('.form-Calendar td').removeClass('form-Calender_Cell-kitDate');
+                      $('.form-Calendar [data-date='+date+']').parent('td').addClass('form-Calender_Cell-kitDate');
+                    });
+                    $('input[type=radio][name=hope-time]').on('change',function(){
+                      $('.js-calendar-time-field').val($(this).val());
+                      modal_hopetime.modaal('close');
+                      $('.sw-Main form').submit();
+                    });
+                  });
+
+                </script>
+              </div><!-- /.form-Calender -->
+            </div><!-- /.form-Content_Inner -->
+
+          </div><!--/.sw-SubSection.form-Content-->
+
+          <div class="sw-SubSection form-Content">
+            <div class="form-Submit">
+              <a onClick="$('.stageSlide').slidePanel('prev');" class="slidePrev">
+                <i class="fas fa-chevron-circle-left"></i>
+                戻る
+              </a>
+            </div>
+          </div><!--/.sw-SubSection.form-Content-->
+
+        </div><!--/.slideInner-->
+      </div><!--/.slidePanel-->
+
+    </div><!--/.stageSlide -->
+  </form>
+</main><!--./sw-Main-->
+
+<div id="modal-login" class="modal-Template">
+  <form action="dummy" method="get">
+    <div class="modal-Field u-mb-6v">
+      <div class="modal-Field_Widget">
+        <input class="form-control form-InputText" type="text" placeholder="ログインID">
+      </div>
+    </div>
+    <div class="modal-Field">
+      <div class="modal-Field_Widget">
+        <input class="form-control form-InputText" type="text" placeholder="パスワード">
+      </div>
+    </div>
+    <div class="modal-Checkbox custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="modal-checkbox-confirm">
+        <label class="custom-control-label form-Text_Confirm" for="modal-checkbox-confirm">
+            ログイン状態を保持する
+        </label>
+    </div>
+    <div class="modal-Submit">
+      <!--<span class="form-Button_Chara form-Button_Chara-moe1">-->
+      <button type="submit" class="btn btn-block form-Button">
+        ログインして進む
+        <span class="form-Button_Icon"><i class="fas fa-chevron-circle-right"></i></span>
+      </button>
+      <!--</span>-->
+    </div>
+    <p class="modal-Text"><a href="#dummy">パスワードを忘れた方はこちら<i class="fas fa-chevron-circle-right modal-Text-ml5"></i></a></p>
+  </form>
+</div><!-- /.modal-Template #modal-help-login -->
+
+<div id="modal-Purchase" class="modal-Template">
+  <div class="purchase-Container">
+    <div class="purchase-Content-1">
+      <table class="purchase-Item_Table">
+        <tr class="purchase-Item_Row">
+          <td class="purchase-Item_Name">Fate/Grand Order バーサーカー/タマモキャット 1/7スケール ABS&PVC製 塗装済み完成品フィギュア</td>
+          <td class="purchase-Item_Price">989,000円</td>
+        </tr>
+        <tr class="purchase-Item_Row">
+          <td class="purchase-Item_Name">K MISSING KINGS 伏見猿比古 1/8 完成品フィギュア</td>
+          <td class="purchase-Item_Price">1,000円</td>
+        </tr>
+        <tr class="purchase-Item_Row">
+          <td class="purchase-Item_Name">G.E.M.シリーズ 鋼の錬金術師 FULLMETAL ALCHEMIST エドワード・エルリック（未開封品）</td>
+          <td class="purchase-Item_Price">2,000円</td>
+        </tr>
+        <tr class="purchase-Item_Row">
+          <td class="purchase-Item_Name">G.E.M.シリーズ remix 斉天大聖 うずまきナルト! 「NARUTO-ナルト-疾風伝」 メガトレショップ＆ジャンプショップ(一部店舗)＆オンラインショップ限定</td>
+          <td class="purchase-Item_Price">3,000円</td>
+        </tr>
+        <tr class="purchase-Item_Row">
+          <td class="purchase-Item_Name">ねんどろいど この世界の片隅に すずさん</td>
+          <td class="purchase-Item_Price">4,000円</td>
+        </tr>
+      </table>
+    </div><!-- purchase-Content-1 -->
+
+    <div class="purchase-Content-2">
+      <h3 class="purchase-Detail_Title">買取金額詳細</h3>
+      <div class="purchase-Content_Inner">
+        <table class="purchase-Detail_Table">
+          <tr class="purchase-Detail_Row">
+            <th class="purchase-Detail_RowTitle">買取金額小計</th>
+            <td class="purchase-Detail_SubtotalNum">5点</td>
+            <td class="purchase-Detail_Price">999,000円</td>
+          </tr>
+          <tr class="purchase-Detail_Row">
+            <th class="purchase-Detail_RowTitle">未開封品10％UP</th>
+            <td class="purchase-Detail_SubtotalNum">1点</td>
+            <td class="purchase-Detail_Price">100円</td>
+          </tr>
+          <tr class="purchase-Detail_Row"><th class="purchase-Detail_RowTitle">ランクアップ</th>
+            <td class="purchase-Detail_SubtotalNum">5点</td>
+            <td class="purchase-Detail_Price">200円</td>
+          </tr>
+          <tr class="purchase-Detail_Row">
+            <th class="purchase-Detail_RowTitle purchase-Detail_RowTitle-total">買取金額合計</th>
+            <td></td>
+            <td class="purchase-Detail_TotalPrice">999,300円</td>
+          </tr>
+        </table>
+      </div><!-- purchase-Content_Inner -->
+    </div><!-- purchase-Content-2 -->
+    <div class="purchase-Close js_purchase_display_btn">
+      <span class="purchase-Close_Text">閉じる</span>
+      <i class="fas fa-times-circle purchase-Close_Icon"></i>
+    </div>
+  </div><!-- purchase-Container -->
+</div><!-- /.modal-Template #modal-help-login -->
+
+<div id="modal-HopeTime" class="modal-Template">
+  <div class="modal-Header">
+    <p class="modal-HeaderText">
+      お届け希望の時間帯を<br>
+      教えてください
+    </p>
+  </div>
+
+  <div class="modal-HopeTime_Content">
+    <form>
+      <div class="modal-RadioBox modal-RadioBox-optional custom-control custom-checkbox modal-HopeTime_RadioBox">
+        <input type="radio" name="hope-time" autocomplete="off" class="custom-control-input" id="hope-time1" value="1">
+        <label class="custom-control-label" for="hope-time1">
+          <span class=" modal-Field_Text-hopeTime">指定なし</span>
+        </label>
+      </div>
+      <div class="modal-RadioBox modal-RadioBox-optional custom-control custom-checkbox modal-HopeTime_RadioBox">
+        <input type="radio" name="hope-time" autocomplete="off" class="custom-control-input" id="hope-time2" value="2">
+        <label class="custom-control-label" for="hope-time2">
+          <span class=" modal-Field_Text-hopeTime">午前中</span>
+        </label>
+      </div>
+      <div class="modal-RadioBox modal-RadioBox-optional custom-control custom-checkbox modal-HopeTime_RadioBox">
+        <input type="radio" name="hope-time" autocomplete="off" class="custom-control-input" id="hope-time3" value="3">
+        <label class="custom-control-label" for="hope-time3">
+          <span class="modal-Field_Text-hopeTime">12:00-14:00</span>
+        </label>
+      </div>
+
+      <div class="modal-RadioBox modal-RadioBox-optional custom-control custom-checkbox modal-HopeTime_RadioBox">
+        <input type="radio" name="hope-time" autocomplete="off" class="custom-control-input" id="hope-time4" value="4">
+        <label class="custom-control-label" for="hope-time4">
+          <span class="modal-Field_Text-hopeTime">14:00-16:00</span>
+        </label>
+      </div>
+      <div class="modal-RadioBox modal-RadioBox-optional custom-control custom-checkbox modal-HopeTime_RadioBox">
+        <input type="radio" name="hope-time" autocomplete="off" class="custom-control-input" id="hope-time5" value="5">
+        <label class="custom-control-label" for="hope-time5">
+          <span class="modal-Field_Text-hopeTime">16:00-18:00</span>
+        </label>
+      </div>
+      <div class="modal-RadioBox modal-RadioBox-optional custom-control custom-checkbox modal-HopeTime_RadioBox">
+        <input type="radio" name="hope-time" autocomplete="off" class="custom-control-input" id="hope-time6" value="6">
+        <label class="custom-control-label" for="hope-time6">
+          <span class="modal-Field_Text-hopeTime">18:00-20:00</span>
+        </label>
+      </div>
+    </form>
+  </div>
+</div><!--モダール表示　（お届け希望時間帯）ここまで-->
+
+<div id="modal-Recommend" class="modal-Template">
+  <div class="modal-Recommend_Header">
+    <p class="modal-Recommend_HeaderText">売るなら今です！</p>
+  </div>
+
+  <div class="modal-Recommend_Content">
+    <p class="modal-Recommend_Text modal-Recommend_Text-1">
+      フィギュアの価格は、発売後、<br>
+      毎週値下がりしてしまいます。<br>
+      今が最高値の可能性が高いです。<br>
+      <span class="modal-Recommend_Text-emphasis">売るなら今です！</span><br>
+    </p>
+    <p class="modal-Recommend_Text modal-Recommend_Text-2">ぜひこのまま<br>買取お申し込みにお進みください。</p>
+  </div>
+
+  <div class="form-Submit modal-Recommend_Submit">
+    <button type="submit" class="btn btn-block form-Button">
+      <i class="fas fa-chevron-circle-left form-Button_Icon form-Button_Icon-prev"></i>
+      申込に戻る
+    </button>
+  </div>
+</div><!--モダール表示　（売るなら今です）ここまで-->
+
+<script src="js/site.js?v=0.2"></script>
+<script>
+  $(document).separationPopup(true);
+</script>
+</body>
+</html>

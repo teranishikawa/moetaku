@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Description Hear">
+  <title>もえたく</title>
+  <link href="css/vendor.css" rel="stylesheet">
+  <link href="css/style.css?v=0.2" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <script src="js/vendor.js"></script>
+</head>
+<body>
+
+<header class="sw-Header">
+  <div class="sw-Header_Main">
+    <div class="sw-Header_MainInner cf">
+      <h1 class="sw-Header_Logo">
+        <a><img class="sw-Header_LogoImg" src="images/common/header/logo.png" alt="もえたく"></a>
+      </h1>
+      <ol class="sw-Header_FlowList">
+        <li class="sw-Header_FlowItem">買取情報</li>
+        <li class="sw-Header_FlowItem">お客様情報</li>
+        <li class="sw-Header_FlowItem sw-Header_FlowItem-active">完了</li>
+      </ol>
+    </div>
+  </div>
+</header>
+
+<main class="sw-Main">
+  <form action="form_sp_5.html" method="get">
+    <div class="stageSlide">
+
+      <div class="slidePanel">
+        <div class="slideInner">
+
+          <section class="thanks-Wrapper">
+            <div class="thanks-Header_Title">
+              <p class="thanks-Header_Text">
+                買取お申し込み<br>ありがとうございました！
+              </p>
+            </div>
+
+            <p class="thanks-Text">
+              お申し込み完了メールを送信しましたので、<br>ご確認をお願いします。
+            </p>
+
+            <div class="thanks-Content thanks-Content-Submit">
+              <div class="thanks-Content_Position">
+              <p class="thanks-Text_Medium">続いて、振り込み情報を<br>ご入力ください。</p>
+
+              <p class="btn btn-block form-Button thanks-Text_Button" onClick="$('.stageSlide').slidePanel('next');">
+                次に進む
+                <span class="form-Button_Icon"><i class="fas fa-chevron-circle-right form-Button_Icon-size18"></i></span>
+              </p>
+
+              <p class="thanks-Text">
+                査定結果が出るまで<br>いつ入力していただいてもOKです。<br>お時間がある方は<br>このままお進みください。
+              </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="thanks-Wrapper">
+            <div class="thanks-Header_Title">
+              <p class="thanks-Header_Text">
+                ありがとうございます！<br>すべてのお申し込み<br>手続きが完了しました！
+              </p>
+            </div>
+
+            <p class="thanks-Text u-pb-4v">
+              お申し込み完了メールを送信しましたので、<br>ご確認をお願いします。
+            </p>
+
+            <div class="thanks-Content u-pt-0 u-pb-0 u-mb-6v">
+              <p class="thanks-Text u-pl-1v">
+                お申し込みのキャンセルにつきましては、<br>お客様センターまで、<br>電話かメールにてご連絡ください。<br>その際には、「お客様のお名前」「電話番号」<br>「買取申込ID」をお知らせください。
+              </p>
+            </div>
+
+            <p class="thanks-Text_Medium u-mb-3v">
+              フィギュアを箱に詰める前に・・・<br>あなたの愛情も一緒に送ってみませんか？
+            </p>
+
+            <figure class="thanks-Banner">
+              <img class="thanks-Banner_1" src="./images/step5/banner_1@2x.png" alt="愛情買取のバナー">
+            </figure>
+            <figure class="thanks-Banner">
+              <img class="thanks-Banner_2" src="./images/step5/banner_2@2x.png" alt="お友達紹介キャンペーンのバナー">
+            </figure>
+          </section>
+
+        </div><!--/.slideInner-->
+      </div><!--/.slidePanel-->
+
+      <div class="slidePanel">
+        <div class="slideInner">
+
+          <section class="sw-Section">
+            <header class="sw-Section_Header u-mb-3v">
+              <div class="sw-Section_TitleMark sw-Section_TitleMark-step6">
+                <h2 class="sw-Section_Title form-Title u-pl-42v">お振り込み情報</h2>
+              </div>
+            </header>
+
+            <div class="sw-Section_Content">
+              <div class="sw-SubSection form-Content">
+                <h3 class="sw-SubSection_Title form-Content_Title">
+                  査定金額の承認方法を教えてください
+                </h3>
+
+                <!-- div>
+                  <p class="error_Message"><i class="fas fa-exclamation-triangle"></i>「xxx」を選択した場合、「xxxxxx」は必須入力なのにゃ！</p>
+                </div -->
+
+                <div class="sw-SubSection_Content u-mt-13v">
+                  <div class="form-Field_Widget form-Field_Widget-multi btn-group-toggle" data-toggle="buttons">
+                    <label class="btn form-ToggleBtn" onClick="$('.stageSlide').slidePanel('next');">
+                      <input type="radio" name="options" autocomplete="off">
+                      <span class="form-ToggleBtn_Text">
+                        すぐにお支払<br>（自動承認）
+                      </span>
+                      <i class="fas fa-chevron-circle-right form-ToggleBtn_Icon"></i>
+                    </label>
+                    <label class="btn form-ToggleBtn" onClick="$('.stageSlide').slidePanel('next');">
+                      <input type="radio" name="options" autocomplete="off">
+                      <span class="form-ToggleBtn_Text">
+                        査定結果を<br>確認して承認
+                      </span>
+                      <i class="fas fa-chevron-circle-right form-ToggleBtn_Icon"></i>
+                    </label>
+                  </div>
+                </div><!--/.sw-SubSection_Content-->
+              </div><!-- /.sw-SubSection .form-Content-->
+            </div>
+          </section>
+
+        </div><!--/.slideInner-->
+      </div><!--/.slidePanel-->
+
+      <div class="slidePanel">
+        <div class="slideInner">
+
+          <div class="sw-SubSection form-Content">
+            <h3 class="sw-SubSection_Title form-Content_Title">振り込み先を教えてください</h3>
+
+            <div class="sw-SubSection_Content u-mt-13v">
+              <ul class="form-Field_Widget form-Field_Widget-multi btn-group-toggle js_tab" data-toggle="buttons">
+                <li class="u-mb-3v js_tab_current_content">
+                  <label class="btn form-ToggleBtn active" onClick="$('.stageSlide').slidePanel('next');">
+                    <input type="radio" name="options" autocomplete="off">
+                    <span class="larger form-ToggleBtn_Text form-ToggleBtn_Text-sm form-ToggleBtn_Text-marginLeft30">
+                      銀行
+                    </span>
+                    <i class="fas fa-chevron-circle-right form-ToggleBtn_Icon"></i>
+                  </label>
+                </li>
+                <li class="u-mb-3v">
+                  <label class="btn form-ToggleBtn" onClick="$('.stageSlide').slidePanel('next');">
+                    <input type="radio" name="options" autocomplete="off">
+                    <span class="form-ToggleBtn_Text form-ToggleBtn_Text-sm">
+                      インターネットバンク
+                    </span>
+                    <i class="fas fa-chevron-circle-right form-ToggleBtn_Icon"></i>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn form-ToggleBtn" onClick="$('.stageSlide').slidePanel('next');">
+                    <input type="radio" name="options" autocomplete="off">
+                    <span class="form-ToggleBtn_Text form-ToggleBtn_Text-sm">
+                      ゆうちょ銀行・<br>郵便局
+                    </span>
+                    <i class="fas fa-chevron-circle-right form-ToggleBtn_Icon"></i>
+                  </label>
+                </li>
+              </ul>
+            </div><!-- /.sw-SubSection_Content -->
+          </div><!-- /.sw-SubSection .form-Content -->
+
+          <div class="page-back u-mt-23v">
+            <a onClick="$('.stageSlide').slidePanel('prev');" class="slidePrev">
+              <i class="fas fa-chevron-circle-left"></i>
+              戻る
+            </a>
+          </div>
+
+        </div><!--/.slideInner-->
+      </div><!--/.slidePanel-->
+
+      <div class="slidePanel">
+        <div class="slideInner">
+
+          <div class="sw-SubSection form-Content">
+            <h3 class="sw-SubSection_Title form-Content_Title">振り込み先の口座情報を教えてください</h3>
+            <div class="sw-SubSection_Content u-mt-0">
+
+              <div class="js_tab_content js_tab_current_content">
+
+                <div class="form-Fields">
+                  <div class="form-Field">
+                    <label class="form-Field_Label">
+                      よくある銀行
+                    </label>
+                    <div class="form-Field-selectBank">
+                      <div class="form-Field_Widget form-Field_Widget-multi flex-wrap btn-group-toggle">
+                        <label class="btn form-ToggleBtn form-ToggleBtn-selectBank">
+                          <input type="radio" name="options" autocomplete="off" onclick="$('#bank_name').val('三菱UFJ銀行')">
+                          <span class="form-Text-selectBank">
+                            三菱UFJ銀行
+                          </span>
+                        </label>
+
+                        <label class="btn form-ToggleBtn form-ToggleBtn-selectBank">
+                          <input type="radio" name="options" autocomplete="off" onclick="$('#bank_name').val('みずほ銀行')">
+                          <span class="form-Text-selectBank">
+                              みずほ銀行
+                          </span>
+                        </label>
+
+                        <label class="btn form-ToggleBtn form-ToggleBtn-selectBank">
+                          <input type="radio" name="options" autocomplete="off" onclick="$('#bank_name').val('三井住友銀行')">
+                          <span class="form-Text-selectBank">
+                            三井住友銀行
+                          </span>
+                        </label>
+
+                        <label class="btn form-ToggleBtn form-ToggleBtn-selectBank">
+                          <input type="radio" name="options" autocomplete="off" onclick="$('#bank_name').val('りそな銀行')">
+                          <span class="form-Text-selectBank">
+                              りそな銀行
+                          </span>
+                        </label>
+                      </div><!-- /.form-Field_Widget -->
+                    </div><!-- /.form-Field-selectBank -->
+                  </div><!-- /.form-Field -->
+                </div>
+
+                <div class="form-Fields">
+                  <div class="form-Field form-Field-half">
+                    <label class="form-Field_Label">
+                      銀行名
+                    </label>
+                    <div class="form-Field_Widget">
+                      <input id="bank_name" class="form-control form-InputText form-InputText-optional" type="text" placeholder="古本銀行">
+                    </div>
+                  </div>
+                  <div class="form-Field form-Field-half">
+                    <div class="form-Field_Widget">
+                      <!-- a.modaalまたは button.modaal 要素でオープン data-modall-xxx にoptionを書く -->
+                      <a href="#modal-search-bank"
+                         class="btn btn-secondary form-Button-SearchBank form-Button_Text-searchBank modaal"
+                         data-modaal-custom-class="modal-Bank">
+                        <i class="fas fa-chevron-circle-left form-Button_searchBankIcon"></i>
+                          銀行名を検索
+                      </a>
+
+                      <div id="modal-search-bank" class="modal-Template modal-Select">
+                        <div class="form-group modal-Field-selectBank">
+                          <label class="col-form-label modal-Field_Label-selectBank">銀行名を入力</label>
+                          <input class="form-control form-InputText form-InputSelectBank form-InputText-optional" type="text" value="">
+                        </div>
+                        <select class="form-control modal-Select-selectBank" size="6">
+                          <option>UFJ銀行</option>
+                          <option>UFJ銀行</option>
+                          <option>UFJ銀行</option>
+                          <option>UFJ銀行</option>
+                          <option>UFJ銀行</option>
+                          <option>UFJ銀行</option>
+                          <option>UFJ銀行</option>
+                          <option>UFJ銀行</option>
+                          <option>UFJ銀行</option>
+                          <option>UFJ銀行</option>
+                          <option>UFJ銀行</option>
+                          <option>UFJ銀行</option>
+                          <option>UFJ銀行</option>
+                          <option>UFJ銀行</option>
+                          <option>UFJ銀行</option>
+                          <option>UFJ銀行</option>
+                        </select>
+                        <div class="text-center">
+                          <button class="btn btn-secondary modal-Bank_Button">選択</button>
+                        </div>
+                      </div><!-- /.modal-Template -->
+                    </div>
+                  </div>
+
+                  <div class="form-Field form-Field-half">
+                    <label class="form-Field_Label">
+                      支店名
+                    </label>
+                    <div class="form-Field_Widget">
+                      <input class="form-control form-InputText form-InputText-optional" type="text" placeholder="古本支店">
+                    </div>
+                  </div>
+                  <div class="form-Field form-Field-half">
+                    <div class="form-Field_Widget">
+
+                      <!-- a.modaalまたは button.modaal 要素でオープン data-modall-xxx にoptionを書く -->
+                      <a href="#modal-search-bank-branch"
+                         class="btn btn-secondary form-Button-SearchBank form-Button_Text-searchBank modaal"
+                         data-modaal-custom-class="modal-Bank">
+                         <i class="fas fa-chevron-circle-left form-Button_searchBankIcon"></i>
+                        支店名を検索
+                      </a>
+
+                      <div id="modal-search-bank-branch" class="modal-Template">
+                        <div class="form-group modal-Field-selectBank">
+                          <label class="col-form-label modal-Field_Label-selectBank">支店名を入力</label>
+                          <input class="form-control form-InputText form-InputText-310 form-InputText-optional" type="text" value="">
+                        </div>
+                        <select class="form-control modal-Select-selectBank" size="6">
+                          <option>UFJ銀行</option>
+                          <option>UFJ銀行</option>
+                          <option>UFJ銀行</option>
+                          <option>UFJ銀行</option>
+                          <option>UFJ銀行</option>
+                          <option>UFJ銀行</option>
+                          <option>UFJ銀行</option>
+                          <option>UFJ銀行</option>
+                          <option>UFJ銀行</option>
+                          <option>UFJ銀行</option>
+                          <option>UFJ銀行</option>
+                          <option>UFJ銀行</option>
+                          <option>UFJ銀行</option>
+                          <option>UFJ銀行</option>
+                          <option>UFJ銀行</option>
+                          <option>UFJ銀行</option>
+                        </select>
+                        <div class="text-center">
+                          <button class="btn btn-secondary modal-Bank_Button">選択</button>
+                        </div>
+                      </div><!-- /.modal-Template -->
+
+                    </div>
+                  </div>
+
+                  <div class="form-Field u-mb-2v">
+                    <label class="form-Field_Label">
+                      口座種類
+                    </label>
+
+                    <div class="form-Field_Widget btn-group-toggle" data-toggle="buttons">
+                      <div class="form-Field_Widget-selectType u-mr-1v u-mt-0">
+                        <label class="btn form-ToggleBtn form-ToggleBtn-selectBank form-ToggleBtn-width86 active form-ToggleBtn-mr10">
+                          <input type="radio" name="options" autocomplete="off">
+                          <span class="form-ToggleBtn_Text-selectBank" checked="checked">
+                            普通
+                          </span>
+                          <i class="fas fa-check form-Radio_Icon form-ToggleBtn_Icon-sm form-ToggleBtn_Icon-check"></i>
+                        </label>
+                      </div>
+                      <div class="form-Field_Widget-selectType u-mt-0">
+                        <label class="btn form-ToggleBtn form-ToggleBtn-selectBank form-ToggleBtn-width86">
+                          <input type="radio" name="options" autocomplete="off">
+                          <span class="form-ToggleBtn_Text-selectBank">
+                            当座
+                          </span>
+                          <i class="fas fa-check form-Radio_Icon form-ToggleBtn_Icon-sm form-ToggleBtn_Icon-check"></i>
+                        </label>
+                      </div>
+                    </div>
+                  </div><!-- /.form-Field -->
+                  <!--</div>-->
+                  <div class="form-Field u-mb-2v">
+                    <label class="form-Field_Label">
+                      口座番号
+                    </label>
+                    <div class="form-Field_Widget">
+                      <input class="form-control form-InputText form-InputText-optional" type="text" placeholder="1234567">
+                    </div>
+                  </div><!-- /.form-Field -->
+
+                  <div class="form-Field u-mb-2v">
+                    <label class="form-Field_Label">
+                      口座名義
+                    </label>
+                    <div class="form-Field_Widget">
+                      <input class="form-control form-InputText form-InputText-optional" type="text" placeholder="フルホンタロウ">
+                    </div>
+                  </div><!-- /.form-Field -->
+                </div>
+
+              </div><!-- /.js_tab_content -->
+
+              <div class="js_tab_content">
+  
+                <div class="form-Fields">
+                  <div class="form-Field-selectBank"><!--インターネットバンク-->
+                    <div class="form-Field_Widget form-Field_Widget-multi flex-wrap btn-group-toggle u-mb-4v" data-toggle="buttons">
+                      <label class="btn form-ToggleBtn form-ToggleBtn-selectBank form-ToggleBtn-selectNetBank">
+                        <input type="radio" name="options" autocomplete="off">
+                        <span class="form-ToggleBtn_Text-selectBank form-Text-selectBank u-l--2v">
+                            ジャパンネット<br>銀行
+                        </span>
+                        <i class="fas fa-check form-Radio_Icon form-ToggleBtn_Icon form-ToggleBtn_Icon-check u-r-1v"></i>
+                      </label>
+
+                      <label class="btn form-ToggleBtn form-ToggleBtn-selectBank form-ToggleBtn-selectNetBank">
+                        <input type="radio" name="options" autocomplete="off">
+                        <span class="form-ToggleBtn_Text-selectBank form-Text-selectBank">
+                              楽天銀行
+                        </span>
+                        <i class="fas fa-check form-Radio_Icon form-ToggleBtn_Icon form-ToggleBtn_Icon-check u-r-1v"></i>
+                      </label>
+                    </div>
+                  </div><!-- /.form-Field-selectBank -->
+
+                  <div class="form-Field">
+                    <label class="form-Field_Label">
+                      支店番号
+                    </label>
+                    <div class="form-Field_Widget">
+                      <input class="form-control form-InputText form-InputText-optional u-wd-41v d-inline-block" type="text" placeholder="123">
+                    </div>
+                  </div>
+
+                  <div class="form-Field">
+                    <label class="form-Field_Label">
+                      口座番号
+                    </label>
+                    <div class="form-Field_Widget">
+                      <input class="form-control form-InputText form-InputText-optional u-wd-41v d-inline-block" type="text" placeholder="1234567">
+                    </div>
+                  </div>
+
+                  <div class="form-Field">
+                    <label class="form-Field_Label">
+                      口座名義
+                    </label>
+                    <div class="form-Field_Widget">
+                      <input class="form-control form-InputText form-InputText-optional u-wd-56v d-inline-block" type="text" placeholder="フルホンタロウ">
+                    </div>
+                  </div>
+                </div>
+  
+              </div> <!-- /.tab_content -->
+
+              <div class="js_tab_content">
+
+                <div class="form-Fields">
+                  <!--ゆうちょ銀行・郵便局-->
+                  <div class="form-Field">
+                    <label class="form-Field_Label">
+                      記号
+                    </label>
+                    <div class="form-Field_Widget">
+                      <input class="form-control form-InputText form-InputText-optional u-wd-41v d-inline-block" type="text" placeholder="12345">
+                    </div>
+                  </div>
+
+                  <div class="form-Field">
+                    <label class="form-Field_Label">
+                      口座番号
+                    </label>
+                    <div class="form-Field_Widget">
+                      <input class="form-control form-InputText form-InputText-optional u-wd-41v d-inline-block" type="text" placeholder="1234567">
+                    </div>
+                  </div>
+
+                  <div class="form-Field">
+                    <label class="form-Field_Label">
+                      口座名義
+                    </label>
+                    <div class="form-Field_Widget">
+                      <input class="form-control form-InputText form-InputText-optional u-wd-56v d-inline-block" type="text" placeholder="フルホンタロウ">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-Submit u-mt-3v">
+                <p class="btn btn-block form-Button" onClick="$('.stageSlide').slidePanel('next');">
+                  次へ
+                  <span class="form-Button_Icon"><i class="fas fa-chevron-circle-right"></i></span>
+                </p>
+                <a onClick="$('.stageSlide').slidePanel('prev');" class="slidePrev">
+                  <i class="fas fa-chevron-circle-left"></i>
+                  戻る
+                </a>
+              </div>
+
+            </div><!-- /.sw-SubSection_Content -->
+          </div><!-- /.sw-SubSection .form-Content -->
+
+        </div><!--/.slideInner-->
+      </div><!--/.slidePanel-->
+
+      <div class="slidePanel">
+        <div class="slideInner">
+
+          <div class="sw-SubSection form-Content">
+            <h3 class="sw-SubSection_Title form-Content_Title u-mb-0">お得意様専用　買取1,500円UPクーポン</h3>
+
+            <div class="sw-SubSection_Content u-mt-5v u-mb-0">
+              <div class="form-Field_Widget form-Field_Widget-multi btn-group-toggle" data-toggle="buttons">
+                <label class="btn form-ToggleBtn active">
+                  <input type="radio" name="options" autocomplete="off" checked="checked">
+                  <span class="form-ToggleBtn_Text">
+                    受け取る
+                  </span>
+                  <i class="fas fa-check form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                </label>
+                <label class="btn form-ToggleBtn">
+                  <input type="radio" name="options" autocomplete="off">
+                  <span class="form-ToggleBtn_Text">
+                    受け取らない
+                  </span>
+                  <i class="fas fa-check form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                </label>
+              </div>
+              <p class="form-Text form-Text_Coupon u-mt-9v u-mb-0">
+                アンケートに答えてくれた<br>方の中から抽選で、<br>
+                追加でさらにクーポン500円UP!
+              </p>
+            </div>
+          </div><!--/.form-Content-->
+
+          <div class="sw-SubSection form-Content">
+            <h3 class="sw-SubSection_Title form-Content_Title u-mt-2v">今回の買取のご利用のきっかけ（複数可）</h3>
+
+            <div class="sw-SubSection_Content mt-0">
+              <div class="form-Content_Inner">
+                <div class="form-Content_Wrapper form-Content_Wrapper_step5">
+                  <div class="form-Checkbox form-Checkbox-multi form-Checkbox-optional custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label form-Field_Label-custumerQues" for="customCheck1">バナー広告</label>
+                  </div>
+                  <div class="form-Checkbox form-Checkbox-multi form-Checkbox-optional custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck2">
+                    <label class="custom-control-label form-Field_Label-custumerQues" for="customCheck2">チラシ</label>
+                  </div>
+                  <div class="form-Checkbox form-Checkbox-multi form-Checkbox-optional custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck3">
+                    <label class="custom-control-label form-Field_Label-custumerQues" for="customCheck3">お気に入り</label>
+                  </div>
+                  <div class="form-Checkbox form-Checkbox-optional custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck4">
+                    <label class="custom-control-label form-Field_Label-custumerQues" for="customCheck4">キーワード検索</label>
+                  </div>
+                  <div class="form-Checkbox form-Checkbox-multi form-Checkbox-optional custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck5">
+                    <label class="custom-control-label form-Field_Label-custumerQues" for="customCheck5">その他</label>
+                  </div>
+                </div>
+                <div class="form-Field_Widget">
+                  <input class="form-control form-InputText form-InputText-470 form-InputText-another form-InputText-optional" type="text">
+                </div>
+              </div>
+            </div>
+          </div><!--/.form-Content-->
+
+          <div class="sw-SubSection form-Content">
+            <h3 class="sw-SubSection_Title form-Content_Title">買取をご利用したことのあるサービス（複数可）</h3>
+
+            <div class="sw-SubSection_Content mt-0 mb-0">
+              <div class="form-Content_Inner form-Content_Wrapper form-Content_Wrapper_step5">
+
+                <div class="form-Checkbox form-Checkbox-multi form-Checkbox-optional custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck6">
+                  <label class="custom-control-label form-Field_Label-custumerQues" for="customCheck6">ブックオフ店舗</label>
+                </div>
+                <div class="form-Checkbox form-Checkbox-multi form-Checkbox-optional custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck7">
+                  <label class="custom-control-label form-Field_Label-custumerQues form-Field_Label-custumerQues-small" for="customCheck7">ブックオフオンライン</label>
+                </div>
+                <div class="form-Checkbox form-Checkbox-multi form-Checkbox-optional custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck8">
+                  <label class="custom-control-label form-Field_Label-custumerQues" for="customCheck8">駿河屋</label>
+                </div>
+                <div class="form-Checkbox form-Checkbox-multi form-Checkbox-optional custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck9">
+                  <label class="custom-control-label form-Field_Label-custumerQues form-Field_Label-custumerQues-small" for="customCheck9">フルイチオンライン</label>
+                </div>
+                <div class="form-Checkbox form-Checkbox-multi form-Checkbox-optional custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck10">
+                  <label class="custom-control-label form-Field_Label-custumerQues" for="customCheck10">Amazon</label>
+                </div>
+                <div class="form-Checkbox form-Checkbox-multi form-Checkbox-optional custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck11">
+                  <label class="custom-control-label form-Field_Label-custumerQues" for="customCheck11">買取王子</label>
+                </div>
+                <div class="form-Checkbox form-Checkbox-multi form-Checkbox-optional custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck12">
+                  <label class="custom-control-label form-Field_Label-custumerQues" for="customCheck12">GEO</label>
+                </div>
+                <div class="form-Checkbox form-Checkbox-multi form-Checkbox-optional custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck13">
+                  <label class="custom-control-label form-Field_Label-custumerQues" for="customCheck13">その他</label>
+                </div>
+                <div class="form-Checkbox form-Checkbox-multi form-Checkbox-optional custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck14">
+                  <label class="custom-control-label form-Field_Label-custumerQues" for="customCheck14">なし</label>
+                </div>
+              </div>
+            </div>
+
+          </div><!--/.form-Content-->
+
+          <div class="sw-SubSection form-Content">
+            <div class="sw-SubSection_Content u-mt-3v">
+
+              <div class="form-Submit u-mt-0">
+                <p class="btn btn-block form-Button" onClick="$('.stageSlide').slidePanel('next');">
+                  次へ
+                  <span class="form-Button_Icon"><i class="fas fa-chevron-circle-right"></i></span>
+                </p>
+                <a onClick="$('.stageSlide').slidePanel('prev');" class="slidePrev">
+                  <i class="fas fa-chevron-circle-left"></i>
+                  戻る
+                </a>
+              </div>
+
+            </div><!-- /.sw-SubSection_Content -->
+          </div><!-- /.sw-SubSection .form-Content -->
+
+        </div><!--/.slideInner-->
+      </div><!--/.slidePanel-->
+
+      <div class="slidePanel">
+        <div class="slideInner">
+
+          <div class="sw-SubSection form-Content">
+            <h3 class="sw-SubSection_Title form-Content_Title u-mb-0">お客様情報</h3>
+
+            <div class="sw-SubSection_Content sw-SubSection_Content_Step5_Cust u-mt-5v">
+              <div class="form-Field_Widget form-Field_Widget-multi btn-group-toggle" data-toggle="buttons">
+                <label class="btn form-ToggleBtn form-ToggleBtn-mr10">
+                  <input type="radio" name="options" autocomplete="off">
+                  <span class="form-ToggleBtn_Text">
+                    男性
+                  </span>
+                  <i class="fas fa-check form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                </label>
+                <label class="btn form-ToggleBtn">
+                  <input type="radio" name="options" autocomplete="off">
+                  <span class="form-ToggleBtn_Text">
+                    女性
+                  </span>
+                  <i class="fas fa-check form-ToggleBtn_Icon form-ToggleBtn_Icon-check"></i>
+                </label>
+              </div>
+              <div class="form-Field u-mt-4v">
+                <label class="form-Field_Label u-mt-8">
+                  職業
+                </label>
+                <!--<div class="form-Field_Widget">-->
+                  <div class="form-Field_Widget u-mt-7">
+                    <select class="custom-select form-Select u-wd-56v form-Select-optional">
+                      <option value="">選択してください</option>
+                      <option value="会社員">会社員</option>
+                      <option value="主婦">主婦</option>
+                      <option value="自営業">自営業</option>
+                      <option value="公務員">公務員</option>
+                      <option value="自由業">自由業</option>
+                      <option value="学生">学生</option>
+                      <option value="その他">その他</option>
+                    </select>
+                  </div>
+                <!--</div>-->
+              </div>
+            </div>
+
+            <div class="sw-SubSection_Content u-mt-0">
+
+          <div class="form-Submit u-mt-8v">
+            <span class="form-Button_Chara form-Button_Chara-nene2">
+              <button type="submit" class="btn btn-block form-Button form-Button-bgOrange u-h-13v">
+                買取情報の入力を完了する
+                <span class="form-Button_Icon"><i class="fas fa-chevron-circle-right"></i></span>
+              </button>
+            </span>
+          </div>
+
+          <div class="page-back u-mt-6v">
+            <a onClick="$('.stageSlide').slidePanel('prev');" class="slidePrev">
+              <i class="fas fa-chevron-circle-left"></i>
+              戻る
+            </a>
+          </div>
+
+            </div><!-- /.sw-SubSection_Content -->
+          </div><!-- /.sw-SubSection .form-Content -->
+
+        </div><!--/.slideInner-->
+      </div><!--/.slidePanel-->
+
+      <div class="slidePanel">
+        <div class="slideInner">
+
+        </div><!--/.slideInner-->
+      </div><!--/.slidePanel-->
+
+    </div><!--/.stageSlide -->
+  </form>
+</main><!--./sw-Main-->
+
+<div id="modal-Recommend" class="modal-Template">
+  <div class="modal-Recommend_Header">
+    <p class="modal-Recommend_HeaderText">売るなら今です！</p>
+  </div>
+
+  <div class="modal-Recommend_Content">
+    <p class="modal-Recommend_Text modal-Recommend_Text-1">
+      フィギュアの価格は、発売後、<br>
+      毎週値下がりしてしまいます。<br>
+      今が最高値の可能性が高いです。<br>
+      <span class="modal-Recommend_Text-emphasis">売るなら今です！</span><br>
+    </p>
+    <p class="modal-Recommend_Text modal-Recommend_Text-2">ぜひこのまま<br>買取お申し込みにお進みください。</p>
+  </div>
+
+  <div class="form-Submit modal-Recommend_Submit">
+    <button type="submit" class="btn btn-block form-Button">
+      <i class="fas fa-chevron-circle-left form-Button_Icon form-Button_Icon-prev"></i>
+      申込に戻る
+    </button>
+  </div>
+</div><!--モダール表示　（売るなら今です）ここまで-->
+
+<script src="js/site.js?v=0.2"></script>
+<script>
+  $(function() {
+    $(".js_tab li").click(function() {
+      var num = $(".js_tab li").index(this);
+      $(".js_tab_content").removeClass('js_tab_current_content');
+      $(".js_tab_content").eq(num).addClass('js_tab_current_content');
+      $(".js_tab li").removeClass('js_tab_current_content');
+
+      $(this).addClass('js_tab_current_content');
+    });
+  });
+  $(document).separationPopup();
+</script>
+</body>
+</html>
