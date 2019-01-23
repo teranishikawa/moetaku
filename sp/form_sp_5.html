@@ -6,7 +6,7 @@
   <meta name="description" content="Description Hear">
   <title>もえたく</title>
   <link href="css/vendor.css" rel="stylesheet">
-  <link href="css/style.css?v=0.2" rel="stylesheet">
+  <link href="css/style.css?v=0.3" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <script src="js/vendor.js"></script>
 </head>
@@ -107,7 +107,23 @@
               <div class="sw-SubSection form-Content">
                 <h3 class="sw-SubSection_Title form-Content_Title">
                   査定金額の承認方法を教えてください
+                  <a href="#modal-help-assess"
+                     class="sw-SubSection_TitleHelp modaal"
+                     data-modaal-custom-class="modal-Help modal-Help-assess">
+                    <i class="fas fa-question-circle u-c-white"></i>
+                  </a>
                 </h3>
+                <div id="modal-help-assess" class="modal-Template">
+                  <div class="modal-Header">
+                    <p class="modal-HeaderText">
+                      査定金額の承認方法
+                    </p>
+                  </div>
+                  <h4 class="modal-Sub-title">すぐにお支払（自動承認）<span class="modal-Text-red">おすすめ</span></h4>
+                  <p class="modal-help-Text">査定完了後すぐにお支払いに入ります。<br>商品詳細の問合せや返送はお受けできません。</p>
+                  <h4 class="modal-Sub-title">査定結果を確認して承認</h4>
+                  <p class="modal-help-Text">メール、マイページで査定結果を確認し、承認後にお支払いに入ります。</p>
+                </div>
 
                 <!-- div>
                   <p class="error_Message"><i class="fas fa-exclamation-triangle"></i>「xxx」を選択した場合、「xxxxxx」は必須入力なのにゃ！</p>

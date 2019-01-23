@@ -1637,9 +1637,10 @@ body {
   display: none; }
 
 .modal-Sub-title{
-  font-size: 4.26vw;
-  line-height: 1.71429;
-  font-weight: bold;}
+  font-size: 4.1vw;
+  line-height: 1.4;
+  font-weight: bold;
+  margin: 1em 0 0.6em; }
 
 .modal-Text-red{
   color:#ff124c}
@@ -1654,31 +1655,27 @@ body {
   padding: 6vw; }
   .modal-Help-shipping .modaal-content-container {
     width: 100%;
-    padding: 11vw 12vw }
+    padding: 11vw 8vw }
 
-.modal-help-shippingText {
-  display: block;
-  width: 100%;
-  font-size: 3vw;
-  letter-spacing: 0.1em;
-  line-height: 1.8em;
-  margin: 0 0 2vw; }
+.modal-Help-parsonal {
+  padding: 6vw; }
+  .modal-Help-parsonal .modaal-content-container {
+    width: 100%;
+    padding: 11vw 6vw }
 
 .modal-Help-assess {
-  padding: 8vw; }
+  padding: 4vw; }
   .modal-Help-assess .modaal-content-container {
-    width: 310px; }
-.modal-help-assessText {
+    width: 100%;
+    padding: 11vw 6vw }
+
+.modal-help-Text {
   display: block;
-  width: 255px;
-  font-size: 3.73vw;
-  line-height: 1.71429;
-  margin-bottom:0; }
-  .modal-help-assessText em {
-    font-weight:bold;
-    display:block; }
-    .modal-help-assessText em span {
-      color:#FB074D; }
+  width: 100%;
+  font-size: 3.6vw;
+  letter-spacing: 0.1em;
+  line-height: 1.6em;
+  margin: 0 0 2vw; }
 
 .modal-Field_Wrapper {
   display: flex;
