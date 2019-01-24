@@ -401,6 +401,10 @@
               <div class="sw-SubSection_Content mt-0">
                 <p class="form-Text text-center mt-0">宅配キットより後のお日にちをお選びいただけます</p>
 
+                <div class="sw-SubSection form-Content position-relative text-center">
+                  <p class="form-Text d-inline-block u-mt-20"><a href="#modal-ChangeCalender" class="modal-Change">宅配キットのお届け日　2018年10月19日（水）12:00～14:00 [変更]</a></p>
+                </div><!--/.sw-SubSection.form-Content-->
+
                 <div class="collectDatetime">
                   <div class="form-Calendar u-mb-8 cargo-Select">
                     <table class="form-Calender_Table u-mb-18 u-pb-6">
@@ -564,10 +568,7 @@
               </div><!--.sw-SubSection_Content-->
             </div><!--/.sw-SubSection.form-Content-->
 
-            <div class="sw-SubSection form-Content position-relative text-center">
-              <p class="form-Text d-inline-block u-mt-20"><a href="#modal-ChangeCalender" class="modal-Change">宅配キットのお届け日　2018年10月19日（水）12:00～14:00</a></p>
-              <a href="#modal-ChangeCalender" class="comfirm-ChangeAnchor comfirm-ChangeAnchor-h40 modal-Change">変更する</a>
-            </div><!--/.sw-SubSection.form-Content-->
+           
 
           </div>
           <div id="collapse-container-shipping-home" style="display: none;">
@@ -643,6 +644,10 @@
 
               <div id="collectCalendar" class="sw-SubSection_Content mt-0">
                 <p class="form-Text text-center mt-0">宅配キットより後のお日にちをお選びいただけます</p>
+
+                <div class="sw-SubSection form-Content position-relative text-center">
+                  <p class="form-Text d-inline-block u-mt-20"><a href="#modal-ChangeCalender" class="modal-Change">宅配キットのお届け日　2018年10月19日（水）12:00～14:00 [変更]</a></p>
+                </div><!--/.sw-SubSection.form-Content-->
 
                 <div class="collectDatetime">
                   <div class="form-Calendar u-mb-8 cargo-Select">
@@ -806,11 +811,6 @@
                 </div><!--.collectDatetime-->
               </div><!--.sw-SubSection_Content-->
 
-            </div><!--/.sw-SubSection.form-Content-->
-
-            <div class="sw-SubSection form-Content position-relative text-center">
-              <p class="form-Text d-inline-block u-mt-20"><a href="#modal-ChangeCalender" class="modal-Change">宅配キットのお届け日 2018年10月19日（水）12:00～14:00</a></p>
-              <a href="#modal-ChangeCalender" class="comfirm-ChangeAnchor comfirm-ChangeAnchor-h40 modal-Change">変更する</a>
             </div><!--/.sw-SubSection.form-Content-->
 
           </div>
@@ -1466,7 +1466,7 @@
       $('.modal-ChangeCalender .modal-DeliveryHopeTime_Content').hide();
       $('.modal-ChangeCalender .modal-CorrectCalender_Content').hide();
       $('.modal-ChangeCalender .modal-CorrectHopeTime_Content').hide();
-      $('.modal-ChangeCalender .modal-HeaderText').html('宅配キットのお届け変更希望日');
+      $('.modal-ChangeCalender .modal-HeaderText').html('宅配キットのお届け希望日');
       $('.modal-ChangeCalender .modal-DeliveryCalender_Content').show();
       return false;
     });
@@ -1489,7 +1489,7 @@
       $('.modal-ChangeCalender .modal-DeliveryCalender_Content select.js-calendar-date-field').val(date);
 
       $('.modal-ChangeCalender .modal-DeliveryCalender_Content').hide();
-      $('.modal-ChangeCalender .modal-HeaderText').html('宅配キットのお届け変更希望時間帯');
+      $('.modal-ChangeCalender .modal-HeaderText').html('宅配キットのお届け希望時間帯');
       $('.modal-ChangeCalender .modal-DeliveryHopeTime_Content').show();
       $('.modal-ChangeCalender .modal-DeliveryHopeTime_Content input[type=radio]').val([$('.modal-ChangeCalender .modal-DeliveryCalender_Content select.js-calendar-time-field').val()]);
     });
@@ -1509,7 +1509,7 @@
       $('.modal-ChangeCalender .modal-DeliveryCalender_Content .js-calendar-time-field').val(val);
 
       $('.modal-ChangeCalender .modal-DeliveryHopeTime_Content').hide();
-      $('.modal-ChangeCalender .modal-HeaderText').html('宅配キットの集荷変更希望日');
+      $('.modal-ChangeCalender .modal-HeaderText').html('集荷希望日');
       $('.modal-ChangeCalender .modal-CorrectCalender_Content').show();
 
       var date = $('.collectDatetime select.js-calendar-date-field').val();
@@ -1539,7 +1539,7 @@
       $('.collectDatetime select.js-calendar-date-field').val(date);
 
       $('.modal-ChangeCalender .modal-CorrectCalender_Content').hide();
-      $('.modal-ChangeCalender .modal-HeaderText').html('宅配キットの集荷変更希望時間帯');
+      $('.modal-ChangeCalender .modal-HeaderText').html('集荷希望の時間帯');
       $('.modal-ChangeCalender .modal-CorrectHopeTime_Content').show();
       $('.modal-ChangeCalender .modal-CorrectHopeTime_Content input[type=radio]').val([$('.modal-ChangeCalender .modal-CorrectCalender_Content select.js-calendar-time-field').val()]);
     });
