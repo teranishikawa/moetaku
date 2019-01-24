@@ -57,7 +57,7 @@
                 $('.purchase-Summary').click(function(e){
                   modal_purchase.modaal('open');
                 });
-                $(document).on('click', '.modal-Purchase .purchase-Close_Text', function(){
+                $(document).on('click', '.modal-Purchase .purchase-Close_Text, .modal-Purchase .purchase-Close_Icon', function(){
                   modal_purchase.modaal('close');
                 });
               });
@@ -74,7 +74,7 @@
               <div class="sw-SubSection form-Content">
                 <div class="sw-SubSection_Content-initDis">
                   <div class="form-Field_Widget form-Field_Widget-multi btn-group-toggle" data-toggle="buttons">
-                    <label class="btn form-ToggleBtn" onClick="$(window).off('beforeunload'); document.location = 'form_sp_2.html';">
+                    <label class="btn form-ToggleBtn" onClick="$(window).off('beforeunload'); setTimeout(function(){document.location = 'form_sp_2.html';}, 100);">
                       <input type="radio" name="options" autocomplete="off">
                       <span class="form-ToggleBtn_Text">
                         必要ない
@@ -231,12 +231,12 @@
         <div class="slideInner">
 
           <div class="sw-SubSection form-Content">
-            <h3 class="sw-SubSection_Title form-Content_Title">お届け先の郵便番号</h3>
+            <h3 class="sw-SubSection_Title form-Content_Title">宅配キット　お届け先の郵便番号</h3>
 
             <div class="form-Content_Inner text-center">
               <div class="form-Field u-mb-0">
                 <div class="form-Field_Widget">
-                  <input class="js-collapse-zip form-control form-InputText u-wd-53v u-mb-3v" type="text" placeholder="1234567" data-collapse-target="#collapse-container-shipping-calender">
+                  <input class="js-collapse-zip form-control form-InputText u-wd-53v u-mb-3v" type="text" placeholder="1234567" data-collapse-target="#collapse-container-shipping-calender" pattern="\d*">
                 </div>
               </div>     
             </div>
@@ -432,11 +432,20 @@
                       // マークを更新
                       $('.form-Calendar td').removeClass('form-Calender_Cell-kitDate');
                       $('.form-Calendar [data-date='+date+']').parent('td').addClass('form-Calender_Cell-kitDate');
+
+                      if($('select.js-calendar-time-field').val() != ""){
+                      setTimeout(function(){$('.sw-Main form').submit();}, 300);
+                      }
+                    });
+                    $('select.js-calendar-time-field').on('change',function(){
+                      if($('select.js-calendar-date-field').val() != ""){
+                      setTimeout(function(){$('.sw-Main form').submit();}, 300);
+                      }
                     });
                     $('input[type=radio][name=hope-time]').on('change',function(){
                       $('.js-calendar-time-field').val($(this).val());
                       modal_hopetime.modaal('close');
-                      $('.sw-Main form').submit();
+                      setTimeout(function(){$('.sw-Main form').submit();}, 300);
                     });
                   });
 
@@ -466,12 +475,12 @@
   <form action="dummy" method="get">
     <div class="modal-Field u-mb-6v">
       <div class="modal-Field_Widget">
-        <input class="form-control form-InputText" type="text" placeholder="ログインID">
+        <input class="form-control form-InputText" type="url" placeholder="ログインID">
       </div>
     </div>
     <div class="modal-Field">
       <div class="modal-Field_Widget">
-        <input class="form-control form-InputText" type="text" placeholder="パスワード">
+        <input class="form-control form-InputText" type="url" placeholder="パスワード">
       </div>
     </div>
     <div class="modal-Checkbox custom-control custom-checkbox">

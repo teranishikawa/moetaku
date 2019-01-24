@@ -4,6 +4,7 @@
 
   // モーダルのデフォルト設定を変更する
   $.fn.modaal.options.overlay_opacity = 0.6;
+  $.fn.modaal.options.animation_speed = 100;
 
   // 複数モーダルのためのイベント処理の修正
   (function(){

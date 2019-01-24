@@ -302,6 +302,7 @@
                   <label class="custom-control-label form-Text form-Text-numBoxOver mt-0" for="num-box-other">それ以上</label>
                 </div>
                 <select class="custom-select form-Select form-Select-120 form-Select-optional">
+                  <option></option>
                   <option value="7箱">7</option>
                   <option value="8箱">8</option>
                   <option value="9箱">9</option>
@@ -337,6 +338,16 @@
                 });
                 $('.sw-Shipping_Boxes select').change(function(){
                   if($('#num-box-other').prop('checked')){
+                    $('.stageSlide').slidePanel('next');
+                  }
+                });
+                $('select.form-Select-optional').change(function(){
+                  if(($this).val() != "" && $('#num-box-other').prop('checked')){
+                    $('.stageSlide').slidePanel('next');
+                  }
+                });
+                $('#num-box-other').change(function(){
+                  if($(this).prop('checked') && $('select.form-Select-optional').val() != ""){
                     $('.stageSlide').slidePanel('next');
                   }
                 });
