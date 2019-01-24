@@ -681,7 +681,7 @@ body {
   display: none; }
 
 .form-Radio .custom-control-label:before {
-  top: 0vw;
+  top: 0.4vw;
   left: -7vw;
   width: 5vw;
   height: 5vw;
@@ -690,10 +690,10 @@ body {
   box-shadow: inset 3px 3px 0.2em rgba(0, 0, 0, 0.1); }
 
 .form-Radio .custom-control-label:after {
-  top: 1vw;
+  top: 1.3vw;
   left: -6vw;
   display: block;
-  width: 3.05vw;
+  width: 3.04vw;
   height: 3.05vw;
   background-image: none;
   background-color: transparent;
