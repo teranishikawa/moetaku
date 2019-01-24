@@ -1142,7 +1142,7 @@
       $('.modal-ChangeCalender .modal-DeliveryHopeTime_Content').hide();
       $('.modal-ChangeCalender .modal-CorrectCalender_Content').hide();
       $('.modal-ChangeCalender .modal-CorrectHopeTime_Content').hide();
-      $('.modal-ChangeCalender .modal-HeaderText').html('宅配キットのお届け変更希望日');
+      $('.modal-ChangeCalender .modal-HeaderText').html('宅配キットのお届け希望日');
       $('.modal-ChangeCalender .modal-DeliveryCalender_Content').show();
       return false;
     });
@@ -1165,7 +1165,7 @@
       $('.modal-ChangeCalender .modal-DeliveryCalender_Content select.js-calendar-date-field').val(date);
 
       $('.modal-ChangeCalender .modal-DeliveryCalender_Content').hide();
-      $('.modal-ChangeCalender .modal-HeaderText').html('宅配キットのお届け変更希望時間帯');
+      $('.modal-ChangeCalender .modal-HeaderText').html('宅配キットのお届け希望時間帯');
       $('.modal-ChangeCalender .modal-DeliveryHopeTime_Content').show();
       $('.modal-ChangeCalender .modal-DeliveryHopeTime_Content input[type=radio]').val([$('.modal-ChangeCalender .modal-DeliveryCalender_Content select.js-calendar-time-field').val()]);
     });
@@ -1185,7 +1185,7 @@
       $('.modal-ChangeCalender .modal-DeliveryCalender_Content .js-calendar-time-field').val(val);
 
       $('.modal-ChangeCalender .modal-DeliveryHopeTime_Content').hide();
-      $('.modal-ChangeCalender .modal-HeaderText').html('宅配キットの集荷変更希望日');
+      $('.modal-ChangeCalender .modal-HeaderText').html('集荷希望日');
       $('.modal-ChangeCalender .modal-CorrectCalender_Content').show();
 
       var date = $('.collectDatetime select.js-calendar-date-field').val();
@@ -1215,7 +1215,7 @@
       $('.collectDatetime select.js-calendar-date-field').val(date);
 
       $('.modal-ChangeCalender .modal-CorrectCalender_Content').hide();
-      $('.modal-ChangeCalender .modal-HeaderText').html('宅配キットの集荷変更希望時間帯');
+      $('.modal-ChangeCalender .modal-HeaderText').html('集荷希望の時間帯');
       $('.modal-ChangeCalender .modal-CorrectHopeTime_Content').show();
       $('.modal-ChangeCalender .modal-CorrectHopeTime_Content input[type=radio]').val([$('.modal-ChangeCalender .modal-CorrectCalender_Content select.js-calendar-time-field').val()]);
     });
