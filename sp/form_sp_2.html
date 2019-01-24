@@ -547,9 +547,9 @@
             <h3 class="sw-SubSection_Title form-Content_Title form-Content_Title_Coupon">クーポンをお待ちの方はご入力ください</h3><span class="form-Text-anyMark">任意</span>
             <div class="form-Field u-mb-3v">
               <div class="form-Field_Widget form-Field_Widget-couponInput">
-                <input class="form-control form-InputText d-inline-block u-wd-29v form-InputText-optional form-InputText_Placeholder-black" type="text" placeholder="MOE">
+                <input class="form-control form-InputText d-inline-block u-wd-29v form-InputText-optional form-InputText_Placeholder-black" type="email" placeholder="MOE">
                 <p class="form-text d-inline-block">-</p>
-                <input class="form-control form-InputText d-inline-block u-wd-51v form-InputText-optional" type="text" placeholder="">
+                <input class="form-control form-InputText d-inline-block u-wd-51v form-InputText-optional" type="number" placeholder="" pattern="\d*">
               </div>
             </div>
             <!-- div>
@@ -562,11 +562,12 @@
           <div class="form-Submit u-mt-8v">
             <div class="form-Submit_wrapper">
               <div class="form-Button_Chara form-Button_Chara-moe1 u-mb-5v">
-                <button type="submit" class="btn btn-block form-Button">
+                <a class="btn btn-block form-Button modaal u-no-underline" href="#modal-login"
+                   data-modaal-custom-class="modal-Login">
                   <em>会員の方</em>
                   <span class="form-Button_SubText">２回目以降はこちらから！</span>
                   <span class="form-Button_Icon form-Button_Icon-member"><i class="fas fa-chevron-circle-right"></i></span>
-                </button>
+                </a>
               </div>
 
               <div class="form-Button_Chara form-Button_Chara-nene1 u-mb-5v">
@@ -1043,8 +1044,37 @@
       </div>
     </form>
   </div><!-- /.modal-CorrectHopeTime_Content -->
-
 </div><!--モダール表示　（変更する）ここまで-->
+
+<div id="modal-login" class="modal-Template">
+  <form action="dummy" method="get">
+    <div class="modal-Field u-mb-6v">
+      <div class="modal-Field_Widget">
+        <input class="form-control form-InputText" type="email" placeholder="ログインID">
+      </div>
+    </div>
+    <div class="modal-Field">
+      <div class="modal-Field_Widget">
+        <input class="form-control form-InputText" type="password" placeholder="パスワード">
+      </div>
+    </div>
+    <div class="modal-Checkbox custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="modal-checkbox-confirm">
+        <label class="custom-control-label form-Text_Confirm" for="modal-checkbox-confirm">
+            ログイン状態を保持する
+        </label>
+    </div>
+    <div class="modal-Submit">
+      <!--<span class="form-Button_Chara form-Button_Chara-moe1">-->
+      <button type="submit" class="btn btn-block form-Button">
+        ログインして進む
+        <span class="form-Button_Icon"><i class="fas fa-chevron-circle-right"></i></span>
+      </button>
+      <!--</span>-->
+    </div>
+    <p class="modal-Text"><a href="#dummy">パスワードを忘れた方はこちら<i class="fas fa-chevron-circle-right modal-Text-ml5"></i></a></p>
+  </form>
+</div><!-- /.modal-Template #modal-help-login -->
 
 <script src="js/site.js?v=0.2"></script>
 <script>

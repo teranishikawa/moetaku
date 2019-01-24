@@ -2314,6 +2314,9 @@ body {
 .js_tab_current_content {
   display: block; }
 
+.u-no-underline {
+  text-decoration:none !important; }
+
 #cv-top {
   position:fixed;
   top:0;
