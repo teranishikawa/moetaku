@@ -342,9 +342,8 @@
                   }
                 });
                 $('select.form-Select-optional').change(function(){
-                  if(($this).val() != "" && $('#num-box-other').prop('checked')){
+                    $('#num-box-other').prop('checked',true);
                     $('.stageSlide').slidePanel('next');
-                  }
                 });
                 $('#num-box-other').change(function(){
                   if($(this).prop('checked') && $('select.form-Select-optional').val() != ""){
