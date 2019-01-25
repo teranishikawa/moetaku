@@ -1614,7 +1614,12 @@ body {
 
 .modaal-container {
   border-radius: 6px;
-  box-shadow: 0 0 16px 8px rgba(0, 0, 0, 0.3); }
+  box-shadow: 0 0 16px 8px rgba(0, 0, 0, 0.3);
+  padding: 0 0 1vw; }
+
+.modaal-content {
+  max-height: 75vh;
+  overflow-y: auto; }
 
 .modaal-close {
   position: absolute;
