@@ -214,7 +214,8 @@ body {
   position: absolute;
   right: 0;
   bottom: -10vw;
-  margin: auto; }
+  margin: auto;
+  z-index: 999; }
   h2 .sw-SubSection_TitleHelp {
     right: 2.5vw;
     bottom: -12vw;
