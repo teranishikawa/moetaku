@@ -9,6 +9,7 @@ body {
 .btn {
   transition: color 0.1s ease-in-out,background-color 0.1s ease-in-out,border-color 0.1s ease-in-out,box-shadow 0.1s ease-in-out;
   padding: 4vw 4vw;
+  position: relative;
 }
 .cf:after {
     content:"";
@@ -778,7 +779,7 @@ body {
     .form-Calender_Cell .btn.selected:after {
       content: "";
       position: absolute;
-      bottom: -1vw;
+      bottom: -2.5vw;
       right: -0.5vw;
       width: 8vw;
       height: 6.5vw;
@@ -2415,6 +2416,19 @@ body {
   text-decoration:none !important; }
 .u-v-hidden {
   visibility: hidden !important; }
+
+.btn.recommend:before{
+  position: absolute;
+  top:-1em;
+  width:5em;
+  height:1.5em;
+  padding:0.5vw 0 0;
+  content:"オススメ";
+  background: #fc0148;
+  color:#fff;
+  font-size:3vw;
+  border-radius: 6px;
+}
 
 #cv-top {
   position:fixed;

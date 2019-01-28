@@ -7,6 +7,7 @@ body {
 }
 
 .btn {
+  position: relative;
   transition: color 0.1s ease-in-out,background-color 0.1s ease-in-out,border-color 0.1s ease-in-out,box-shadow 0.1s ease-in-out;
 }
 
@@ -2363,5 +2364,18 @@ body {
   left:0;
   width:20px;
   height:100vh; }
+
+.btn.recommend:before{
+  position: absolute;
+  top:-1em;
+  width:5em;
+  height:1.5em;
+  padding:2px 0 0;
+  content:"オススメ";
+  background: #fc0148;
+  color:#fff;
+  font-size:11px;
+  border-radius: 4px;
+}
 
 /*# sourceMappingURL=style.css.map*/
