@@ -108,11 +108,13 @@
       slide();
     }
     function slide(){
+      $('.slidePrev').hide();
       _this.attr('data-current',current);
       $("html, body").animate({scrollTop:0}, 'fast', 'swing');
       _this.stop().animate({scrollLeft: $(window).width() * current}, 'fast', function(){
         if(typeof callback !== "undefined") callback();
         $(this).css({height: $(this).find('.slidePanel').eq(current).find('.slideInner').outerHeight() + ($(window).width() * 0.2)});
+        $(this).find('.slidePanel').eq(current).find('.slidePrev').show();
       });
     }
   }
@@ -123,9 +125,15 @@
     }
     _currentWidth = $(window).width()
   });
-
-  $('.slidePrev').each(function(){
-console.log($(this));
+  var timer = false;
+  $(window).on('scroll touchmove',function(){
+    $('.slidePrev').addClass('scroll');
+    if( timer !== false ){
+      clearTimeout( timer );
+    }
+    timer = setTimeout( function(){
+      $('.slidePrev').removeClass('scroll');
+    }, 100 );
   });
 
   $.fn.separationPopup = function(bPopstate) {

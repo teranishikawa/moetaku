@@ -2406,22 +2406,28 @@ body {
   overflow: hidden;
 }
 .slidePrev {
-/*
+  display: none;
+  opacity: 1;
   position: fixed;
   height: 10vw;
   bottom: 10vw;
   left: 2.5vw;
   z-index: 999;
-*/
+/*
   position: absolute;
   top: 0.8vw;
   left: 0;
-
+*/
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius:5px;
   text-decoration: underline !important;
   font-size: 3.4vw;
-  padding: 1em 1em 1em 0;
-  background-color: #fff;
+  padding: 2.5vw;
+  transition: opacity 0.3s ease-out; }
 
-}
+.slidePrev.scroll {
+  opacity: 0.2; }
+
 
 /*# sourceMappingURL=style.css.map*/
