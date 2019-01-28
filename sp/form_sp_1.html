@@ -539,8 +539,11 @@
                       $('.form-Calendar td').removeClass('form-Calender_Cell-kitDate');
                       $('.form-Calendar [data-date='+date+']').parent('td').addClass('form-Calender_Cell-kitDate');
                     });
-                    $('input[type=radio][name=hope-time]').on('change',function(){
-                      $('.js-calendar-time-field').val($(this).val());
+
+                    $(document).on('touchend','.modal-HopeTime .modal-HopeTime_RadioBox label',function(e){
+                      e.preventDefault();
+                      var val = $(this).prev('input[type=radio]').prop('checked',true).val();
+                      $('.js-calendar-time-field').val(val);
                       modal_hopetime.modaal('close');
                     });
                   });
