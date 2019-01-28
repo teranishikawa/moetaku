@@ -780,7 +780,7 @@ body {
     .form-Calender_Cell .btn.selected:after {
       content: "";
       position: absolute;
-      bottom: -2px;
+      bottom: -10px;
       right: -2px;
       width: 33px;
       height: 23px;
@@ -790,7 +790,8 @@ body {
     .form-Calender_Cell .btn:disabled, .form-Calender_Cell .btn:disabled:hover {
       opacity: 0.3;
       color: inherit;
-      border: 2px solid #999999; }
+      border: 2px solid #999999;
+      pointer-events: none; }
 
 .form-Calender_Cell-sun {
   color: #ff124c; }
@@ -2377,5 +2378,42 @@ body {
   font-size:11px;
   border-radius: 4px;
 }
+
+.icon-box:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 33px;
+  height: 23px;
+  margin-top: -1px;
+  margin-left: -38px;
+  margin-right: 5px;
+  background: url(../images/step2/calender-icon-package@2x.png) center center no-repeat;
+  background-size: contain; }
+.icon-box-modal:before {
+  position:relative;
+  top: 11px; }
+.icon-box-modal2:before {
+  position:relative;
+  top: -1px; }
+
+.icon-truck:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 33px;
+  height: 23px;
+  margin-top: -1px;
+  margin-left: -38px;
+  margin-right: 5px;
+  background: url(../images/step2/calender-icon-truck@2x.png) center center no-repeat;
+  background-size: contain; }
+.icon-truck-modal:before {
+  position:relative;
+  top: 11px; }
+.icon-truck-modal2:before {
+  position:relative;
+  top: -1px; }
+
 
 /*# sourceMappingURL=style.css.map*/
