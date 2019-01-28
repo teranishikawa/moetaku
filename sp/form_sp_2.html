@@ -542,7 +542,7 @@
             <h3 class="sw-SubSection_Title form-Content_Title form-Content_Title_Coupon">クーポンをお待ちの方はご入力ください</h3><span class="form-Text-anyMark">任意</span>
             <div class="form-Field u-mb-3v">
               <div class="form-Field_Widget form-Field_Widget-couponInput">
-                <input class="form-control form-InputText d-inline-block u-wd-29v form-InputText-optional form-InputText_Placeholder-black" type="email" placeholder="MOE">
+                <input class="form-control form-InputText d-inline-block u-wd-29v form-InputText-optional form-InputText_Placeholder-black" type="text" placeholder="MOE" pattern="^[A-Za-z]+$" title="アルファベットのみ入力してください">
                 <p class="form-text d-inline-block">-</p>
                 <input class="form-control form-InputText d-inline-block u-wd-51v form-InputText-optional" type="number" placeholder="" pattern="\d*">
               </div>
@@ -1045,7 +1045,7 @@
   <form action="dummy" method="get">
     <div class="modal-Field u-mb-6v">
       <div class="modal-Field_Widget">
-        <input class="form-control form-InputText" type="email" placeholder="ログインID">
+        <input class="form-control form-InputText" type="email" placeholder="ログインID（メールアドレス）">
       </div>
     </div>
     <div class="modal-Field">
