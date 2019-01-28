@@ -6,7 +6,7 @@
   <meta name="description" content="Description Hear">
   <title>もえたく</title>
   <link href="css/vendor.css" rel="stylesheet">
-  <link href="css/style.css?v=0.4" rel="stylesheet">
+  <link href="css/style.css?v=0.5" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <script src="js/vendor.js"></script>
 </head>
@@ -67,7 +67,60 @@
           <section class="sw-Section">
             <header class="sw-Section_Header">
               <div class="sw-Section_TitleMark sw-Section_TitleMark-step0">
-                <h2 class="sw-Section_Title">事前にお届け！宅配キットの送付（無料）</h2>
+                <h2 class="sw-Section_Title">事前にお届け！宅配キットの送付（無料）
+                  <a href="#modal-help-kit"
+                     class="sw-SubSection_TitleHelp modaal"
+                     data-modaal-custom-class="modal-Help modal-Help-kit">
+                    <i class="fas fa-question-circle u-c-gray"></i>
+                  </a>
+                </h2>
+                <div id="modal-help-kit" class="modal-Template">
+                  <p class="modal-help-Text">
+                    「宅配キット」とは、ダンボール箱、緩衝材がセットになった梱包キットです。<br>
+                    ご希望のお客様に、<span class="modal-Text-red">20箱まで無料</span>で届けしております。<br>
+                    <br>
+                    宅配キットは、<span class="modal-Text-red">集荷希望日より前に、事前にお届けいたします</span>ので、ゆっくりと商品を詰めることができます。
+                  </p>
+                  <h4 class="sw-SubSection_Title">キットの大きさ</h4>
+                  <ul class="kit-Size text-center">
+                    <li>
+                      <figure>
+                        <img src="./images/step1/icon-package_large.png" alt="段ボール大">
+                        <figcaption>
+                          <em>ダンボール箱 大サイズ＋緩衝材</em>
+                          よこ61×たて44×奥行き40cm<br>figmaなら約32個入ります 
+                        </figcaption>
+                      </figure>
+                    </li>
+                    <li>
+                      <figure>
+                        <img src="./images/step1/icon-package_middle.png" alt="段ボール中">
+                        <figcaption>
+                          <em>ダンボール箱 中サイズ＋緩衝材 </em>
+                          よこ40×たて33×奥行き24cm<br>figmaなら約10個入ります 
+                        </figcaption>
+                      </figure>
+                    </li>
+                    <li>
+                      <figure>
+                        <img src="./images/step1/icon-package_small.png" alt="段ボール小">
+                        <figcaption>
+                          <em>ダンボール箱 小サイズ＋緩衝材 </em>
+                          よこ33×たて25×奥行き16cm<br>figmaなら約4個入ります 
+                        </figcaption>
+                      </figure>
+                    </li>
+                    <li>
+                      <figure>
+                        <img src="./images/step1/icon-package_only.png" alt="緩衝材のみ">
+                        <figcaption>
+                          <em>緩衝材のみ</em>
+                          よこ120×たて300cm
+                        </figcaption>
+                      </figure>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </header>
             <div class="sw-Section_Content">
@@ -116,7 +169,13 @@
         <div class="slideInner">
 
           <div class="sw-SubSection form-Content">
-            <h3 class="sw-SubSection_Title form-Content_Title"><span class="kit-Subtitle_Notice">無料!</span><span class="">宅配キットのサイズと箱数</span></h3>
+            <h3 class="sw-SubSection_Title form-Content_Title"><span class="kit-Subtitle_Notice">無料!</span><span class="">宅配キットのサイズと箱数</span>
+              <a href="#modal-help-kit"
+                 class="sw-SubSection_TitleHelp modaal"
+                 data-modaal-custom-class="modal-Help modal-Help-kit">
+                <i class="fas fa-question-circle u-c-gray"></i>
+              </a>
+            </h3>
             <p class="kit-Text">緩衝材が同梱されています</p>
             <ul class="kit-List">
               <li class="kit-List_Item">
@@ -479,20 +538,10 @@
                       // マークを更新
                       $('.form-Calendar td').removeClass('form-Calender_Cell-kitDate');
                       $('.form-Calendar [data-date='+date+']').parent('td').addClass('form-Calender_Cell-kitDate');
-
-                      if($('select.js-calendar-time-field').val() != ""){
-                      setTimeout(function(){$('.sw-Main form').submit();}, 300);
-                      }
-                    });
-                    $('select.js-calendar-time-field').on('change',function(){
-                      if($('select.js-calendar-date-field').val() != ""){
-                      setTimeout(function(){$('.sw-Main form').submit();}, 300);
-                      }
                     });
                     $('input[type=radio][name=hope-time]').on('change',function(){
                       $('.js-calendar-time-field').val($(this).val());
                       modal_hopetime.modaal('close');
-                      setTimeout(function(){$('.sw-Main form').submit();}, 300);
                     });
                   });
 
@@ -500,15 +549,17 @@
               </div><!-- /.form-Calender -->
             </div><!-- /.form-Content_Inner -->
 
-          </div><!--/.sw-SubSection.form-Content-->
-
-          <div class="sw-SubSection form-Content">
             <div class="form-Submit">
+              <button type="submit" class="btn btn-block form-Button">
+                次へ
+                <span class="form-Button_Icon"><i class="fas fa-chevron-circle-right"></i></span>
+              </button>
               <a onClick="$('.stageSlide').slidePanel('prev');" class="slidePrev">
                 <i class="fas fa-chevron-circle-left"></i>
                 戻る
               </a>
             </div>
+
           </div><!--/.sw-SubSection.form-Content-->
 
         </div><!--/.slideInner-->

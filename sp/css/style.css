@@ -212,10 +212,13 @@ body {
 
 .sw-SubSection_TitleHelp {
   position: absolute;
-  right: 4vw;
-  top: 0;
-  bottom: 0;
+  right: 0;
+  bottom: -10vw;
   margin: auto; }
+  h2 .sw-SubSection_TitleHelp {
+    right: 2.5vw;
+    bottom: -12vw;
+  }
 
 .sw-SubSection_Content {
   position: relative;
@@ -1675,6 +1678,39 @@ body {
     width: 100%;
     padding: 11vw 6vw }
 
+.modal-Help-kit {
+  padding: 4vw; }
+  .modal-Help-kit .modaal-content-container {
+    width: 100%;
+    padding: 11vw 6vw }
+  .modal-Help-kit .kit-Size {
+    padding: 0;
+    list-style:none; }
+  .modal-Help-kit .kit-Size li {
+    width:100%; }
+  .modal-Help-kit .kit-Size li figure img {
+    display: block;
+    width: 40vw;
+    margin-left: 13vw; }
+
+  .modal-Help-kit .kit-Size li:nth-of-type(3) figure img {
+    width: 35vw;
+    margin-left: 15vw;
+    margin-top: 9vw; }
+  .modal-Help-kit .kit-Size li:nth-of-type(4) figure img {
+    width: 35vw;
+    margin-left: 15vw;
+    margin-top: 6vw; }
+
+  .modal-Help-kit .kit-Size li figcaption {
+    margin: 5.8vw;
+    font-size: 3.6vw;
+    line-height: 1.8em; }
+  .modal-Help-kit .kit-Size li figcaption em {
+    display: block;
+    font-style: normal;
+    font-weight: 900; }
+
 .modal-help-Text {
   display: block;
   width: 100%;
@@ -2193,6 +2229,9 @@ body {
 
 .u-c-white {
   color: #fff !important; }
+.u-c-gray {
+  color: #979797 !important;
+  font-size: 6vw !important; }
 
 .u-l--2v {
   left: -2vw; !important; }
@@ -2308,6 +2347,15 @@ body {
 .u-mb-13v {
   margin-bottom: 13vw !important; }
 
+.b-t-0:before {
+  top: 0 !important; }
+.b-t-06:before {
+  top: 0.6vw !important; }
+.a-t-1v:after {
+  top: 1vw !important; }
+.a-t-1_6:after {
+  top: 1.6vw !important; }
+
 .b-l-28v:before {
   left: 28vw; }
 .b-l-34v:before {
@@ -2358,11 +2406,22 @@ body {
   overflow: hidden;
 }
 .slidePrev {
+/*
+  position: fixed;
+  height: 10vw;
+  bottom: 10vw;
+  left: 2.5vw;
+  z-index: 999;
+*/
   position: absolute;
-  bottom: 0;
+  top: 0.8vw;
   left: 0;
+
   text-decoration: underline !important;
-  font-size: 3vw;
+  font-size: 3.4vw;
+  padding: 1em 1em 1em 0;
+  background-color: #fff;
+
 }
 
 /*# sourceMappingURL=style.css.map*/

@@ -124,6 +124,10 @@
     _currentWidth = $(window).width()
   });
 
+  $('.slidePrev').each(function(){
+console.log($(this));
+  });
+
   $.fn.separationPopup = function(bPopstate) {
     if(typeof bPopstate === 'undefined') bPopstate = false;
     $(document).on('click', 'a', function(e) {
