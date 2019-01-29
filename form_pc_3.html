@@ -244,7 +244,7 @@
 
               <div class="form-Field_Widget form-Field_Widget-multi">
 
-                <select class="custom-select form-Select form-Select-150">
+                <select class="custom-select form-Select form-Select-150 form-Select-birth-year">
                   <option value="">年</option>
                   <option>1980</option>
                   <option>1981</option>
@@ -307,7 +307,16 @@
                   <option>30</option>
                   <option>31</option>
                 </select>
-
+                <script>
+                  $('.form-Select-birth-year').children().remove();
+                  var now = new Date();
+                  var year = now.getFullYear();
+                  $('.form-Select-birth-year').append($('<option value="">年</option>'));
+                  for(i=-100;i<=0;i++){
+                    $('.form-Select-birth-year').append($('<option value="'+(year+i)+'">'+(year+i)+'</option>'));
+                  }
+                  $('.form-Select-birth-year').val(year - 30);
+                </script>
               </div>
             </div><!--/.sw-SubSection_Content-->
           </div><!--/.sw-SubSection.form-Content-->

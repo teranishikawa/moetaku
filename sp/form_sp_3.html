@@ -316,11 +316,11 @@
                         $('.form-Select-birth-year').children().remove();
                         var now = new Date();
                         var year = now.getFullYear();
-                        year -= 30;
                         $('.form-Select-birth-year').append($('<option value="">年</option>'));
-                        for(i=0;i<=100;i++){
+                        for(i=-100;i<=0;i++){
                           $('.form-Select-birth-year').append($('<option value="'+(year+i)+'">'+(year+i)+'</option>'));
                         }
+                        $('.form-Select-birth-year').val(year - 30);
                       </script>
                     </div>
                   </div>
