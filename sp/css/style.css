@@ -2251,6 +2251,7 @@ body {
   vertical-align: middle;
   width: 8vw;
   height: 6.5vw;
+  margin-top: -0.5vw;
   margin-left: -8vw;
   margin-right: 1vw;
   background: url(../images/step2/calender-icon-truck@2x.png) center center no-repeat;
