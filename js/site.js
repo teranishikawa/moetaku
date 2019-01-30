@@ -79,6 +79,9 @@
     if($('i', this).hasClass('fa-chevron-circle-down')){
       $('i', this).removeClass('fa-chevron-circle-down').addClass('fa-times-circle');
     }
+    if($('i', '.purchase-Summary').hasClass('fa-times-circle')){
+      $('i', '.purchase-Summary').removeClass('fa-times-circle').addClass('fa-chevron-circle-down');
+    }
   });
 
   // result-Containerの表示表示の操作
@@ -103,6 +106,9 @@
 
     if($('i', this).hasClass('fa-chevron-circle-down')){
       $('i', this).removeClass('fa-chevron-circle-down').addClass('fa-times-circle');
+    }
+    if($('i', '.result-Detail_Btn').hasClass('fa-times-circle')){
+      $('i', '.result-Detail_Btn').removeClass('fa-times-circle').addClass('fa-chevron-circle-down');
     }
   });
 
