@@ -57,6 +57,30 @@
     });
   });
 
+  // result-Containerの表示表示の操作
+  $('.result-Detail_Btn').click(function (e) {
+    var $hide_content = $('.result-Container');
+    // $('.purchase-Container').toggleClass('purchase-Container--active');
+    $($hide_content).slideToggle(500);
+    if($('i', this).hasClass('fa-chevron-circle-down')){
+      $('i', this).removeClass('fa-chevron-circle-down').addClass('fa-times-circle');
+    }else{
+      $('i', this).addClass('fa-chevron-circle-down').removeClass('fa-times-circle');
+    }
+  });
+
+  $('.result-Close').click(function (e) {
+    var $hide_content = $('.result-Container');
+    // $('.purchase-Container').toggleClass('purchase-Container--active');
+    $($hide_content).slideToggle(500);
+    if($('i', this).hasClass('fa-chevron-circle-down')){
+      $('i', this).removeClass('fa-chevron-circle-down').addClass('fa-times-circle');
+    }
+    if($('i', '.result-Detail_Btn').hasClass('fa-times-circle')){
+      $('i', '.result-Detail_Btn').removeClass('fa-times-circle').addClass('fa-chevron-circle-down');
+    }
+  });
+
   // collapse処理
   $('.js-collapse').click(function (e) {
     var $hide_content = $($(this).data('collapseTarget'));
@@ -166,6 +190,30 @@
     timer = setTimeout( function(){
       $('.slidePrev').removeClass('scroll');
     }, 100 );
+  });
+
+  //査定理由(.result-Reason_Btn)をmouseover時の処理
+  $(function(){
+
+    var resultReason_Btn = $('.result-Reason_Btn');
+    var resultReason_Text = $('.result-Reason_Text');
+    $(resultReason_Text).hide();
+
+    //buttonをmouseoverしたとき、mouseoutしたときの指定
+    $(resultReason_Btn).mouseover(function () {
+      var num = $('.result-Reason_Btn').index(this);
+      $(resultReason_Text).eq(num).show();
+    });
+
+    $(resultReason_Btn).mouseout(function () {
+      var num = $('.result-Reason_Btn').index(this);
+      $(resultReason_Text).eq(num).hide();
+    });
+  });
+
+  // js-window-contributionに関して click時、pop_upで別窓表示
+  $('.js-window-contribution').click(function (e) {
+    window.open('https://www.netoff.co.jp/smile/contribution_popup.html' ,"", "width=420,height=400,scrollbars=yes");
   });
 
   $.fn.separationPopup = function(bPopstate) {
