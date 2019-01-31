@@ -1515,7 +1515,9 @@
       var date = $('.collectDatetime select.js-calendar-date-field').val();
       var time = $('.collectDatetime select.js-calendar-time-field').val();
       $('.modal-ChangeCalender .modal-CorrectCalender_Content td button').removeClass('selected');
-      $('.modal-ChangeCalender .modal-CorrectCalender_Content [data-date='+date+']').addClass('selected');
+      if(date != ""){
+        $('.modal-ChangeCalender .modal-CorrectCalender_Content [data-date='+date+']').addClass('selected');
+      }
       $('.modal-ChangeCalender .modal-CorrectCalender_Content select.js-calendar-date-field').val(date);
       $('.modal-ChangeCalender .modal-CorrectCalender_Content select.js-calendar-time-field').val(time);
     });
