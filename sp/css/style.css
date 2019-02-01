@@ -2798,8 +2798,10 @@ body {
 
 .u-pb-0 {
     padding-bottom: 0 !important; }
-.u-pb-4 {
+.u-pb-4v {
     padding-bottom: 4vw !important; }
+.u-pb-8v {
+    padding-bottom: 8vw !important; }
 
 .u-pl-0 {
     padding-left: 0 !important; }
@@ -2977,5 +2979,8 @@ body {
 
 .form-InputText-right {
   text-align: right; }
+
+.u-of-hidden {
+  overflow:hidden !important;}
 
 /*# sourceMappingURL=style.css.map*/
