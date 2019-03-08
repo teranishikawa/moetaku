@@ -1585,6 +1585,12 @@ body {
     background-size: 100% auto;
     z-index: 2; }
 
+  .thanks-Content.sorry:before {
+    background: none;}
+
+  .thanks-Content.sorry:after {
+    background: none;}
+
 .thanks-Content_Position {
   position: relative;
   top: -10px; }
@@ -2873,3 +2879,34 @@ body {
   cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map*/
+
+.message-Tip{
+  display: block;
+  position: relative;
+  margin: 0 auto 15px;
+  text-align: center;
+  left:0;
+  right:0;
+  width:20em;
+  height:auto;
+  line-height: 1.4;
+  font-size:16px;
+  font-size:1rem;
+  background: #ff124b;
+  color: #ff124b;
+  border-radius: 10px;
+  padding:7px 30px 6px;
+}
+.message-Tip span{ 
+  color: #fff;
+}
+.message-Tip:after{
+  content:"▼";
+  display: block;
+  position: absolute;
+  width:16px;
+  height:16px;
+  top:28px;
+  left:46%;
+  right:0;
+}

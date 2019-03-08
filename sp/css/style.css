@@ -1668,6 +1668,11 @@ body {
     background: url("../images/step5/chara_4@2x.png") no-repeat center;
     -webkit-background-size: 100% auto;
     background-size: 100% auto; }
+  .thanks-Header_Title.sorry:before {
+    background: none;}
+
+  .thanks-Header_Title.sorry:after {
+    background: none;}
 
 .thanks-Wrapper:nth-of-type(2) .thanks-Header_Title {
   padding: 4.4vw 0 5vw; }
@@ -2796,6 +2801,9 @@ body {
 .u-pr-17v {
     padding-right: 17vw !important; }
 
+.u-pt-4v {
+    padding-top: 4vw !important; }
+
 .u-pb-0 {
     padding-bottom: 0 !important; }
 .u-pb-4v {
@@ -2984,3 +2992,34 @@ body {
   overflow:hidden !important;}
 
 /*# sourceMappingURL=style.css.map*/
+
+.message-Tip{
+  display: block;
+  position: relative;
+  text-align: center;
+  left:0;
+  right:0;
+  width:20em;
+  height:auto;
+  line-height: 1.4;
+  font-size:16px;
+  font-size:1rem;
+  background: #ff124b;
+  color: #ff124b;
+  border-radius: 10px;
+  padding:7px 30px 6px;
+  margin:20px auto 5px;
+}
+.message-Tip span{ 
+  color: #fff;
+}
+.message-Tip:after{
+  content:"▼";
+  display: block;
+  position: absolute;
+  width:16px;
+  height:16px;
+  top:28px;
+  left:46%;
+  right:0;
+}
