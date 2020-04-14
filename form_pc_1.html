@@ -175,8 +175,7 @@
           </div>
         </header>
         <div class="sw-Section_Content">
-          <div class="sw-SubSection form-Content">
-
+          <div class="sw-SubSection form-Content u-mb-36">
             <div class="form-Field_Widget form-Field_Widget-multi btn-group-toggle" data-toggle="buttons">
               <label class="btn form-ToggleBtn mr-2">
                 <input type="radio" name="options" autocomplete="off">
@@ -209,10 +208,146 @@
           </div><!--/.sw-SubSection.form-Content-->
 
           <div class="sw-SubSection form-Content">
-
-            <h3 class="sw-SubSection_Title form-Content_Title u-mb-25"><span class="kit-Subtitle_Notice">無料でお届け!</span><span class="">宅配キットのサイズと箱数</span></h3>
+            <h3 class="sw-SubSection_Title form-Content_Title u-mb-25">「もえたく！用宅配キット」のサイズと箱数</h3>
             <p class="kit-Text">すべての段ボールには、緩衝材が同梱されています</p>
+            
+            <div class="simu-Wrapper">
+              <button type="button" class="btn simu-Btn open">
+                <span class="kit-Subtitle_Notice">NEW!!</span>
+                <span class="simu-Btn_Text">ダンボール 必要数シミュレーター</span>
+              </button>
+              
+              <div class="simu-Container">
+                <div class="simu-Inner">
+                  <p class="simu-Text u-mb-15">送りたいフィギュアの点数を入れてください</p>
+                  <dl class="simu-Row">
+                    <dt>
+                      <figure><img src="./images/simulator/icon-figure.png" alt=""></figure>
+                      <span class="simu-Row_Text">フィギュア・プラモ</span>
+                    </dt>
+                    <dd>
+                      <input id="simu-figure" type="text" value="" name="simu-figure" maxlength="3" placeholder="0" autocomplete="off" class="form-control form-InputText" />
+                      <span class="simu-Unit_Text">点</span>
+                    </dd>
+                  </dl>
 
+                  <div class="simu-Detail_Wrapper">
+                    <button type="button" class="btn simu-DetailBtn">
+                      <span class="simu-DetailBtn_Text">もっと詳しく計算する</span>
+                    </button>
+                    <div class="simu-Detail_Container">
+                      <div class="simu-Detail_Inner">
+                        <dl class="simu-Row">
+                          <dt>
+                            <span class="simu-Row_Text">プライズ系(小)</span>
+                            <a class="simu-Help modaal" data-modaal-custom-class="modal-Help modal-Help-kit modal-Help-simu" data-modaal-width="360" href="#modal-simu-fig1"><i class="fas fa-question-circle"></i></a>
+                          </dt>
+                          <dd>
+                            <input id="simu-prizeS" type="text" value="" name="simu-prizeS" maxlength="3" placeholder="0" autocomplete="off" class="form-control form-InputText" />
+                            <span class="simu-Unit_Text">点</span>
+                          </dd>
+                        </dl>
+                        <dl class="simu-Row">
+                          <dt>
+                            <span class="simu-Row_Text">プライズ系(大)</span>
+                            <a class="simu-Help modaal" data-modaal-custom-class="modal-Help modal-Help-kit modal-Help-simu" data-modaal-width="360" href="#modal-simu-fig2"><i class="fas fa-question-circle"></i></a>
+                          </dt>
+                          <dd>
+                            <input id="simu-prizeL" type="text" value="" name="simu-prizeL" maxlength="3" placeholder="0" autocomplete="off" class="form-control form-InputText" />
+                            <span class="simu-Unit_Text">点</span>
+                          </dd>
+                        </dl>
+                        <dl class="simu-Row">
+                          <dt>
+                            <span class="simu-Row_Text">ねんどろいど<br>figma,figuarts</span>
+                            <a class="simu-Help modaal" data-modaal-custom-class="modal-Help modal-Help-kit modal-Help-simu" data-modaal-width="360" href="#modal-simu-fig3"><i class="fas fa-question-circle"></i></a>
+                          </dt>
+                          <dd>
+                            <input id="simu-nendo" type="text" value="" name="simu-nendo" maxlength="3" placeholder="0" autocomplete="off" class="form-control form-InputText" />
+                            <span class="simu-Unit_Text">点</span>
+                          </dd>
+                        </dl>
+                        <dl class="simu-Row">
+                          <dt>
+                            <span class="simu-Row_Text">スケール<br>フィギュア</span>
+                            <a class="simu-Help modaal" data-modaal-custom-class="modal-Help modal-Help-kit modal-Help-simu" data-modaal-width="360" href="#modal-simu-fig4"><i class="fas fa-question-circle"></i></a>
+                          </dt>
+                          <dd>
+                            <input id="simu-scalefig" type="text" value="" name="simu-scalefig" maxlength="3" placeholder="0" autocomplete="off" class="form-control form-InputText" />
+                            <span class="simu-Unit_Text">点</span>
+                          </dd>
+                        </dl>
+                        <dl class="simu-Row">
+                          <dt>
+                            <span class="simu-Row_Text">プラモデル<br>(HG,RG)</span>
+                            <a class="simu-Help modaal" data-modaal-custom-class="modal-Help modal-Help-kit modal-Help-simu" data-modaal-width="360" href="#modal-simu-fig5"><i class="fas fa-question-circle"></i></a>
+                          </dt>
+                          <dd>
+                            <input id="simu-plamodel" type="text" value="" name="simu-plamodel" maxlength="3" placeholder="0" autocomplete="off" class="form-control form-InputText" />
+                            <span class="simu-Unit_Text">点</span>
+                          </dd>
+                        </dl>
+                      </div>
+                    </div>
+
+                    <div class="modal-Template" id="modal-simu-fig1">
+                      <figure class="simu-Modal_Container">
+                        <figcaption><em>プライズ系（小）</em></figcaption>
+                        <p class="simu-Modal_Text">UFOキャッチャー・ゲームセンター景品、コンビニくじなどの中で、小さめのサイズ。</p>
+                        <p class="simu-Modal_Box">SQフィギュア、DXF、造形王頂上決戦、造形天下一武道会、Q posket、など</p>
+                        <img alt="プライズ系（小）" src="./images/simulator/figure1.jpg" />
+                      </figure>
+                    </div>
+                    <div class="modal-Template" id="modal-simu-fig2">
+                      <figure class="simu-Modal_Container">
+                        <figcaption><em>プライズ系(大)</em></figcaption>
+                        <p class="simu-Modal_Text">UFOキャッチャー・ゲームセンター景品、コンビニくじなどの中で、大きめのサイズ。</p>
+                        <p class="simu-Modal_Box">EXQ、Grandista、スーパープレミアムフィギュア、SSSフィギュア、MASTER STARS PIECE、など</p>
+                        <img alt="プライズ系（大）" src="./images/simulator/figure2.jpg" />
+                      </figure>
+                    </div>
+                    <div class="modal-Template" id="modal-simu-fig3">
+                      <figure class="simu-Modal_Container">
+                        <figcaption><em>ねんどろいど<br>figma、フィギュアーツ</em></figcaption>
+                        <p class="simu-Modal_Text">上記フィギュアシリーズなど、厚み（奥行）がそれほど大きくないフィギュアのサイズ。</p>
+                        <p class="simu-Modal_Box">ねんどろいど、figma、フィギュアーツ、など</p>
+                        <img alt="ねんどろいど、figma、フィギュアーツ" src="./images/simulator/figure3.jpg" />
+                      </figure>
+                    </div>
+                    <div class="modal-Template" id="modal-simu-fig4">
+                      <figure class="simu-Modal_Container">
+                        <figcaption><em>スケールフィギュア</em></figcaption>
+                        <p class="simu-Modal_Text">フィギュアのメーカ―品など1/8スケールといったサイズ縮尺があるもの。正方形の箱など大きめのサイズ。</p>
+                        <p class="simu-Modal_Box">アルター、マックスファクトリー、メガハウス、グッドスマイルカンパニー、コトブキヤ、など</p>
+                        <img alt="スケールフィギュア" src="./images/simulator/figure4.jpg" />
+                      </figure>
+                    </div>
+                    <div class="modal-Template" id="modal-simu-fig5">
+                      <figure class="simu-Modal_Container">
+                        <figcaption><em>プラモデル</em></figcaption>
+                        <p class="simu-Modal_Text">ガンプラのＨＧ（ハイグレード）、ＲＧ（リアルグレード）などのサイズ。</p>
+                        <p class="simu-Modal_Box">ＨＧ（ハイグレード）、ＲＧ（リアルグレード）など</p>
+                        <img alt="プラモデル(HG,RG)" src="./images/simulator/figure5.jpg" />
+                      </figure>
+                    </div>
+
+                  </div>
+
+                  <dl class="simu-Row simu-Result">
+                    <dt>
+                      <figure><img src="./images/common/marks/calender-icon-package@2x.png" alt=""></figure>
+                      <span class="simu-Row_Text">必要ダンボール数</span>
+                    </dt>
+                    <dd>
+                      <span id="simu-result" class="simu-Result_Text">0</span>
+                      <span class="simu-Unit_Text">箱</span>
+                    </dd>
+                  </dl>
+                  <p class="simu-Text text-right">箱数はすこし余裕を持って計算されています</p>
+                </div>
+              </div>
+            </div>
+            
             <ul class="kit-List">
               <li class="kit-List_Item">
                 <figure class="kit-Img_Unit kit-Img_Unit-large">
@@ -220,7 +355,7 @@
                   <figcaption class="kit-Img kit-Img_Title">figma 約32個分<span class="kit-Img_SizeText kit-Img_SizeText-large">（61×44×40cm）</span></figcaption>
                 </figure>
                 <div class="text-center u-ml-5">
-                  <select class="custom-select form-Select form-Select-120 u-pb-6">
+                  <select class="custom-select form-Select form-Select-120 u-pb-6" name="kitBox1">
                     <option value="0">0箱</option>
                     <option value="1">1箱</option>
                     <option value="2">2箱</option>
@@ -232,6 +367,16 @@
                     <option value="8">8箱</option>
                     <option value="9">9箱</option>
                     <option value="10">10箱</option>
+                    <option value="11">11箱</option>
+                    <option value="12">12箱</option>
+                    <option value="13">13箱</option>
+                    <option value="14">14箱</option>
+                    <option value="15">15箱</option>
+                    <option value="16">16箱</option>
+                    <option value="17">17箱</option>
+                    <option value="18">18箱</option>
+                    <option value="19">19箱</option>
+                    <option value="20">20箱</option>
                   </select>
                 </div>
               </li>
@@ -241,7 +386,7 @@
                   <figcaption class="kit-Img_Title">figma 約10個分<span class="kit-Img_SizeText kit-Img_SizeText-medium">（40×33×24cm）</span></figcaption>
                 </figure>
                 <div class="text-center u-ml-5">
-                  <select class="custom-select form-Select form-Select-120 u-pb-6">
+                  <select class="custom-select form-Select form-Select-120 u-pb-6" name="kitBox2">
                     <option value="0">0箱</option>
                     <option value="1">1箱</option>
                     <option value="2">2箱</option>
@@ -253,6 +398,16 @@
                     <option value="8">8箱</option>
                     <option value="9">9箱</option>
                     <option value="10">10箱</option>
+                    <option value="11">11箱</option>
+                    <option value="12">12箱</option>
+                    <option value="13">13箱</option>
+                    <option value="14">14箱</option>
+                    <option value="15">15箱</option>
+                    <option value="16">16箱</option>
+                    <option value="17">17箱</option>
+                    <option value="18">18箱</option>
+                    <option value="19">19箱</option>
+                    <option value="20">20箱</option>
                   </select>
                 </div>
               </li>
@@ -262,7 +417,7 @@
                   <figcaption class="kit-Img_Title kit-Img_Title-small">figma 約4個分<span class="kit-Img_SizeText kit-Img_SizeText-small">（33×25×16cm）</span></figcaption>
                 </figure>
                 <div class="text-center u-ml-5">
-                  <select class="custom-select form-Select form-Select-120 u-pb-6">
+                  <select class="custom-select form-Select form-Select-120 u-pb-6" name="kitBox3">
                     <option value="0">0箱</option>
                     <option value="1">1箱</option>
                     <option value="2">2箱</option>
@@ -274,6 +429,16 @@
                     <option value="8">8箱</option>
                     <option value="9">9箱</option>
                     <option value="10">10箱</option>
+                    <option value="11">11箱</option>
+                    <option value="12">12箱</option>
+                    <option value="13">13箱</option>
+                    <option value="14">14箱</option>
+                    <option value="15">15箱</option>
+                    <option value="16">16箱</option>
+                    <option value="17">17箱</option>
+                    <option value="18">18箱</option>
+                    <option value="19">19箱</option>
+                    <option value="20">20箱</option>
                   </select>
                 </div>
               </li>
@@ -283,18 +448,28 @@
                   <figcaption class="kit-Img_Title kit-Img_Title-only"><span class="kit-Img_SizeText kit-Img_SizeText-only">（120x300cm）</span></figcaption>
                 </figure>
                 <div class="text-center u-ml-5">
-                  <select class="custom-select form-Select form-Select-120 u-pb-6">
+                  <select class="custom-select form-Select form-Select-120 u-pb-6" name="kitBox5">
                     <option value="0">0箱</option>
-                    <option value="1">1個</option>
-                    <option value="2">2個</option>
-                    <option value="3">3個</option>
-                    <option value="4">4個</option>
-                    <option value="5">5個</option>
-                    <option value="6">6個</option>
-                    <option value="7">7個</option>
-                    <option value="8">8個</option>
-                    <option value="9">9個</option>
-                    <option value="10">10個</option>
+                    <option value="1">1箱</option>
+                    <option value="2">2箱</option>
+                    <option value="3">3箱</option>
+                    <option value="4">4箱</option>
+                    <option value="5">5箱</option>
+                    <option value="6">6箱</option>
+                    <option value="7">7箱</option>
+                    <option value="8">8箱</option>
+                    <option value="9">9箱</option>
+                    <option value="10">10箱</option>
+                    <option value="11">11箱</option>
+                    <option value="12">12箱</option>
+                    <option value="13">13箱</option>
+                    <option value="14">14箱</option>
+                    <option value="15">15箱</option>
+                    <option value="16">16箱</option>
+                    <option value="17">17箱</option>
+                    <option value="18">18箱</option>
+                    <option value="19">19箱</option>
+                    <option value="20">20箱</option>
                   </select>
                 </div>
               </li>
@@ -615,6 +790,7 @@
 <div id="cv-top"></div>
 <div id="cv-left"></div>
 <script src="js/site.js"></script>
+<script src="js/simulator.js"></script>
 <script>
   $(document).separationPopup(true);
 </script>

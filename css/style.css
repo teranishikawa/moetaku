@@ -2910,3 +2910,271 @@ body {
   left:46%;
   right:0;
 }
+
+
+/*****
+ ダンボール 必要数シミュレーター
+ *****/
+.simu-Wrapper {
+  width: 100%;
+  margin: 0 auto 25px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column; }
+.simu-Btn {
+  position: relative;
+  display: block;
+  width: 470px;
+  height: 60px;
+  padding: 0 20px 0 0;
+  text-align: center;
+  color: #ffffff;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.2;
+  background-color: #666666;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  border: 2px solid #999999;
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.15) inset; }
+  .simu-Btn:hover {
+    background-color: #888888;
+    border: 2px solid #aaaaaa; }
+  .simu-Btn:active, .simu-Btn:focus {
+    outline: 0 !important;
+    box-shadow: none !important; }
+  .simu-Btn:after {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-family: "Font Awesome 5 Free";
+    font-size: 18px;
+    font-size: 1.125rem;
+    content: "\f055";
+    color: #ffffff; }
+    .simu-Btn.open:after {
+      content: "\f056"; }
+    .simu-Btn .kit-Subtitle_Notice {
+      padding: 1px 6px 1px;
+    }
+
+.simu-Container {
+  display: block;
+  width: 100%;
+  box-sizing: border-box; }
+  .simu-Container .simu-Inner {
+    background-color: #f1f1f1;
+    padding: 25px 50px;
+    margin: 10px auto;
+    -moz-border-radius: 6px;
+    border-radius: 6px; }
+.simu-Text {
+  font-size: 14px;
+  font-size: 0.875rem;
+  text-align: center;
+  margin: 0; }
+.simu-Row {
+  border-bottom: 1px solid #cccccc;
+  display: flex;
+  width: 100%;
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding: 15px 0;
+  margin: 0 0 10px; }
+  .simu-Row dt {
+    position: relative;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    width: 65%;
+    margin: 0; }
+    .simu-Row dt figure {
+      height: auto;
+      width: 66px;
+      text-align: center;
+      display: inline-block;
+      margin: 0 10px 0 0; }
+      .simu-Row dt figure img {
+        max-height: 66px;
+        max-width: 66px; }
+  .simu-Row dd {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    text-align: right;
+    vertical-align: middle;
+    line-height: 1.3;
+    width: 35%;
+    margin: 0; }
+    .simu-Row dd .form-InputText {
+      display: inline-block;
+      width: 120px;
+      height: auto;
+      font-size: 40px;
+      font-size: 2.5rem;
+      margin: 0;
+      line-height: 1.3;
+      padding: 0.3rem 0.6rem 0rem 0;
+      text-align: right; }
+    .simu-Row dd .form-InputText::-webkit-input-placeholder { 
+      padding-top: 0.2rem; }
+    .simu-Row dd .form-InputText:disabled {
+      pointer-events: none;
+      color: #999; }
+    .simu-Row dd .simu-Unit_Text {
+      display: inline-block;
+      font-weight: bold;
+      margin-left: 0.3rem; }
+
+.simu-Row.simu-Result {
+  border-color: #ff124c; }
+  .simu-Row.simu-Result .simu-Result_Text {
+    display: inline-block;
+    width: auto;
+    color: #ff124c;
+    font-size: 40px;
+    font-size: 2.5rem;
+    text-align: right; }
+    .simu-Row.simu-Result .simu-Result_Text small {
+      color: #000000;
+      font-size: 20px;
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin: 0 0.3rem 0 0.1rem; }
+
+.simu-Detail_Wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px; }
+  .simu-Detail_Wrapper:after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-top: 15px;
+    border-style: solid;
+    border-width: 15px 23px 0 23px;
+    border-color: #999999 transparent transparent transparent; }
+
+.simu-DetailBtn {
+  position: relative;
+  display: block;
+  width: 250px;
+  height: 34px;
+  padding: 1px 0 0;
+  text-align: center;
+  color: #000000;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 1.2;
+  background-color: #ffffff;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+  border: 2px solid #999999;
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.15) inset; }
+  .simu-DetailBtn:hover {
+    color: #6cb23c;
+    border: 2px solid #6cb23c; }
+    .simu-DetailBtn:hover:after {
+      color: #6cb23c; }
+  .simu-DetailBtn:active, .simu-DetailBtn:focus {
+    outline: 0 !important;
+    box-shadow: none !important; }
+  .simu-DetailBtn:after {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-family: "Font Awesome 5 Free";
+    font-size: 16px;
+    font-size: 1rem;
+    content: "\f13a";
+    color: #999999; }
+    .simu-DetailBtn.open:after {
+      content: "\f139"; }
+
+.simu-Detail_Container {
+  display: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box; }
+  .simu-Detail_Container .simu-Detail_Inner {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    padding: 20px 10px 5px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 15px auto 0;
+    -moz-border-radius: 5px;
+    border-radius: 5px; }
+  .simu-Detail_Container .simu-Row {
+    border-bottom: 0;
+    width: 50%;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: normal;
+    padding: 0 15px;
+    margin: 0 0 15px; }
+    .simu-Detail_Container .simu-Row dt {
+      font-weight: normal;
+      width: 50%; }
+    .simu-Detail_Container .simu-Row dd {
+      width: 50%; }
+      .simu-Detail_Container .simu-Row dd .form-InputText {
+        width: 80px;
+        height: auto;
+        padding: 0.35rem 0.6rem 0.25rem 0;
+        font-size: 20px;
+        font-size: 1.25rem; }
+      .simu-Detail_Container .simu-Row dd .simu-Unit_Text {
+        margin-left: 3px; }
+
+.simu-Help {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1; }
+
+.simu-Modal_Container {
+  display: block;
+  position: relative; }
+  .simu-Modal_Container figcaption em {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: normal;
+    border-bottom: 1px solid #999999;
+    padding: 0 0 10px;
+    margin: 0 0 10px; }
+  .simu-Modal_Container .simu-Modal_Text {
+    font-size: 14px;
+    font-size: 0.875rem;
+    margin: 15px 0; }
+  .simu-Modal_Container .simu-Modal_Box {
+    font-size: 14px;
+    font-size: 0.875rem;
+    color: #ffffff;
+    background: #666666;
+    padding: 6px 10px;
+    margin: 0; }
+  .simu-Modal_Container img {
+    width: 100%;
+    height: auto; }
+

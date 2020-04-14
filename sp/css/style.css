@@ -3023,3 +3023,235 @@ body {
   left:46%;
   right:0;
 }
+
+
+
+/*****
+ ダンボール 必要数シミュレーター
+ *****/
+.simu-Wrapper {
+  width: 100%;
+  margin: 0 auto 25px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column; }
+.simu-Btn {
+  position: relative;
+  display: block;
+  width: 96%;
+  height: auto;
+  padding: 4.5vw 5vw 4.5vw 0;
+  text-align: center;
+  color: #ffffff;
+  font-size: 3.6vw;
+  font-weight: bold;
+  line-height: 1.2em;
+  background-color: #666666;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  border: 2px solid #999999;
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.15) inset; }
+  .simu-Btn:active, .simu-Btn:focus {
+    outline: 0 !important;
+    box-shadow: none !important; }
+  .simu-Btn:after {
+    position: absolute;
+    right: 3vw;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-family: "Font Awesome 5 Free";
+    font-size: 5vw;
+    content: "\f055";
+    color: #ffffff; }
+    .simu-Btn.open:after {
+      content: "\f056"; }
+    .simu-Btn .kit-Subtitle_Notice {
+      margin: 0 2vw 0 0;
+      padding: 0.4vw 1.5vw 0.2vw; }
+
+.simu-Container {
+  display: block;
+  width: 100%;
+  box-sizing: border-box; }
+  .simu-Container .simu-Inner {
+    background-color: #f1f1f1;
+    padding: 3vw 3vw;
+    margin: 3vw auto;
+    -moz-border-radius: 6px;
+    border-radius: 6px; }
+.simu-Text {
+  font-size: 3.6vw;
+  text-align: center;
+  margin: 0; }
+.simu-Row {
+  border-bottom: 1px solid #cccccc;
+  display: flex;
+  width: 100%;
+  font-size: 3.6vw;
+  font-weight: bold;
+  padding: 3vw 0;
+  margin: 0 0 2vw; }
+  .simu-Row dt {
+    position: relative;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    width: 55%;
+    margin: 0; }
+    .simu-Row dt figure {
+      height: auto;
+      width: 12vw;
+      text-align: center;
+      display: inline-block;
+      margin: 0 2vw 0 0; }
+      .simu-Row dt figure img {
+        max-height: 12vw;
+        max-width: 12vw; }
+  .simu-Row dd {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    text-align: right;
+    vertical-align: middle;
+    width: 45%;
+    margin: 0; }
+    .simu-Row dd .form-Select {
+      width: 25vw;
+      height: 12vw;
+      margin: 0;
+      padding: 2vw 2vw;
+      display: inline-block; }
+    .simu-Row dd .simu-Unit_Text {
+      display: inline-block;
+      font-weight: bold;
+      margin-left: 1vw; }
+
+.simu-Row.simu-Result {
+  border-color: #ff124c; }
+  .simu-Row.simu-Result .simu-Result_Text {
+    display: inline-block;
+    width: auto;
+    color: #ff124c;
+    font-size: 9vw;
+    text-align: right; }
+    .simu-Row.simu-Result .simu-Result_Text small {
+      color: #000000;
+      font-size: 3.6vw;
+      font-weight: bold;
+      margin: 0 1.5vw 0 0.5vw; }
+
+.simu-Detail_Wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3vw; }
+  .simu-Detail_Wrapper:after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-top: 3vw;
+    border-style: solid;
+    border-width: 5vw 8vw 0 8vw;
+    border-color: #999999 transparent transparent transparent; }
+
+.simu-DetailBtn {
+  position: relative;
+  display: block;
+  width: 80%;
+  height: 9vw;
+  padding: 0 4vw 0 0;
+  text-align: center;
+  color: #000000;
+  font-size: 3.6vw;
+  font-weight: bold;
+  line-height: 1.2rem;
+  background-color: #ffffff;
+  -moz-border-radius: 4.5vw;
+  border-radius: 4.5vw;
+  border: 2px solid #999999;
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.15) inset; }
+  .simu-DetailBtn:active, .simu-DetailBtn:focus {
+    outline: 0 !important;
+    box-shadow: none !important; }
+  .simu-DetailBtn:after {
+    position: absolute;
+    right: 2vw;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-family: "Font Awesome 5 Free";
+    font-size: 5vw;
+    content: "\f13a";
+    color: #999999; }
+    .simu-DetailBtn.open:after {
+      content: "\f139"; }
+
+.simu-Detail_Container {
+  display: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box; }
+  .simu-Detail_Container .simu-Detail_Inner {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    padding: 3vw 3vw 0.5vw;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 3vw auto 0;
+    -moz-border-radius: 5px;
+    border-radius: 5px; }
+  .simu-Detail_Container .simu-Row {
+    border-bottom: 0;
+    width: 100%;
+    font-size: 3.6vw;
+    font-weight: normal;
+    padding: 0;
+    margin: 0 0 4vw; }
+    .simu-Detail_Container .simu-Row dt {
+      font-weight: normal;
+      width: 44%; }
+    .simu-Detail_Container .simu-Row dd {
+      width: 56%; }
+
+.simu-Help {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 5vw;
+  line-height: 1; }
+
+.modal-Help-simu .modaal-content-container {
+  width: 100%;
+  padding: 6vw 6vw; }
+.simu-Modal_Container {
+  display: block;
+  position: relative; }
+  .simu-Modal_Container figcaption em {
+    display: block;
+    text-align: center;
+    font-size: 4.2vw;
+    font-weight: bold;
+    font-style: normal;
+    border-bottom: 1px solid #999999;
+    padding: 0 0 2vw;
+    margin: 0 0 2vw; }
+  .simu-Modal_Container .simu-Modal_Text {
+    font-size: 3.6vw;
+    margin: 3vw 0; }
+  .simu-Modal_Container .simu-Modal_Box {
+    font-size: 3.6vw;
+    color: #ffffff;
+    background: #666666;
+    padding: 1.5vw 2vw;
+    margin: 0; }
+  .simu-Modal_Container img {
+    width: 100%;
+    height: auto; }
